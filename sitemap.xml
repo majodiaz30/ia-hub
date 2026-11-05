@@ -7,4 +7,16 @@
         <priority>1.0</priority>
     </url>
 
+    <url>
+        <loc>https://ia-hub-bice.vercel.app/herramienta.html?id=chatgpt</loc>
+    </url>
+
+    <url>
+        <loc>https://ia-hub-bice.vercel.app/herramienta.html?id=gemini</loc>
+    </url>
+
+    <url>
+        <loc>https://ia-hub-bice.vercel.app/herramienta.html?id=claude</loc>
+    </url>
+
 </urlset>
