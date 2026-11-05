@@ -114,7 +114,12 @@ if (herramienta) {
     // Herramientas relacionadas
     const contenedorRelacionadas = document.getElementById(
         "herramientas-relacionadas"
+        
     );
+
+    console.log("Herramientas relacionadas:", herramientas.length);
+console.log("Contenedor:", contenedorRelacionadas);
+console.log("Herramienta actual:", herramienta.nombre);
 
     const relacionadas = herramientas
         .filter(elemento =>
