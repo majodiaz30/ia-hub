@@ -397,39 +397,90 @@ function actualizarContadorFavoritos() {
 
 // Obtener herramientas según búsqueda, categoría y favoritos
 function obtenerResultados() {
-    const terminos = normalizar(searchInput.value).split(/[\s,]+/).filter(Boolean);
+    const terminos = normalizar(searchInput.value)
+        .split(/[\s,]+/)
+        .filter(Boolean);
+
     const categoriaBuscada = normalizar(categoriaActual);
 
     const resultados = [];
 
     herramientas.forEach(herramienta => {
+
         const coincideCategoria = categoriaActual === "Todas" ||
-            herramienta.categorias.some(c => normalizar(c) === categoriaBuscada);
-        const coincideFavorito = !mostrarSoloFavoritos || favoritos.includes(herramienta.id);
+            herramienta.categorias.some(c =>
+                normalizar(c) === categoriaBuscada
+            );
+
+        const coincideFavorito =
+            !mostrarSoloFavoritos ||
+            favoritos.includes(herramienta.id);
 
         if (!coincideCategoria || !coincideFavorito) return;
 
-        const texto = normalizar([
-            herramienta.nombre,
-            ...herramienta.categorias,
-            herramienta.descripcion,
-            ...herramienta.etiquetas
-        ].join(" "));
+        const nombre = normalizar(herramienta.nombre);
+        const categorias = normalizar(herramienta.categorias.join(" "));
+        const etiquetas = normalizar(herramienta.etiquetas.join(" "));
+        const descripcion = normalizar(herramienta.descripcion);
 
-        // Cuántas palabras de la búsqueda aparecen en la herramienta
-        const coincidencias = terminos.filter(t => texto.includes(t)).length;
+        const textoCompleto = [
+            nombre,
+            categorias,
+            etiquetas,
+            descripcion
+        ].join(" ");
 
-        if (terminos.length === 0 || coincidencias > 0) {
-            resultados.push({ herramienta, coincidencias });
+        // Si no hay búsqueda, mostrar todos los resultados
+        if (terminos.length === 0) {
+            resultados.push({
+                herramienta,
+                puntuacion: 0
+            });
+            return;
         }
+
+        // Todas las palabras deben coincidir
+        const coincideTodo = terminos.every(termino =>
+            textoCompleto.includes(termino)
+        );
+
+        if (!coincideTodo) return;
+
+        // Dar mayor prioridad a las coincidencias más importantes
+        let puntuacion = 0;
+
+        terminos.forEach(termino => {
+
+            if (nombre.includes(termino)) {
+                puntuacion += 10;
+            }
+
+            if (categorias.includes(termino)) {
+                puntuacion += 6;
+            }
+
+            if (etiquetas.includes(termino)) {
+                puntuacion += 4;
+            }
+
+            if (descripcion.includes(termino)) {
+                puntuacion += 2;
+            }
+
+        });
+
+        resultados.push({
+            herramienta,
+            puntuacion
+        });
     });
 
-    // Con búsqueda activa, primero las que coinciden con más palabras
-    if (terminos.length > 0) {
-        resultados.sort((a, b) => b.coincidencias - a.coincidencias);
-    }
+    // Mostrar primero las herramientas más relacionadas
+    resultados.sort((a, b) =>
+        b.puntuacion - a.puntuacion
+    );
 
-    return resultados.map(r => r.herramienta);
+    return resultados.map(resultado => resultado.herramienta);
 }
 
 // Crear una tarjeta sin insertar texto del catálogo mediante HTML inseguro

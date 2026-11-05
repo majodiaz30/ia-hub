@@ -1793,3 +1793,33 @@ input:focus-visible {
         min-height: auto;
     }
 }
+/* FECHA DE LAS NOVEDADES */
+.news-date {
+    display: block;
+    margin: 10px 0;
+    color: #9290a5;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* TEXTO DE LOS ELEMENTOS VISUALES */
+.news-visual span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ENLACES DE LAS NOTICIAS */
+.news-content a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #0fbfb3;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.news-content a:hover {
+    color: #ffffff;
+}
