@@ -5,6 +5,7 @@
 // Catálogo. Cada herramienta puede pertenecer a varias categorías.
 // Categorías válidas: Texto, Imágenes, Video, Programación, Estudio, Audio
 // Colores válidos: purple, blue, orange, mint
+
 const herramientas = [
     {
         id: "chatgpt",
@@ -13,8 +14,8 @@ const herramientas = [
         inicial: "C",
         color: "purple",
         destacado: true,
-        etiquetas: ["escribir", "redactar", "estudiar", "programar", "preguntas", "asistente"],
-        descripcion: "Asistente de IA para escribir, aprender, programar, generar ideas y resolver preguntas.",
+        etiquetas: ["escribir", "redactar", "estudiar", "programar", "preguntas", "asistente", "resumir", "ideas", "explicar"],
+        descripcion: "ChatGPT es un asistente de inteligencia artificial que permite redactar textos, resumir documentos, resolver dudas, aprender nuevos temas, generar ideas y recibir ayuda con programación y tareas cotidianas.",
         enlace: "https://chatgpt.com"
     },
     {
@@ -24,8 +25,8 @@ const herramientas = [
         inicial: "G",
         color: "blue",
         destacado: true,
-        etiquetas: ["escribir", "investigar", "estudiar", "programar", "google", "asistente"],
-        descripcion: "Asistente de Google para investigar, crear contenido, programar y organizar ideas.",
+        etiquetas: ["escribir", "investigar", "estudiar", "programar", "google", "asistente", "resumir", "analizar"],
+        descripcion: "Gemini es el asistente de inteligencia artificial de Google. Ayuda a investigar temas, redactar contenido, comprender información, organizar ideas y resolver consultas relacionadas con el estudio y el trabajo.",
         enlace: "https://gemini.google.com"
     },
     {
@@ -35,8 +36,8 @@ const herramientas = [
         inicial: "C",
         color: "orange",
         destacado: false,
-        etiquetas: ["escribir", "redactar", "programar", "codigo", "analizar", "documentos", "asistente"],
-        descripcion: "Asistente de IA para redactar, analizar documentos y programar, incluido Claude Code.",
+        etiquetas: ["escribir", "redactar", "programar", "codigo", "analizar", "documentos", "asistente", "razonamiento"],
+        descripcion: "Claude es un asistente de inteligencia artificial de Anthropic que permite analizar documentos, redactar textos, resumir información, desarrollar ideas y recibir ayuda para escribir y comprender código.",
         enlace: "https://claude.ai"
     },
     {
@@ -46,8 +47,8 @@ const herramientas = [
         inicial: "M",
         color: "blue",
         destacado: false,
-        etiquetas: ["asistente", "productividad", "texto", "programar"],
-        descripcion: "Asistente de IA para resolver preguntas, redactar textos y generar ideas.",
+        etiquetas: ["asistente", "productividad", "texto", "programar", "microsoft", "investigar", "ideas"],
+        descripcion: "Microsoft Copilot es un asistente de inteligencia artificial que ayuda a responder preguntas, redactar contenido, generar ideas y realizar tareas de productividad dentro del ecosistema de Microsoft.",
         enlace: "https://copilot.microsoft.com/"
     },
     {
@@ -57,8 +58,8 @@ const herramientas = [
         inicial: "D",
         color: "blue",
         destacado: false,
-        etiquetas: ["asistente", "razonamiento", "texto", "programar", "codigo"],
-        descripcion: "Asistente de inteligencia artificial para preguntas, análisis, código y resolución de problemas.",
+        etiquetas: ["asistente", "razonamiento", "texto", "programar", "codigo", "matematicas", "analisis"],
+        descripcion: "DeepSeek es una plataforma de inteligencia artificial útil para resolver preguntas, analizar problemas, trabajar con razonamiento, comprender conceptos y obtener asistencia en programación.",
         enlace: "https://chat.deepseek.com/"
     },
     {
@@ -68,8 +69,8 @@ const herramientas = [
         inicial: "G",
         color: "purple",
         destacado: false,
-        etiquetas: ["asistente", "preguntas", "texto"],
-        descripcion: "Asistente de IA para explorar preguntas, generar contenido y analizar información.",
+        etiquetas: ["asistente", "preguntas", "texto", "informacion", "ideas", "investigacion"],
+        descripcion: "Grok es un asistente de inteligencia artificial desarrollado por xAI. Permite explorar preguntas, generar contenido, analizar información y conversar sobre diferentes temas.",
         enlace: "https://grok.com/"
     },
     {
@@ -79,8 +80,8 @@ const herramientas = [
         inicial: "P",
         color: "mint",
         destacado: true,
-        etiquetas: ["estudiar", "investigar", "buscar", "fuentes", "preguntas"],
-        descripcion: "Buscador con IA que ayuda a investigar preguntas y consultar fuentes.",
+        etiquetas: ["estudiar", "investigar", "buscar", "fuentes", "preguntas", "buscador", "informacion"],
+        descripcion: "Perplexity es un buscador con inteligencia artificial que ayuda a investigar preguntas, encontrar información en internet y consultar fuentes para profundizar en temas académicos y profesionales.",
         enlace: "https://www.perplexity.ai"
     },
     {
@@ -90,8 +91,8 @@ const herramientas = [
         inicial: "N",
         color: "blue",
         destacado: false,
-        etiquetas: ["estudiar", "resumir", "documentos", "investigar", "apuntes", "podcast"],
-        descripcion: "Asistente de investigación que trabaja con las fuentes que proporcionas y puede resumirlas en audio.",
+        etiquetas: ["estudiar", "resumir", "documentos", "investigar", "apuntes", "podcast", "fuentes", "aprendizaje"],
+        descripcion: "NotebookLM es un asistente de investigación de Google que trabaja con las fuentes que proporcionas. Permite resumir documentos, organizar información, responder preguntas y generar resúmenes de audio.",
         enlace: "https://notebooklm.google.com"
     },
     {
@@ -101,8 +102,8 @@ const herramientas = [
         inicial: "E",
         color: "mint",
         destacado: false,
-        etiquetas: ["investigacion", "estudio", "articulos", "papers"],
-        descripcion: "Ayuda a buscar y analizar artículos científicos para investigar temas académicos.",
+        etiquetas: ["investigacion", "estudio", "articulos", "papers", "ciencia", "academico", "fuentes"],
+        descripcion: "Elicit es una herramienta de investigación académica con inteligencia artificial que ayuda a encontrar artículos científicos, revisar publicaciones y organizar información para trabajos e investigaciones.",
         enlace: "https://elicit.com/"
     },
     {
@@ -112,8 +113,8 @@ const herramientas = [
         inicial: "G",
         color: "purple",
         destacado: false,
-        etiquetas: ["presentaciones", "diapositivas", "documentos", "diseño"],
-        descripcion: "Crea presentaciones y documentos visuales a partir de ideas y textos.",
+        etiquetas: ["presentaciones", "diapositivas", "documentos", "diseño", "exposiciones", "trabajos"],
+        descripcion: "Gamma permite crear presentaciones, documentos y páginas visuales a partir de ideas o instrucciones de texto. Es una opción para preparar exposiciones, proyectos y materiales de trabajo.",
         enlace: "https://gamma.app/"
     },
     {
@@ -123,8 +124,8 @@ const herramientas = [
         inicial: "Ca",
         color: "blue",
         destacado: true,
-        etiquetas: ["imagenes", "diseño", "presentaciones", "redes sociales", "ilustraciones"],
-        descripcion: "Plataforma de diseño con funciones de IA para crear contenido visual.",
+        etiquetas: ["imagenes", "diseño", "presentaciones", "redes sociales", "ilustraciones", "plantillas", "carteles"],
+        descripcion: "Canva es una plataforma de diseño gráfico que incorpora funciones de inteligencia artificial para crear presentaciones, publicaciones para redes sociales, imágenes, carteles y otros recursos visuales.",
         enlace: "https://www.canva.com"
     },
     {
@@ -134,8 +135,8 @@ const herramientas = [
         inicial: "L",
         color: "purple",
         destacado: false,
-        etiquetas: ["imagenes", "diseño", "ilustraciones", "arte", "generador"],
-        descripcion: "Herramienta para crear imágenes y recursos visuales con inteligencia artificial.",
+        etiquetas: ["imagenes", "diseño", "ilustraciones", "arte", "generador", "creatividad", "recursos visuales"],
+        descripcion: "Leonardo AI es una herramienta de generación de imágenes con inteligencia artificial. Permite crear ilustraciones, conceptos visuales y recursos gráficos a partir de descripciones escritas.",
         enlace: "https://leonardo.ai"
     },
     {
@@ -145,8 +146,8 @@ const herramientas = [
         inicial: "A",
         color: "orange",
         destacado: false,
-        etiquetas: ["imagenes", "diseño", "generar", "editar", "creatividad"],
-        descripcion: "Herramientas generativas de Adobe para crear y editar contenido visual.",
+        etiquetas: ["imagenes", "diseño", "generar", "editar", "creatividad", "adobe", "fotografia"],
+        descripcion: "Adobe Firefly reúne herramientas generativas para crear y editar imágenes y otros recursos visuales. Permite experimentar con ideas creativas mediante instrucciones de texto.",
         enlace: "https://firefly.adobe.com"
     },
     {
@@ -156,8 +157,8 @@ const herramientas = [
         inicial: "I",
         color: "purple",
         destacado: false,
-        etiquetas: ["imagenes", "diseño", "creatividad", "carteles"],
-        descripcion: "Genera imágenes, carteles y diseños a partir de descripciones de texto.",
+        etiquetas: ["imagenes", "diseño", "creatividad", "carteles", "texto en imagen", "ilustraciones"],
+        descripcion: "Ideogram es una herramienta de inteligencia artificial para generar imágenes a partir de descripciones. Puede utilizarse para crear carteles, composiciones gráficas, ilustraciones y diseños con texto integrado.",
         enlace: "https://ideogram.ai/"
     },
     {
@@ -167,8 +168,8 @@ const herramientas = [
         inicial: "M",
         color: "purple",
         destacado: false,
-        etiquetas: ["imagenes", "arte", "diseño"],
-        descripcion: "Herramienta de generación de imágenes artísticas mediante inteligencia artificial.",
+        etiquetas: ["imagenes", "arte", "diseño", "ilustraciones", "generador", "creatividad"],
+        descripcion: "Midjourney es una plataforma de generación de imágenes mediante inteligencia artificial. Permite transformar descripciones escritas en composiciones artísticas, ilustraciones y conceptos visuales.",
         enlace: "https://www.midjourney.com/"
     },
     {
@@ -178,8 +179,8 @@ const herramientas = [
         inicial: "R",
         color: "mint",
         destacado: true,
-        etiquetas: ["videos", "edicion", "audiovisual", "generar video", "animacion"],
-        descripcion: "Plataforma creativa para generar y editar videos con IA.",
+        etiquetas: ["videos", "edicion", "audiovisual", "generar video", "animacion", "efectos", "creatividad"],
+        descripcion: "Runway es una plataforma creativa con inteligencia artificial para generar y editar contenido audiovisual. Incluye herramientas para experimentar con videos, imágenes y efectos visuales.",
         enlace: "https://runwayml.com"
     },
     {
@@ -189,8 +190,8 @@ const herramientas = [
         inicial: "C",
         color: "blue",
         destacado: false,
-        etiquetas: ["videos", "edicion", "subtitulos", "redes sociales"],
-        descripcion: "Editor de video con funciones inteligentes para crear contenido audiovisual.",
+        etiquetas: ["videos", "edicion", "subtitulos", "redes sociales", "efectos", "contenido"],
+        descripcion: "CapCut es un editor de video que incorpora funciones inteligentes para editar clips, añadir subtítulos, aplicar efectos y preparar contenido audiovisual para redes sociales.",
         enlace: "https://www.capcut.com"
     },
     {
@@ -200,8 +201,8 @@ const herramientas = [
         inicial: "K",
         color: "blue",
         destacado: false,
-        etiquetas: ["video", "animacion", "creatividad"],
-        descripcion: "Crea vídeos a partir de indicaciones de texto e imágenes.",
+        etiquetas: ["video", "animacion", "creatividad", "texto a video", "imagen a video"],
+        descripcion: "Kling AI ofrece herramientas de generación de video mediante inteligencia artificial. Permite crear clips a partir de indicaciones de texto e imágenes.",
         enlace: "https://klingai.com/"
     },
     {
@@ -211,8 +212,8 @@ const herramientas = [
         inicial: "P",
         color: "orange",
         destacado: false,
-        etiquetas: ["video", "animacion", "efectos"],
-        descripcion: "Crea y transforma vídeos con herramientas de inteligencia artificial.",
+        etiquetas: ["video", "animacion", "efectos", "edicion", "creatividad"],
+        descripcion: "Pika es una herramienta de inteligencia artificial para crear y transformar videos. Permite experimentar con animaciones, efectos y contenido visual a partir de instrucciones.",
         enlace: "https://pika.art/"
     },
     {
@@ -222,8 +223,8 @@ const herramientas = [
         inicial: "GH",
         color: "mint",
         destacado: true,
-        etiquetas: ["programar", "codigo", "desarrollo", "programacion", "software"],
-        descripcion: "Asistente de programación que ayuda a escribir y comprender código.",
+        etiquetas: ["programar", "codigo", "desarrollo", "programacion", "software", "programador", "autocompletar"],
+        descripcion: "GitHub Copilot es un asistente de programación que ayuda a escribir código, sugerir soluciones, explicar fragmentos y agilizar tareas durante el desarrollo de software.",
         enlace: "https://github.com/features/copilot"
     },
     {
@@ -233,8 +234,8 @@ const herramientas = [
         inicial: "C",
         color: "mint",
         destacado: false,
-        etiquetas: ["codigo", "programacion", "desarrollo", "editor"],
-        descripcion: "Editor de código con IA que ayuda a comprender y desarrollar proyectos.",
+        etiquetas: ["codigo", "programacion", "desarrollo", "editor", "software", "programador"],
+        descripcion: "Cursor es un editor de código con funciones de inteligencia artificial que ayuda a comprender proyectos, generar código, realizar cambios y trabajar con archivos de programación.",
         enlace: "https://cursor.com/"
     },
     {
@@ -244,8 +245,8 @@ const herramientas = [
         inicial: "W",
         color: "blue",
         destacado: false,
-        etiquetas: ["codigo", "programacion", "desarrollo", "editor"],
-        descripcion: "Editor de código con agentes de IA para desarrollar y modificar proyectos.",
+        etiquetas: ["codigo", "programacion", "desarrollo", "editor", "software", "agentes"],
+        descripcion: "Windsurf es un entorno de desarrollo con funciones de inteligencia artificial que ayuda a explorar proyectos, escribir código y realizar tareas de programación.",
         enlace: "https://windsurf.com/"
     },
     {
@@ -255,8 +256,8 @@ const herramientas = [
         inicial: "R",
         color: "orange",
         destacado: false,
-        etiquetas: ["codigo", "programacion", "aplicaciones", "en linea"],
-        descripcion: "Entorno en línea para crear y probar aplicaciones con ayuda de IA.",
+        etiquetas: ["codigo", "programacion", "aplicaciones", "en linea", "desarrollo", "crear apps"],
+        descripcion: "Replit es un entorno de desarrollo en línea que permite crear, ejecutar y compartir aplicaciones. También ofrece herramientas de inteligencia artificial para apoyar el proceso de programación.",
         enlace: "https://replit.com/"
     },
     {
@@ -266,8 +267,8 @@ const herramientas = [
         inicial: "L",
         color: "purple",
         destacado: false,
-        etiquetas: ["aplicaciones", "paginas web", "programacion", "sin codigo"],
-        descripcion: "Crea aplicaciones y sitios web describiendo en lenguaje natural lo que necesitas.",
+        etiquetas: ["aplicaciones", "paginas web", "programacion", "sin codigo", "desarrollo web", "prototipos"],
+        descripcion: "Lovable permite crear aplicaciones y sitios web a partir de instrucciones en lenguaje natural. Es una herramienta para desarrollar prototipos y proyectos web describiendo lo que necesitas.",
         enlace: "https://lovable.dev/"
     },
     {
@@ -277,8 +278,8 @@ const herramientas = [
         inicial: "B",
         color: "blue",
         destacado: false,
-        etiquetas: ["aplicaciones", "paginas web", "programacion", "desarrollo"],
-        descripcion: "Genera y edita aplicaciones web completas desde el navegador con ayuda de IA.",
+        etiquetas: ["aplicaciones", "paginas web", "programacion", "desarrollo", "prototipos", "codigo"],
+        descripcion: "Bolt permite crear y modificar aplicaciones web desde el navegador mediante instrucciones de texto. Puede ayudar a generar prototipos y desarrollar proyectos con tecnologías web.",
         enlace: "https://bolt.new/"
     },
     {
@@ -288,8 +289,8 @@ const herramientas = [
         inicial: "11",
         color: "orange",
         destacado: false,
-        etiquetas: ["audio", "voces", "texto a voz", "transcripcion", "locucion"],
-        descripcion: "Plataforma de generación de voz y herramientas de audio con IA.",
+        etiquetas: ["audio", "voces", "texto a voz", "transcripcion", "locucion", "narracion"],
+        descripcion: "ElevenLabs ofrece herramientas de inteligencia artificial para generar voces, convertir texto en audio y trabajar con contenido hablado, narraciones y otros formatos de sonido.",
         enlace: "https://elevenlabs.io"
     },
     {
@@ -299,8 +300,8 @@ const herramientas = [
         inicial: "S",
         color: "orange",
         destacado: false,
-        etiquetas: ["musica", "audio", "creatividad", "canciones"],
-        descripcion: "Genera canciones y composiciones musicales a partir de descripciones.",
+        etiquetas: ["musica", "audio", "creatividad", "canciones", "composicion"],
+        descripcion: "Suno es una plataforma de creación musical con inteligencia artificial que permite generar canciones a partir de descripciones e ideas, explorando diferentes estilos y sonidos.",
         enlace: "https://suno.com/"
     },
     {
@@ -310,8 +311,8 @@ const herramientas = [
         inicial: "U",
         color: "purple",
         destacado: false,
-        etiquetas: ["musica", "audio", "canciones"],
-        descripcion: "Plataforma para crear música con inteligencia artificial.",
+        etiquetas: ["musica", "audio", "canciones", "composicion", "creatividad"],
+        descripcion: "Udio es una plataforma de creación musical con inteligencia artificial que permite experimentar con canciones y composiciones a partir de indicaciones y conceptos musicales.",
         enlace: "https://www.udio.com/"
     },
     {
@@ -321,8 +322,8 @@ const herramientas = [
         inicial: "D",
         color: "mint",
         destacado: false,
-        etiquetas: ["transcripcion", "audio", "edicion", "podcast", "video"],
-        descripcion: "Edita audio y video como si fuera un documento de texto, con transcripción automática.",
+        etiquetas: ["transcripcion", "audio", "edicion", "podcast", "video", "subtitulos"],
+        descripcion: "Descript es una herramienta de edición de audio y video que utiliza transcripciones de texto para facilitar la edición de grabaciones, podcasts y contenido audiovisual.",
         enlace: "https://www.descript.com/"
     },
     {
@@ -332,11 +333,12 @@ const herramientas = [
         inicial: "O",
         color: "blue",
         destacado: false,
-        etiquetas: ["transcripcion", "reuniones", "audio", "notas", "resumir"],
-        descripcion: "Transcribe y resume reuniones y conversaciones con inteligencia artificial.",
+        etiquetas: ["transcripcion", "reuniones", "audio", "notas", "resumir", "voz"],
+        descripcion: "Otter es una herramienta de transcripción asistida por inteligencia artificial que ayuda a convertir conversaciones y reuniones en texto, además de organizar notas y resúmenes.",
         enlace: "https://otter.ai/"
     }
 ];
+
 
 // Elementos del HTML
 const toolsGrid = document.getElementById("toolsGrid");
