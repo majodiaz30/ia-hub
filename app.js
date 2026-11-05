@@ -571,9 +571,14 @@ function crearTarjeta(herramienta) {
     botonDetalles.textContent = "Ver detalles";
 
     botonDetalles.addEventListener("click", () => {
-        mostrarDetalle(herramienta, botonDetalles);
-    });
 
+        if (herramienta.id === "chatgpt") {
+            window.location.href = "chatgpt.html";
+        } else {
+            mostrarDetalle(herramienta, botonDetalles);
+        }
+
+    });
     acciones.append(enlace, botonDetalles, botonFavorito);
     tarjeta.append(top, titulo, descripcion, acciones);
 

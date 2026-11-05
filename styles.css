@@ -1823,3 +1823,250 @@ input:focus-visible {
 .news-content a:hover {
     color: #ffffff;
 }
+
+
+
+/* =====================================
+   PÁGINA INDIVIDUAL DE CHATGPT
+===================================== */
+
+.chatgpt-page {
+    min-height: 100vh;
+    background: #0d0b1c;
+    color: #ffffff;
+}
+
+.chatgpt-header {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chatgpt-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.chatgpt-logo img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.chatgpt-logo strong {
+    color: #0fbfb3;
+}
+
+.chatgpt-back {
+    color: #b9b6ca;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.chatgpt-back:hover {
+    color: #0fbfb3;
+}
+
+.chatgpt-main {
+    width: 86%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.chatgpt-hero {
+    padding: 85px 20px 70px;
+    text-align: center;
+}
+
+.chatgpt-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 22px;
+}
+
+.chatgpt-icon img {
+    width: 48px;
+    height: 48px;
+}
+
+.chatgpt-label {
+    color: #0fbfb3;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.chatgpt-hero h1 {
+    margin: 15px 0;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+.chatgpt-intro {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #aaa7bd;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.chatgpt-button {
+    display: inline-block;
+    padding: 13px 27px;
+    background: #0fbfb3;
+    color: #0d0b1c;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.chatgpt-button:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+.chatgpt-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    padding-bottom: 75px;
+}
+
+.chatgpt-card {
+    padding: 30px;
+    background: #171528;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.chatgpt-card h2 {
+    margin: 0 0 18px;
+    font-size: 1.35rem;
+}
+
+.chatgpt-card p {
+    color: #aaa7bd;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.chatgpt-uses {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 18px;
+}
+
+.chatgpt-uses span {
+    color: #0fbfb3;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.chatgpt-uses h3 {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.chatgpt-uses p {
+    margin: 0;
+    font-size: 0.88rem;
+}
+
+.chatgpt-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chatgpt-tags span {
+    padding: 9px 13px;
+    color: #c9c6d9;
+    background: #242139;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 7px;
+    font-size: 0.85rem;
+}
+
+.chatgpt-plans a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0fbfb3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.chatgpt-plans a:hover {
+    color: #ffffff;
+}
+
+.chatgpt-final {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 25px;
+}
+
+.chatgpt-final p {
+    margin-bottom: 25px;
+}
+
+.chatgpt-footer {
+    padding: 25px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #9290a5;
+    font-size: 0.85rem;
+}
+
+.chatgpt-footer a {
+    color: #0fbfb3;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+
+    .chatgpt-header {
+        padding: 18px 5%;
+    }
+
+    .chatgpt-main {
+        width: 90%;
+    }
+
+    .chatgpt-hero {
+        padding: 65px 5px 50px;
+    }
+
+    .chatgpt-content {
+        grid-template-columns: 1fr;
+    }
+
+    .chatgpt-uses {
+        grid-template-columns: 1fr;
+    }
+
+    .chatgpt-final {
+        grid-column: auto;
+    }
+
+    .chatgpt-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
