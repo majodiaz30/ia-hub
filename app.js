@@ -7,6 +7,7 @@
 // Colores válidos: purple, blue, orange, mint
 
 const herramientas = [
+
     {
         id: "chatgpt",
         nombre: "ChatGPT",
@@ -14,10 +15,63 @@ const herramientas = [
         inicial: "C",
         color: "purple",
         destacado: true,
-        etiquetas: ["escribir", "redactar", "estudiar", "programar", "preguntas", "asistente", "resumir", "ideas", "explicar"],
-        descripcion: "ChatGPT es un asistente de inteligencia artificial que permite redactar textos, resumir documentos, resolver dudas, aprender nuevos temas, generar ideas y recibir ayuda con programación y tareas cotidianas.",
+
+        etiquetas: [
+            "escribir",
+            "redactar",
+            "estudiar",
+            "programar",
+            "preguntas",
+            "asistente",
+            "resumir",
+            "ideas",
+            "explicar"
+        ],
+
+        descripcion: "ChatGPT es un asistente de inteligencia artificial desarrollado por OpenAI que permite conversar, resolver dudas, aprender nuevos temas, redactar textos y trabajar con diferentes tipos de contenido.",
+
+        queEs: "ChatGPT es una herramienta de inteligencia artificial diseñada para comprender instrucciones y generar respuestas mediante conversaciones. Puede ayudar en actividades académicas, creativas y profesionales.",
+
+        usos: [
+            {
+                titulo: "Estudiar y aprender",
+                descripcion: "Explica conceptos, desarrolla ejemplos, resume información y ayuda a comprender diferentes temas."
+            },
+            {
+                titulo: "Escribir y redactar",
+                descripcion: "Ayuda a crear textos, organizar ideas, corregir escritos y elaborar contenidos."
+            },
+            {
+                titulo: "Programar",
+                descripcion: "Explica código, ayuda a encontrar errores y propone soluciones de programación."
+            },
+            {
+                titulo: "Investigar",
+                descripcion: "Permite explorar temas, analizar información y organizar conocimientos."
+            }
+        ],
+
+        funciones: [
+            "Conversación con inteligencia artificial",
+            "Generación y corrección de textos",
+            "Análisis de archivos",
+            "Ayuda con programación",
+            "Generación de imágenes",
+            "Análisis de información",
+            "Búsqueda e investigación"
+        ],
+
+        ventajas: [
+            "Facilita el aprendizaje de diferentes temas.",
+            "Permite realizar distintas tareas desde una misma plataforma.",
+            "Se adapta a diferentes instrucciones y necesidades."
+        ],
+
+        disponibilidad: "Cuenta con una modalidad gratuita y diferentes planes de pago. Los límites y funciones disponibles dependen del plan.",
+
         enlace: "https://chatgpt.com"
     },
+
     {
         id: "gemini",
         nombre: "Gemini",
