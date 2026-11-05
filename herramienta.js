@@ -3,16 +3,6 @@
 const parametros = new URLSearchParams(window.location.search);
 const idHerramienta = parametros.get("id");
 
-// Obtener el catálogo guardado desde la página principal
-const herramientasGuardadas = localStorage.getItem("iahub-herramientas");
-
-const herramientas = herramientasGuardadas
-    ? JSON.parse(herramientasGuardadas)
-    : [];
-
-    console.log("Catálogo guardado:", herramientasGuardadas);
-console.log("Cantidad de herramientas:", herramientas.length);
-
 
 // Buscar la herramienta seleccionada
 const herramienta = herramientas.find(
@@ -24,6 +14,53 @@ const herramienta = herramientas.find(
 if (herramienta) {
 
     document.title = `${herramienta.nombre} | IA Hub`;
+
+    // ============================================
+    // SEO DINÁMICO PARA CADA HERRAMIENTA
+    // ============================================
+
+    const descripcionSEO = (
+        herramienta.queEs ||
+        herramienta.descripcion
+    ).substring(0, 155);
+
+    // Función para crear o actualizar etiquetas META
+    function actualizarMeta(nombre, contenido, atributo = "name") {
+        let meta = document.querySelector(`meta[${atributo}="${nombre}"]`);
+
+        if (!meta) {
+            meta = document.createElement("meta");
+            meta.setAttribute(atributo, nombre);
+            document.head.appendChild(meta);
+        }
+
+        meta.setAttribute("content", contenido);
+    }
+
+    // Descripción para Google
+    actualizarMeta("description", descripcionSEO);
+
+    // Open Graph para compartir enlaces
+    actualizarMeta("og:title", `${herramienta.nombre} | IA Hub`, "property");
+    actualizarMeta("og:description", descripcionSEO, "property");
+    actualizarMeta("og:type", "website", "property");
+    actualizarMeta("og:url", window.location.href, "property");
+
+    // Twitter
+    actualizarMeta("twitter:card", "summary");
+    actualizarMeta("twitter:title", `${herramienta.nombre} | IA Hub`);
+    actualizarMeta("twitter:description", descripcionSEO);
+
+    // URL canónica
+    let canonical = document.querySelector('link[rel="canonical"]');
+
+    if (!canonical) {
+        canonical = document.createElement("link");
+        canonical.rel = "canonical";
+        document.head.appendChild(canonical);
+    }
+
+    canonical.href = window.location.href;
 
     document.getElementById("herramienta-nombre").textContent =
         herramienta.nombre;
@@ -117,12 +154,12 @@ if (herramienta) {
     // Herramientas relacionadas
     const contenedorRelacionadas = document.getElementById(
         "herramientas-relacionadas"
-        
+
     );
 
     console.log("Herramientas relacionadas:", herramientas.length);
-console.log("Contenedor:", contenedorRelacionadas);
-console.log("Herramienta actual:", herramienta.nombre);
+    console.log("Contenedor:", contenedorRelacionadas);
+    console.log("Herramienta actual:", herramienta.nombre);
 
     const relacionadas = herramientas
         .filter(elemento =>
