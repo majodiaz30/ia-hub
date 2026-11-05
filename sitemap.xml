@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -7,16 +8,39 @@
         <priority>1.0</priority>
     </url>
 
-    <url>
-        <loc>https://ia-hub-bice.vercel.app/herramienta.html?id=chatgpt</loc>
-    </url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=chatgpt</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=gemini</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=claude</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=copilot</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=deepseek</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=grok</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=perplexity</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=notebooklm</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=elicit</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=gamma</loc></url>
 
-    <url>
-        <loc>https://ia-hub-bice.vercel.app/herramienta.html?id=gemini</loc>
-    </url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=canva</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=leonardo</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=firefly</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=ideogram</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=midjourney</loc></url>
 
-    <url>
-        <loc>https://ia-hub-bice.vercel.app/herramienta.html?id=claude</loc>
-    </url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=runway</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=capcut</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=kling</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=pika</loc></url>
+
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=github-copilot</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=cursor</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=windsurf</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=replit</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=lovable</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=bolt</loc></url>
+
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=elevenlabs</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=suno</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=udio</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=descript</loc></url>
+    <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=otter</loc></url>
 
 </urlset>
