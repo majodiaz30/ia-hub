@@ -72,28 +72,132 @@ const herramientas = [
         enlace: "https://chatgpt.com"
     },
 
+
     {
         id: "gemini",
         nombre: "Gemini",
-        categorias: ["Texto", "Estudio", "Programación"],
+        categorias: ["Texto", "Estudio", "Programación", "Imágenes"],
         inicial: "G",
         color: "blue",
         destacado: true,
-        etiquetas: ["escribir", "investigar", "estudiar", "programar", "google", "asistente", "resumir", "analizar"],
-        descripcion: "Gemini es el asistente de inteligencia artificial de Google. Ayuda a investigar temas, redactar contenido, comprender información, organizar ideas y resolver consultas relacionadas con el estudio y el trabajo.",
+
+        etiquetas: [
+            "asistente",
+            "investigar",
+            "estudiar",
+            "redactar",
+            "resumir",
+            "imágenes",
+            "programar",
+            "google"
+        ],
+
+        descripcion: "Gemini es el asistente de inteligencia artificial de Google que permite buscar información, crear contenido, analizar archivos y resolver diferentes tareas.",
+
+        queEs: "Gemini es una familia de modelos y un asistente de inteligencia artificial desarrollado por Google. Está diseñado para comprender distintos tipos de información y ayudar a realizar tareas mediante instrucciones.",
+
+        usos: [
+            {
+                titulo: "Estudiar",
+                descripcion: "Ayuda a explicar conceptos, resumir información y preparar actividades académicas."
+            },
+            {
+                titulo: "Investigar",
+                descripcion: "Permite explorar temas y consultar información con apoyo de las herramientas de Google."
+            },
+            {
+                titulo: "Crear contenido",
+                descripcion: "Ayuda a redactar textos, generar ideas y organizar información."
+            },
+            {
+                titulo: "Analizar información",
+                descripcion: "Puede trabajar con diferentes tipos de contenido y archivos compatibles."
+            }
+        ],
+
+        funciones: [
+            "Conversación con inteligencia artificial",
+            "Generación de textos",
+            "Análisis de imágenes",
+            "Comprensión de documentos",
+            "Ayuda con programación",
+            "Integración con servicios de Google"
+        ],
+
+        ventajas: [
+            "Se integra con diferentes servicios del ecosistema Google.",
+            "Permite trabajar con distintos tipos de información.",
+            "Ofrece herramientas para estudiar, investigar y crear contenido."
+        ],
+
+        disponibilidad: "Cuenta con acceso gratuito y planes de pago. Las funciones y los límites dependen del plan y la región.",
+
         enlace: "https://gemini.google.com"
     },
+
+
     {
         id: "claude",
         nombre: "Claude",
-        categorias: ["Texto", "Programación"],
+        categorias: ["Texto", "Estudio", "Programación"],
         inicial: "C",
         color: "orange",
-        destacado: false,
-        etiquetas: ["escribir", "redactar", "programar", "codigo", "analizar", "documentos", "asistente", "razonamiento"],
-        descripcion: "Claude es un asistente de inteligencia artificial de Anthropic que permite analizar documentos, redactar textos, resumir información, desarrollar ideas y recibir ayuda para escribir y comprender código.",
+        destacado: true,
+
+        etiquetas: [
+            "redactar",
+            "analizar",
+            "estudiar",
+            "programar",
+            "documentos",
+            "escribir",
+            "razonar",
+            "resumir"
+        ],
+
+        descripcion: "Claude es un asistente de inteligencia artificial desarrollado por Anthropic, orientado a la conversación, el análisis de información, la escritura y la programación.",
+
+        queEs: "Claude es una familia de modelos de inteligencia artificial de Anthropic. Su asistente permite interactuar mediante conversaciones y trabajar con textos, documentos y tareas complejas.",
+
+        usos: [
+            {
+                titulo: "Redactar textos",
+                descripcion: "Ayuda a escribir, corregir y mejorar documentos y diferentes contenidos."
+            },
+            {
+                titulo: "Analizar documentos",
+                descripcion: "Permite examinar información y extraer ideas importantes de archivos compatibles."
+            },
+            {
+                titulo: "Programar",
+                descripcion: "Ayuda a explicar código, revisar errores y desarrollar soluciones."
+            },
+            {
+                titulo: "Estudiar",
+                descripcion: "Explica conceptos y ayuda a organizar información para el aprendizaje."
+            }
+        ],
+
+        funciones: [
+            "Generación y corrección de textos",
+            "Análisis de documentos",
+            "Programación asistida",
+            "Resumen de información",
+            "Razonamiento y resolución de problemas",
+            "Conversación con inteligencia artificial"
+        ],
+
+        ventajas: [
+            "Es útil para trabajar con textos extensos.",
+            "Ayuda a organizar y analizar información.",
+            "Ofrece asistencia para escritura y programación."
+        ],
+
+        disponibilidad: "Ofrece una modalidad gratuita y planes de pago. Los límites y las funciones disponibles dependen del plan.",
+
         enlace: "https://claude.ai"
     },
+
     {
         id: "microsoft-copilot",
         nombre: "Microsoft Copilot",
