@@ -1600,3 +1600,186 @@ input:focus-visible {
     border-radius: 10px;
     flex-shrink: 0;
 }
+
+
+/* =====================================
+   CENTRO DE APRENDIZAJE - TUTORIALES
+===================================== */
+
+.tutorials-section {
+    padding: 100px 7%;
+    background: #0d0b1c;
+    position: relative;
+}
+
+.tutorials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tutorials-heading {
+    max-width: 680px;
+    margin-bottom: 45px;
+}
+
+.tutorials-heading h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #ffffff;
+    margin: 15px 0;
+}
+
+.tutorials-heading p {
+    color: #aaa7bd;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.tutorials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.tutorial-card {
+    background: #17142b;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 28px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(15, 191, 179, 0.5);
+}
+
+.tutorial-number {
+    color: #0fbfb3;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.tutorial-icon {
+    font-size: 2rem;
+    margin: 24px 0 18px;
+}
+
+.tutorial-category {
+    color: #0fbfb3;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.tutorial-card h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin: 12px 0;
+}
+
+.tutorial-card > p {
+    color: #aaa7bd;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    min-height: 90px;
+}
+
+.tutorial-details {
+    margin-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 18px;
+}
+
+.tutorial-details summary {
+    color: #0fbfb3;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tutorial-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.tutorial-details summary span {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.tutorial-details[open] summary span {
+    transform: rotate(45deg);
+}
+
+.tutorial-body {
+    padding-top: 22px;
+    color: #c1bed0;
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+.tutorial-body h4 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin: 20px 0 8px;
+}
+
+.tutorial-body p {
+    margin-bottom: 12px;
+}
+
+.tutorial-body ol {
+    padding-left: 20px;
+    margin: 12px 0;
+}
+
+.tutorial-body li {
+    margin-bottom: 8px;
+}
+
+.tutorial-body blockquote {
+    background: rgba(15, 191, 179, 0.08);
+    border-left: 3px solid #0fbfb3;
+    border-radius: 0 10px 10px 0;
+    padding: 14px;
+    margin: 12px 0;
+    color: #e3e0ef;
+}
+
+.tutorial-tip {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 18px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .tutorials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .tutorials-section {
+        padding: 70px 5%;
+    }
+
+    .tutorials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tutorial-card {
+        padding: 23px;
+    }
+
+    .tutorial-card > p {
+        min-height: auto;
+    }
+}
