@@ -1662,7 +1662,17 @@ input:focus-visible {
 }
 
 .tutorial-icon {
-    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(15, 191, 179, 0.10);
+    border: 1px solid rgba(15, 191, 179, 0.25);
+    color: #0fbfb3;
+    font-size: 1rem;
+    font-weight: 700;
     margin: 24px 0 18px;
 }
 
