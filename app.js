@@ -199,47 +199,191 @@ const herramientas = [
     },
 
     {
-        id: "microsoft-copilot",
+        id: "copilot",
         nombre: "Microsoft Copilot",
-        categorias: ["Texto", "Programación"],
+        categorias: ["Texto", "Estudio", "Programación", "Imágenes"],
         inicial: "M",
         color: "blue",
-        destacado: false,
-        etiquetas: ["asistente", "productividad", "texto", "programar", "microsoft", "investigar", "ideas"],
-        descripcion: "Microsoft Copilot es un asistente de inteligencia artificial que ayuda a responder preguntas, redactar contenido, generar ideas y realizar tareas de productividad dentro del ecosistema de Microsoft.",
-        enlace: "https://copilot.microsoft.com/"
+        destacado: true,
+        etiquetas: [
+            "asistente", "microsoft", "redactar", "estudiar",
+            "investigar", "imágenes", "productividad", "office"
+        ],
+        descripcion: "Microsoft Copilot es un asistente de inteligencia artificial que ayuda a buscar información, crear contenido, generar imágenes y realizar diferentes tareas.",
+        queEs: "Microsoft Copilot es un asistente de inteligencia artificial desarrollado por Microsoft. Permite interactuar mediante instrucciones y ofrece herramientas para trabajar, aprender y crear contenido.",
+        usos: [
+            {
+                titulo: "Crear contenido",
+                descripcion: "Ayuda a redactar textos, organizar ideas y preparar diferentes tipos de documentos."
+            },
+            {
+                titulo: "Buscar información",
+                descripcion: "Permite consultar temas, obtener explicaciones y explorar información."
+            },
+            {
+                titulo: "Generar imágenes",
+                descripcion: "Puede crear imágenes a partir de descripciones escritas."
+            },
+            {
+                titulo: "Mejorar la productividad",
+                descripcion: "Ayuda a organizar tareas y trabajar con herramientas del entorno Microsoft."
+            }
+        ],
+        funciones: [
+            "Conversación con inteligencia artificial",
+            "Generación y corrección de textos",
+            "Creación de imágenes",
+            "Búsqueda de información",
+            "Ayuda con programación",
+            "Integración con herramientas de Microsoft"
+        ],
+        ventajas: [
+            "Se integra con diferentes servicios de Microsoft.",
+            "Permite realizar tareas de escritura e investigación.",
+            "Ofrece herramientas para mejorar la productividad."
+        ],
+        disponibilidad: "Cuenta con acceso gratuito y opciones de pago. Las funciones disponibles dependen del producto, el plan y la cuenta utilizada.",
+        enlace: "https://copilot.microsoft.com"
     },
     {
         id: "deepseek",
         nombre: "DeepSeek",
-        categorias: ["Texto", "Programación"],
+        categorias: ["Texto", "Estudio", "Programación"],
         inicial: "D",
         color: "blue",
-        destacado: false,
-        etiquetas: ["asistente", "razonamiento", "texto", "programar", "codigo", "matematicas", "analisis"],
-        descripcion: "DeepSeek es una plataforma de inteligencia artificial útil para resolver preguntas, analizar problemas, trabajar con razonamiento, comprender conceptos y obtener asistencia en programación.",
-        enlace: "https://chat.deepseek.com/"
+        destacado: true,
+        etiquetas: [
+            "razonamiento", "programar", "estudiar", "resolver",
+            "analizar", "matemáticas", "código", "asistente"
+        ],
+        descripcion: "DeepSeek es una plataforma de inteligencia artificial que permite conversar, analizar información, resolver problemas y obtener ayuda con programación.",
+        queEs: "DeepSeek es una familia de modelos de inteligencia artificial desarrollada por la empresa china DeepSeek. Sus modelos están orientados a tareas como el razonamiento, la generación de texto y la programación.",
+        usos: [
+            {
+                titulo: "Programar",
+                descripcion: "Ayuda a escribir código, explicar instrucciones y encontrar posibles errores."
+            },
+            {
+                titulo: "Resolver problemas",
+                descripcion: "Permite desarrollar explicaciones y analizar problemas paso a paso."
+            },
+            {
+                titulo: "Estudiar",
+                descripcion: "Ayuda a comprender conceptos, resumir temas y practicar ejercicios."
+            },
+            {
+                titulo: "Analizar información",
+                descripcion: "Puede organizar datos, explicar textos y desarrollar respuestas sobre diferentes temas."
+            }
+        ],
+        funciones: [
+            "Generación de textos",
+            "Razonamiento y resolución de problemas",
+            "Programación asistida",
+            "Explicación de conceptos",
+            "Análisis de información",
+            "Conversación con inteligencia artificial"
+        ],
+        ventajas: [
+            "Es útil para tareas de razonamiento y programación.",
+            "Ofrece modelos de inteligencia artificial de código abierto.",
+            "Cuenta con acceso a través de su plataforma web."
+        ],
+        disponibilidad: "Ofrece acceso gratuito a través de su plataforma, aunque las condiciones y funciones pueden variar según el servicio utilizado.",
+        enlace: "https://www.deepseek.com"
     },
     {
         id: "grok",
         nombre: "Grok",
-        categorias: ["Texto"],
+        categorias: ["Texto", "Estudio", "Imágenes"],
         inicial: "G",
         color: "purple",
-        destacado: false,
-        etiquetas: ["asistente", "preguntas", "texto", "informacion", "ideas", "investigacion"],
-        descripcion: "Grok es un asistente de inteligencia artificial desarrollado por xAI. Permite explorar preguntas, generar contenido, analizar información y conversar sobre diferentes temas.",
-        enlace: "https://grok.com/"
+        destacado: true,
+        etiquetas: [
+            "asistente", "preguntas", "investigar", "actualidad",
+            "redactar", "imágenes", "analizar", "x"
+        ],
+        descripcion: "Grok es un asistente de inteligencia artificial desarrollado por xAI que permite conversar, investigar temas, generar contenido y analizar información.",
+        queEs: "Grok es un asistente de inteligencia artificial creado por xAI. Está diseñado para responder preguntas, ayudar con diferentes tareas y ofrecer herramientas de generación y análisis de contenido.",
+        usos: [
+            {
+                titulo: "Consultar información",
+                descripcion: "Permite realizar preguntas y obtener explicaciones sobre diferentes temas."
+            },
+            {
+                titulo: "Investigar actualidad",
+                descripcion: "Puede ayudar a explorar conversaciones y temas de actualidad disponibles en sus fuentes."
+            },
+            {
+                titulo: "Crear contenido",
+                descripcion: "Ayuda a redactar textos, desarrollar ideas y preparar contenido."
+            },
+            {
+                titulo: "Generar imágenes",
+                descripcion: "Ofrece herramientas para crear imágenes a partir de instrucciones."
+            }
+        ],
+        funciones: [
+            "Conversación con inteligencia artificial",
+            "Generación de textos",
+            "Búsqueda de información",
+            "Análisis de contenido",
+            "Generación de imágenes",
+            "Integración con el ecosistema de X"
+        ],
+        ventajas: [
+            "Permite explorar temas de actualidad.",
+            "Combina herramientas de conversación y creación de contenido.",
+            "Ofrece funciones para analizar información."
+        ],
+        disponibilidad: "Su acceso y sus límites dependen del plan, la región y las condiciones de la plataforma X.",
+        enlace: "https://grok.com"
     },
     {
         id: "perplexity",
         nombre: "Perplexity",
-        categorias: ["Estudio", "Texto"],
+        categorias: ["Texto", "Estudio"],
         inicial: "P",
-        color: "mint",
+        color: "teal",
         destacado: true,
-        etiquetas: ["estudiar", "investigar", "buscar", "fuentes", "preguntas", "buscador", "informacion"],
-        descripcion: "Perplexity es un buscador con inteligencia artificial que ayuda a investigar preguntas, encontrar información en internet y consultar fuentes para profundizar en temas académicos y profesionales.",
+        etiquetas: [
+            "investigar", "buscar", "fuentes", "estudiar",
+            "preguntas", "resumir", "información", "respuestas"
+        ],
+        descripcion: "Perplexity es un buscador con inteligencia artificial que permite investigar temas y obtener respuestas acompañadas de fuentes de información.",
+        queEs: "Perplexity es una plataforma de búsqueda e investigación basada en inteligencia artificial. Su objetivo es responder preguntas utilizando información de diferentes fuentes y mostrando referencias para consultar.",
+        usos: [
+            {
+                titulo: "Investigar temas",
+                descripcion: "Ayuda a explorar preguntas y encontrar información de diferentes fuentes."
+            },
+            {
+                titulo: "Consultar fuentes",
+                descripcion: "Presenta referencias que permiten revisar de dónde procede la información."
+            },
+            {
+                titulo: "Estudiar",
+                descripcion: "Permite comprender temas, obtener explicaciones y resumir información."
+            },
+            {
+                titulo: "Comparar información",
+                descripcion: "Ayuda a revisar diferentes perspectivas y organizar los resultados de una investigación."
+            }
+        ],
+        funciones: [
+            "Búsqueda de información con inteligencia artificial",
+            "Respuestas con referencias y fuentes",
+            "Resumen de información",
+            "Exploración de temas",
+            "Investigación asistida",
+            "Análisis de preguntas"
+        ],
+        ventajas: [
+            "Muestra fuentes para ampliar la investigación.",
+            "Facilita la búsqueda de información.",
+            "Permite obtener respuestas organizadas sobre distintos temas."
+        ],
+        disponibilidad: "Cuenta con una modalidad gratuita y opciones de pago. Las funciones y los límites dependen del plan.",
         enlace: "https://www.perplexity.ai"
     },
     {

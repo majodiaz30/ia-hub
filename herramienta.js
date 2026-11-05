@@ -78,9 +78,11 @@ if (herramienta) {
     const contenedorEtiquetas =
         document.getElementById("herramienta-etiquetas");
 
-    herramienta.etiquetas.forEach(etiqueta => {
+    const funciones = herramienta.funciones || herramienta.etiquetas || [];
+
+    funciones.forEach(funcion => {
         const elemento = document.createElement("span");
-        elemento.textContent = etiqueta;
+        elemento.textContent = funcion;
         contenedorEtiquetas.appendChild(elemento);
     });
 
@@ -88,23 +90,25 @@ if (herramienta) {
     const contenedorUsos =
         document.getElementById("herramienta-usos");
 
-    herramienta.etiquetas.slice(0, 4).forEach((uso, indice) => {
+    const usos = herramienta.usos || herramienta.etiquetas.slice(0, 4).map(uso => ({
+        titulo: uso.charAt(0).toUpperCase() + uso.slice(1),
+        descripcion: `Explora las posibilidades de ${herramienta.nombre} relacionadas con ${uso}.`
+    }));
 
+    usos.forEach((uso, indice) => {
         const bloque = document.createElement("div");
 
         const numero = document.createElement("span");
         numero.textContent = String(indice + 1).padStart(2, "0");
 
         const titulo = document.createElement("h3");
-        titulo.textContent = uso.charAt(0).toUpperCase() + uso.slice(1);
+        titulo.textContent = uso.titulo;
 
         const descripcion = document.createElement("p");
-        descripcion.textContent =
-            `Explora las posibilidades de ${herramienta.nombre} relacionadas con ${uso}.`;
+        descripcion.textContent = uso.descripcion;
 
         bloque.append(numero, titulo, descripcion);
         contenedorUsos.appendChild(bloque);
-
     });
 
 } else {
