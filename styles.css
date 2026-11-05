@@ -2147,3 +2147,57 @@ input:focus-visible {
         grid-template-columns: 1fr;
     }
 }
+
+/* SUGERENCIAS DEL BUSCADOR */
+
+.search-suggestions {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: #19172b;
+    border: 1px solid #302c49;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 100;
+    display: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.search-suggestions.active {
+    display: block;
+}
+
+.suggestion-item {
+    width: 100%;
+    padding: 13px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.suggestion-item:hover {
+    background: #29263f;
+}
+
+.suggestion-item img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.suggestion-item span {
+    font-size: 14px;
+}
+
+.suggestion-item strong {
+    color: #0fbfb3;
+    font-size: 11px;
+    margin-left: auto;
+}

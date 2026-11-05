@@ -1190,6 +1190,7 @@ localStorage.setItem(
 // Elementos del HTML
 const toolsGrid = document.getElementById("toolsGrid");
 const searchInput = document.getElementById("searchInput");
+const searchSuggestions = document.getElementById("searchSuggestions");
 const searchButton = document.getElementById("searchButton");
 const noResults = document.getElementById("noResults");
 const resultsCount = document.getElementById("resultsCount");
@@ -1395,6 +1396,67 @@ function obtenerResultados() {
     );
 
     return resultados.map(resultado => resultado.herramienta);
+}
+
+// Mostrar sugerencias mientras se escribe
+function mostrarSugerencias() {
+
+    const busqueda = normalizar(searchInput.value.trim());
+
+    searchSuggestions.innerHTML = "";
+
+    if (!busqueda) {
+        searchSuggestions.classList.remove("active");
+        return;
+    }
+
+    const sugerencias = herramientas
+        .filter(herramienta => {
+            const nombre = normalizar(herramienta.nombre);
+            const etiquetas = normalizar(herramienta.etiquetas.join(" "));
+            const categorias = normalizar(herramienta.categorias.join(" "));
+
+            return nombre.includes(busqueda) ||
+                etiquetas.includes(busqueda) ||
+                categorias.includes(busqueda);
+        })
+        .slice(0, 5);
+
+    if (sugerencias.length === 0) {
+        searchSuggestions.classList.remove("active");
+        return;
+    }
+
+    sugerencias.forEach(herramienta => {
+
+        const boton = document.createElement("button");
+        boton.type = "button";
+        boton.className = "suggestion-item";
+
+        const dominio = new URL(herramienta.enlace).hostname;
+
+        const imagen = document.createElement("img");
+        imagen.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(dominio)}&sz=64`;
+        imagen.alt = "";
+
+        const nombre = document.createElement("span");
+        nombre.textContent = herramienta.nombre;
+
+        const etiqueta = document.createElement("strong");
+        etiqueta.textContent = "VER";
+
+        boton.append(imagen, nombre, etiqueta);
+
+        boton.addEventListener("click", () => {
+            searchInput.value = herramienta.nombre;
+            searchSuggestions.classList.remove("active");
+            mostrarHerramientas();
+        });
+
+        searchSuggestions.appendChild(boton);
+    });
+
+    searchSuggestions.classList.add("active");
 }
 
 // Crear una tarjeta sin insertar texto del catálogo mediante HTML inseguro
@@ -1704,6 +1766,15 @@ searchInput.addEventListener("keydown", event => {
         mostrarHerramientas();
         irAlCatalogo();
     }
+});
+
+searchInput.addEventListener("input", mostrarSugerencias);
+document.addEventListener("click", (evento) => {
+
+    if (!evento.target.closest(".search-container")) {
+        searchSuggestions.classList.remove("active");
+    }
+
 });
 
 // Eventos de filtros
