@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Descubre las mejores herramientas de inteligencia artificial para estudiar, crear, escribir, diseñar, programar y trabajar. Encuentra la IA ideal en IA Hub.">
+
+    <meta name="keywords"
+        content="inteligencia artificial, herramientas IA, ChatGPT, Gemini, Claude, IA para estudiar, IA para diseñar">
+
+    <meta name="author" content="IA Hub">
+    <meta name="theme-color" content="#0d0b1c">
+
+    <!-- Título de la página -->
+    <title>IA Hub | Descubre herramientas de inteligencia artificial</title>
+
+    <!-- Vista previa al compartir en redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="IA Hub | Descubre herramientas de inteligencia artificial">
+    <meta property="og:description"
+        content="Explora herramientas de inteligencia artificial para estudiar, crear, diseñar, programar y mucho más.">
+    <meta property="og:site_name" content="IA Hub">
+
+    <!-- Vista previa para Twitter / X -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="IA Hub | Herramientas de inteligencia artificial">
+    <meta name="twitter:description" content="Encuentra herramientas de IA para estudiar, crear, diseñar y trabajar.">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a href="#inicio" class="logo" aria-label="IA Hub, inicio">
+                <img src="favicon.png" alt="" class="logo-image">
+                <span>IA <strong>Hub</strong></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#herramientas">Herramientas</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#tutoriales">Aprender</a></li>
+                <li><a href="#novedades">Novedades</a></li>
+            </ul>
+
+            <a href="#herramientas" class="nav-button">
+                Explorar IA <span>↗</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="eyebrow"><span class="eyebrow-dot"></span> EXPLORA EL UNIVERSO DE LA IA</span>
+                <h1>Encuentra la IA perfecta para <span>cada idea.</span></h1>
+                <p class="hero-description">
+                    Un espacio para descubrir herramientas de inteligencia artificial,
+                    potenciar tu creatividad y hacer más fácil tu día a día.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#herramientas" class="btn-primary">Descubrir herramientas <span>→</span></a>
+                    <a href="#categorias" class="btn-secondary">Explorar categorías</a>
+                </div>
+                <div class="hero-note">
+                    <span class="note-icon">✧</span>
+                    <span>Explora, compara y encuentra nuevas posibilidades.</span>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="visual-glow"></div>
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="orbit orbit-three"></div>
+                <div class="orbit-dot dot-one"></div>
+                <div class="orbit-dot dot-two"></div>
+                <div class="orbit-dot dot-three"></div>
+                <div class="ai-core">
+                    <span class="core-spark">✦</span>
+                    <span class="core-label">IA</span>
+                    <span class="core-caption">IDEAS SIN LÍMITES</span>
+                </div>
+                <div class="floating-card floating-card-top">
+                    <span class="floating-icon purple">✧</span>
+                    <span><strong>Creatividad</strong><small>Nuevas ideas</small></span>
+                </div>
+                <div class="floating-card floating-card-bottom">
+                    <span class="floating-icon mint">⌘</span>
+                    <span><strong>Productividad</strong><small>Más posibilidades</small></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section" id="herramientas">
+            <div class="search-inner">
+                <div class="search-heading">
+                    <span class="section-kicker">DIRECTORIO IA</span>
+                    <h2>¿Qué quieres crear hoy?</h2>
+                    <p>Busca por nombre, categoría o lo que necesitas hacer.</p>
+                </div>
+                <div class="search-box">
+                    <span class="search-symbol" aria-hidden="true">⌕</span>
+                    <input type="search" id="searchInput" placeholder="Ej. crear imágenes, estudiar, escribir..."
+                        aria-label="Buscar herramientas de IA" autocomplete="off">
+                    <button id="searchButton" type="button">Buscar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section" id="categorias">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">ENCUENTRA TU HERRAMIENTA</span>
+                    <h2>Explora por categorías</h2>
+                    <p>Elige lo que necesitas y descubre herramientas para conseguirlo.</p>
+                </div>
+            </div>
+            <div class="categories-grid">
+                <button type="button" class="category-card" data-category="Texto">
+                    <span class="category-icon icon-text">✎</span>
+                    <span class="category-copy"><strong>Escritura</strong><small>Textos, ideas y
+                            redacción</small></span>
+                    <span class="category-arrow">↗</span>
+                </button>
+                <button type="button" class="category-card" data-category="Imágenes">
+                    <span class="category-icon icon-image">▧</span>
+                    <span class="category-copy"><strong>Imágenes</strong><small>Diseño y creatividad
+                            visual</small></span>
+                    <span class="category-arrow">↗</span>
+                </button>
+                <button type="button" class="category-card" data-category="Video">
+                    <span class="category-icon icon-video">▷</span>
+                    <span class="category-copy"><strong>Video</strong><small>Creación y edición</small></span>
+                    <span class="category-arrow">↗</span>
+                </button>
+                <button type="button" class="category-card" data-category="Programación">
+                    <span class="category-icon icon-code">&lt;/&gt;</span>
+                    <span class="category-copy"><strong>Programación</strong><small>Código y desarrollo</small></span>
+                    <span class="category-arrow">↗</span>
+                </button>
+                <button type="button" class="category-card" data-category="Estudio">
+                    <span class="category-icon icon-study">▤</span>
+                    <span class="category-copy"><strong>Estudio</strong><small>Aprendizaje e
+                            investigación</small></span>
+                    <span class="category-arrow">↗</span>
+                </button>
+                <button type="button" class="category-card" data-category="Audio">
+                    <span class="category-icon icon-audio">♫</span>
+                    <span class="category-copy"><strong>Audio</strong><small>Voz y transcripción</small></span>
+                    <span class="category-arrow">↗</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="tools-section">
+            <div class="tools-heading">
+                <div>
+                    <span class="section-kicker">CATÁLOGO</span>
+                    <h2>Herramientas para descubrir</h2>
+                    <p>Una selección de plataformas para empezar a explorar.</p>
+                </div>
+                <button class="favorites-toggle" id="favoritesToggle" type="button" aria-pressed="false">
+                    <span>♡</span> Mis favoritos <span class="favorite-count" id="favoriteCount">0</span>
+                </button>
+            </div>
+
+            <div class="filter-row" aria-label="Filtros de herramientas">
+                <button class="filter-chip active" type="button" data-filter="Todas">Todas</button>
+                <button class="filter-chip" type="button" data-filter="Texto">Escritura</button>
+                <button class="filter-chip" type="button" data-filter="Imágenes">Imágenes</button>
+                <button class="filter-chip" type="button" data-filter="Video">Video</button>
+                <button class="filter-chip" type="button" data-filter="Programación">Programación</button>
+                <button class="filter-chip" type="button" data-filter="Estudio">Estudio</button>
+                <button class="filter-chip" type="button" data-filter="Audio">Audio</button>
+            </div>
+
+            <div class="results-info">
+                <span id="resultsCount">Mostrando herramientas</span>
+                <button id="clearFilters" class="clear-filters" type="button">Limpiar filtros</button>
+            </div>
+
+            <div class="tools-grid" id="toolsGrid" aria-live="polite"></div>
+            <div class="no-results" id="noResults" hidden>
+                <span>⌕</span>
+                <h3>No encontramos resultados</h3>
+                <p>Prueba con otro término o cambia los filtros.</p>
+                <button type="button" class="btn-secondary" id="resetSearch">Ver todas las herramientas</button>
+            </div>
+        </section>
+
+        <section class="news-section" id="novedades">
+            <div class="news-heading">
+                <div>
+                    <span class="section-kicker">EL UNIVERSO DE LA IA</span>
+                    <h2>Ideas y novedades para explorar</h2>
+                    <p>Descubre nuevas formas de aprovechar la inteligencia artificial.</p>
+                </div>
+                <span class="news-decoration">✦</span>
+            </div>
+
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-visual news-visual-purple">
+                        <span>✧</span>
+                        <small>01 / APRENDE</small>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">GUÍA PRÁCTICA</span>
+                        <h3>Aprende a aprovechar los asistentes de IA</h3>
+                        <p>Descubre cómo utilizar herramientas como ChatGPT, Gemini y Claude para organizar ideas y
+                            resolver tareas.</p>
+                        <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">Explorar ChatGPT ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-visual news-visual-mint">
+                        <span>▧</span>
+                        <small>02 / CREA</small>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">CREATIVIDAD</span>
+                        <h3>Convierte tus ideas en contenido visual</h3>
+                        <p>Explora herramientas que te ayudan a crear diseños, presentaciones e imágenes con
+                            inteligencia artificial.</p>
+                        <a href="https://www.canva.com" target="_blank" rel="noopener noreferrer">Explorar Canva ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-visual news-visual-blue">
+                        <span>⌘</span>
+                        <small>03 / DESCUBRE</small>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">PRODUCTIVIDAD</span>
+                        <h3>La IA como apoyo para estudiar</h3>
+                        <p>Conoce opciones para investigar, resumir documentos y organizar mejor tus materiales de
+                            estudio.</p>
+                        <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">Explorar
+                            NotebookLM ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="learning-section" id="tutoriales">
+            <div class="learning-decoration" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span></div>
+            <div class="learning-content">
+                <span class="section-kicker">APRENDE ALGO NUEVO</span>
+                <h2>La inteligencia artificial también se aprende.</h2>
+                <p>Estamos preparando guías sencillas, recomendaciones y consejos para ayudarte a aprovechar mejor estas
+                    herramientas.</p>
+                <a href="#novedades" class="btn-primary">
+                    Quiero conocer las novedades <span>→</span>
+                </a>
+            </div>
+            <div class="learning-side">
+                <div class="learning-mini-card"><span>01</span>
+                    <div><strong>Guías prácticas</strong><small>Aprende paso a paso</small></div><b>↗</b>
+                </div>
+                <div class="learning-mini-card"><span>02</span>
+                    <div><strong>Consejos de IA</strong><small>Descubre nuevas ideas</small></div><b>↗</b>
+                </div>
+                <div class="learning-mini-card"><span>03</span>
+                    <div><strong>Herramientas útiles</strong><small>Encuentra tu próxima favorita</small></div><b>↗</b>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="#inicio" class="logo"><span class="logo-mark">✦</span><span>IA <strong>Hub</strong></span></a>
+                <p>Descubre herramientas. Despierta ideas.<br>Explora todo lo que la IA puede hacer.</p>
+            </div>
+            <div class="footer-links">
+                <div><strong>Explorar</strong><a href="#herramientas">Herramientas</a><a
+                        href="#categorias">Categorías</a><a href="#tutoriales">Aprender</a></div>
+                <div><strong>IA Hub</strong><a href="mailto:hola@iahub.com">Contacto</a><a
+                        href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 IA Hub. Todos los derechos reservados.</span>
+            <span>Hecho para explorar nuevas ideas <b>✦</b></span>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
