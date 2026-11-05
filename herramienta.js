@@ -10,6 +10,9 @@ const herramientas = herramientasGuardadas
     ? JSON.parse(herramientasGuardadas)
     : [];
 
+    console.log("Catálogo guardado:", herramientasGuardadas);
+console.log("Cantidad de herramientas:", herramientas.length);
+
 
 // Buscar la herramienta seleccionada
 const herramienta = herramientas.find(
