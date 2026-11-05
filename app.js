@@ -1242,13 +1242,75 @@ function actualizarContadorFavoritos() {
     favoritesToggle.setAttribute("aria-pressed", String(mostrarSoloFavoritos));
 }
 
+// Palabras relacionadas para mejorar las búsquedas
+const palabrasRelacionadas = {
+    imagenes: [
+        "imagen", "imagenes", "dibujar", "dibujo",
+        "ilustracion", "ilustraciones", "arte", "foto",
+        "fotografia", "diseño", "diseno", "logo"
+    ],
+
+    video: [
+        "video", "videos", "animacion", "animaciones",
+        "editar video", "peliculas", "clips"
+    ],
+
+    audio: [
+        "audio", "voz", "voces", "musica", "canciones",
+        "sonido", "podcast", "locucion"
+    ],
+
+    programacion: [
+        "programar", "codigo", "codificar", "desarrollo",
+        "desarrollar", "programacion", "software",
+        "pagina web", "aplicacion"
+    ],
+
+    estudio: [
+        "estudiar", "estudio", "aprender", "aprendizaje",
+        "tareas", "investigar", "investigacion",
+        "resumen", "resumir", "apuntes"
+    ],
+
+    texto: [
+        "escribir", "redactar", "texto", "documentos",
+        "ensayos", "correos", "articulos", "contenido"
+    ]
+};
+
+
+// Identificar las categorías relacionadas con una búsqueda
+function obtenerCategoriasRelacionadas(terminos) {
+
+    const categorias = [];
+
+    Object.entries(palabrasRelacionadas).forEach(([categoria, palabras]) => {
+
+        const coincide = terminos.some(termino =>
+            palabras.some(palabra => palabra.includes(termino) ||
+                termino.includes(palabra))
+        );
+
+        if (coincide) {
+            categorias.push(categoria);
+        }
+
+    });
+
+    return categorias;
+}
+
 // Obtener herramientas según búsqueda, categoría y favoritos
 function obtenerResultados() {
+
     const terminos = normalizar(searchInput.value)
         .split(/[\s,]+/)
         .filter(Boolean);
 
     const categoriaBuscada = normalizar(categoriaActual);
+
+    const categoriasRelacionadas =
+        obtenerCategoriasRelacionadas(terminos);
 
     const resultados = [];
 
@@ -1277,7 +1339,6 @@ function obtenerResultados() {
             descripcion
         ].join(" ");
 
-        // Si no hay búsqueda, mostrar todos los resultados
         if (terminos.length === 0) {
             resultados.push({
                 herramienta,
@@ -1286,16 +1347,9 @@ function obtenerResultados() {
             return;
         }
 
-        // Todas las palabras deben coincidir
-        const coincideTodo = terminos.every(termino =>
-            textoCompleto.includes(termino)
-        );
-
-        if (!coincideTodo) return;
-
-        // Dar mayor prioridad a las coincidencias más importantes
         let puntuacion = 0;
 
+        // Coincidencias de palabras escritas
         terminos.forEach(termino => {
 
             if (nombre.includes(termino)) {
@@ -1316,13 +1370,26 @@ function obtenerResultados() {
 
         });
 
+        // Coincidencias por categorías relacionadas
+        categoriasRelacionadas.forEach(categoria => {
+
+            if (herramienta.categorias.some(c =>
+                normalizar(c) === categoria
+            )) {
+                puntuacion += 8;
+            }
+
+        });
+
+        if (puntuacion === 0) return;
+
         resultados.push({
             herramienta,
             puntuacion
         });
+
     });
 
-    // Mostrar primero las herramientas más relacionadas
     resultados.sort((a, b) =>
         b.puntuacion - a.puntuacion
     );
