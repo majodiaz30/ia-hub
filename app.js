@@ -339,6 +339,12 @@ const herramientas = [
     }
 ];
 
+// Guardar el catálogo para utilizarlo en las páginas individuales
+localStorage.setItem(
+    "iahub-herramientas",
+    JSON.stringify(herramientas)
+);
+
 
 // Elementos del HTML
 const toolsGrid = document.getElementById("toolsGrid");
@@ -571,13 +577,7 @@ function crearTarjeta(herramienta) {
     botonDetalles.textContent = "Ver detalles";
 
     botonDetalles.addEventListener("click", () => {
-
-        if (herramienta.id === "chatgpt") {
-            window.location.href = "chatgpt.html";
-        } else {
-            mostrarDetalle(herramienta, botonDetalles);
-        }
-
+        window.location.href = `herramienta.html?id=${encodeURIComponent(herramienta.id)}`;
     });
     acciones.append(enlace, botonDetalles, botonFavorito);
     tarjeta.append(top, titulo, descripcion, acciones);
