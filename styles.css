@@ -2070,3 +2070,80 @@ input:focus-visible {
         text-align: center;
     }
 }
+
+/* VENTAJAS DE LAS HERRAMIENTAS */
+
+.detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail-list p {
+    margin: 0;
+    padding: 13px 15px;
+    background: #242139;
+    border-left: 3px solid #0fbfb3;
+    border-radius: 6px;
+}
+
+/* HERRAMIENTAS RELACIONADAS */
+
+.chatgpt-related {
+    width: min(1100px, 90%);
+    margin: 70px auto;
+}
+
+.chatgpt-related .chatgpt-section-title {
+    margin-bottom: 30px;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.related-card {
+    padding: 22px;
+    background: #19172b;
+    border: 1px solid #302c49;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    border-color: #0fbfb3;
+}
+
+.related-card h3 {
+    color: #ffffff;
+    margin: 12px 0 8px;
+}
+
+.related-card p {
+    color: #aaa6bd;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.related-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0fbfb3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.related-card img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}

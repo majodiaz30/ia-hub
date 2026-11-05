@@ -111,6 +111,52 @@ if (herramienta) {
         contenedorUsos.appendChild(bloque);
     });
 
+    // Herramientas relacionadas
+    const contenedorRelacionadas = document.getElementById(
+        "herramientas-relacionadas"
+    );
+
+    const relacionadas = herramientas
+        .filter(elemento =>
+            elemento.id !== herramienta.id &&
+            elemento.categorias.some(categoria =>
+                herramienta.categorias.includes(categoria)
+            )
+        )
+        .slice(0, 3);
+
+    relacionadas.forEach(relacionada => {
+        const tarjeta = document.createElement("article");
+        tarjeta.className = "related-card";
+
+        const dominioRelacionado = new URL(relacionada.enlace).hostname;
+
+        const logoRelacionado = document.createElement("img");
+        logoRelacionado.src =
+            `https://www.google.com/s2/favicons?domain=${encodeURIComponent(dominioRelacionado)}&sz=128`;
+        logoRelacionado.alt = `Logo de ${relacionada.nombre}`;
+
+        const nombreRelacionado = document.createElement("h3");
+        nombreRelacionado.textContent = relacionada.nombre;
+
+        const descripcionRelacionada = document.createElement("p");
+        descripcionRelacionada.textContent = relacionada.descripcion;
+
+        const enlaceRelacionado = document.createElement("a");
+        enlaceRelacionado.href =
+            `herramienta.html?id=${encodeURIComponent(relacionada.id)}`;
+        enlaceRelacionado.textContent = "Conocer herramienta →";
+
+        tarjeta.append(
+            logoRelacionado,
+            nombreRelacionado,
+            descripcionRelacionada,
+            enlaceRelacionado
+        );
+
+        contenedorRelacionadas.appendChild(tarjeta);
+    });
+
 } else {
 
     // Si no existe la herramienta, mostrar un mensaje
