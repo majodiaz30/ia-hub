@@ -389,45 +389,190 @@ const herramientas = [
     {
         id: "notebooklm",
         nombre: "NotebookLM",
-        categorias: ["Estudio", "Audio"],
+        categorias: ["Estudio", "Texto"],
         inicial: "N",
         color: "blue",
-        destacado: false,
-        etiquetas: ["estudiar", "resumir", "documentos", "investigar", "apuntes", "podcast", "fuentes", "aprendizaje"],
-        descripcion: "NotebookLM es un asistente de investigación de Google que trabaja con las fuentes que proporcionas. Permite resumir documentos, organizar información, responder preguntas y generar resúmenes de audio.",
+        destacado: true,
+        etiquetas: [
+            "estudiar", "investigar", "documentos", "resumir",
+            "notas", "fuentes", "aprender", "google"
+        ],
+        descripcion: "NotebookLM es una herramienta de Google que utiliza inteligencia artificial para analizar documentos, resumir información y ayudar en el aprendizaje.",
+        queEs: "NotebookLM es un asistente de investigación y aprendizaje desarrollado por Google. Trabaja con las fuentes que proporciona el usuario para responder preguntas y organizar información.",
+        usos: [
+            {
+                titulo: "Estudiar con documentos",
+                descripcion: "Permite cargar documentos y utilizarlos como material de estudio."
+            },
+            {
+                titulo: "Crear resúmenes",
+                descripcion: "Ayuda a identificar las ideas principales y organizar la información."
+            },
+            {
+                titulo: "Resolver preguntas",
+                descripcion: "Responde preguntas basándose en las fuentes agregadas al cuaderno."
+            },
+            {
+                titulo: "Preparar material de estudio",
+                descripcion: "Permite generar guías, preguntas frecuentes y otros recursos de aprendizaje."
+            }
+        ],
+        funciones: [
+            "Análisis de documentos",
+            "Resúmenes de fuentes",
+            "Respuestas basadas en documentos",
+            "Generación de guías de estudio",
+            "Creación de resúmenes de audio",
+            "Organización de fuentes"
+        ],
+        ventajas: [
+            "Trabaja directamente con las fuentes proporcionadas.",
+            "Facilita la comprensión de documentos extensos.",
+            "Ayuda a organizar materiales de investigación y estudio."
+        ],
+        disponibilidad: "Cuenta con acceso gratuito y opciones de planes superiores. Los límites y funciones dependen del plan y la región.",
         enlace: "https://notebooklm.google.com"
     },
     {
         id: "elicit",
         nombre: "Elicit",
-        categorias: ["Estudio"],
+        categorias: ["Estudio", "Texto"],
         inicial: "E",
-        color: "mint",
+        color: "teal",
         destacado: false,
-        etiquetas: ["investigacion", "estudio", "articulos", "papers", "ciencia", "academico", "fuentes"],
-        descripcion: "Elicit es una herramienta de investigación académica con inteligencia artificial que ayuda a encontrar artículos científicos, revisar publicaciones y organizar información para trabajos e investigaciones.",
-        enlace: "https://elicit.com/"
+        etiquetas: [
+            "investigación", "artículos", "estudios", "ciencia",
+            "fuentes", "resumir", "universidad", "academia"
+        ],
+        descripcion: "Elicit es una herramienta de inteligencia artificial orientada a la investigación académica y al análisis de artículos científicos.",
+        queEs: "Elicit es una plataforma de investigación que utiliza inteligencia artificial para encontrar, analizar y organizar información de publicaciones científicas.",
+        usos: [
+            {
+                titulo: "Buscar artículos científicos",
+                descripcion: "Ayuda a encontrar investigaciones relacionadas con una pregunta o tema académico."
+            },
+            {
+                titulo: "Analizar estudios",
+                descripcion: "Permite revisar información importante de diferentes publicaciones científicas."
+            },
+            {
+                titulo: "Comparar investigaciones",
+                descripcion: "Ayuda a organizar resultados y comparar información entre distintos artículos."
+            },
+            {
+                titulo: "Preparar revisiones bibliográficas",
+                descripcion: "Facilita la recopilación y organización de literatura académica."
+            }
+        ],
+        funciones: [
+            "Búsqueda de literatura científica",
+            "Análisis de artículos académicos",
+            "Extracción de información",
+            "Comparación de estudios",
+            "Organización de investigaciones",
+            "Apoyo en revisiones bibliográficas"
+        ],
+        ventajas: [
+            "Está orientado a la investigación académica.",
+            "Facilita la revisión de múltiples publicaciones.",
+            "Ayuda a organizar información científica."
+        ],
+        disponibilidad: "Ofrece acceso gratuito con límites y planes de pago para funciones adicionales. Las condiciones pueden cambiar.",
+        enlace: "https://elicit.com"
     },
     {
         id: "gamma",
         nombre: "Gamma",
-        categorias: ["Estudio", "Imágenes"],
+        categorias: ["Texto", "Imágenes"],
         inicial: "G",
         color: "purple",
-        destacado: false,
-        etiquetas: ["presentaciones", "diapositivas", "documentos", "diseño", "exposiciones", "trabajos"],
-        descripcion: "Gamma permite crear presentaciones, documentos y páginas visuales a partir de ideas o instrucciones de texto. Es una opción para preparar exposiciones, proyectos y materiales de trabajo.",
-        enlace: "https://gamma.app/"
+        destacado: true,
+        etiquetas: [
+            "presentaciones", "diapositivas", "diseño", "documentos",
+            "exposiciones", "plantillas", "crear", "contenido"
+        ],
+        descripcion: "Gamma es una herramienta de inteligencia artificial que permite crear presentaciones, documentos y páginas visuales a partir de instrucciones.",
+        queEs: "Gamma es una plataforma de creación de contenido visual que utiliza inteligencia artificial para transformar ideas y textos en presentaciones y documentos organizados.",
+        usos: [
+            {
+                titulo: "Crear presentaciones",
+                descripcion: "Genera diapositivas organizadas a partir de un tema o una descripción."
+            },
+            {
+                titulo: "Preparar exposiciones",
+                descripcion: "Ayuda a estructurar contenidos para trabajos académicos y presentaciones."
+            },
+            {
+                titulo: "Diseñar documentos",
+                descripcion: "Permite crear documentos visuales con diferentes diseños y estilos."
+            },
+            {
+                titulo: "Compartir contenido",
+                descripcion: "Facilita la publicación y presentación de materiales digitales."
+            }
+        ],
+        funciones: [
+            "Generación de presentaciones",
+            "Creación de documentos visuales",
+            "Diseños y plantillas",
+            "Generación de contenido con IA",
+            "Edición de diapositivas",
+            "Compartir proyectos"
+        ],
+        ventajas: [
+            "Permite crear presentaciones en menos tiempo.",
+            "Ofrece diseños visuales personalizables.",
+            "Ayuda a organizar ideas y contenidos."
+        ],
+        disponibilidad: "Cuenta con un plan gratuito y planes de pago. Los créditos y las funciones disponibles dependen del plan.",
+        enlace: "https://gamma.app"
     },
     {
         id: "canva",
         nombre: "Canva",
-        categorias: ["Imágenes"],
-        inicial: "Ca",
+        categorias: ["Imágenes", "Video", "Texto"],
+        inicial: "C",
         color: "blue",
         destacado: true,
-        etiquetas: ["imagenes", "diseño", "presentaciones", "redes sociales", "ilustraciones", "plantillas", "carteles"],
-        descripcion: "Canva es una plataforma de diseño gráfico que incorpora funciones de inteligencia artificial para crear presentaciones, publicaciones para redes sociales, imágenes, carteles y otros recursos visuales.",
+        etiquetas: [
+            "diseño", "imágenes", "presentaciones", "videos",
+            "publicaciones", "plantillas", "creatividad", "redes sociales"
+        ],
+        descripcion: "Canva es una plataforma de diseño gráfico que incorpora herramientas de inteligencia artificial para crear imágenes, presentaciones, videos y contenido visual.",
+        queEs: "Canva es una plataforma de diseño y comunicación visual que permite crear diferentes materiales digitales mediante plantillas, herramientas de edición y funciones de inteligencia artificial.",
+        usos: [
+            {
+                titulo: "Diseñar publicaciones",
+                descripcion: "Permite crear contenido visual para redes sociales y otros medios digitales."
+            },
+            {
+                titulo: "Crear presentaciones",
+                descripcion: "Ofrece plantillas y herramientas para preparar diapositivas y exposiciones."
+            },
+            {
+                titulo: "Editar imágenes",
+                descripcion: "Incluye herramientas para modificar imágenes y aplicar efectos visuales."
+            },
+            {
+                titulo: "Crear videos",
+                descripcion: "Permite diseñar y editar videos utilizando recursos y plantillas."
+            }
+        ],
+        funciones: [
+            "Diseño gráfico",
+            "Generación de imágenes con IA",
+            "Edición de fotografías",
+            "Creación de presentaciones",
+            "Edición de videos",
+            "Plantillas personalizables",
+            "Herramientas de escritura con IA"
+        ],
+        ventajas: [
+            "Cuenta con una gran variedad de plantillas.",
+            "Permite crear diferentes tipos de contenido desde una misma plataforma.",
+            "Ofrece herramientas de diseño fáciles de utilizar."
+        ],
+        disponibilidad: "Cuenta con una versión gratuita y planes de pago como Canva Pro y Canva para equipos. Algunas herramientas de IA tienen límites de uso.",
         enlace: "https://www.canva.com"
     },
     {
@@ -437,19 +582,60 @@ const herramientas = [
         inicial: "L",
         color: "purple",
         destacado: false,
-        etiquetas: ["imagenes", "diseño", "ilustraciones", "arte", "generador", "creatividad", "recursos visuales"],
-        descripcion: "Leonardo AI es una herramienta de generación de imágenes con inteligencia artificial. Permite crear ilustraciones, conceptos visuales y recursos gráficos a partir de descripciones escritas.",
+        etiquetas: ["imágenes", "arte", "ilustración", "diseño", "personajes", "creatividad", "modelos"],
+        descripcion: "Leonardo AI es una plataforma de inteligencia artificial especializada en la generación de imágenes y recursos visuales.",
+        queEs: "Leonardo AI es una herramienta creativa que permite generar imágenes y elementos visuales a partir de descripciones escritas.",
+        usos: [
+            { titulo: "Crear imágenes", descripcion: "Genera imágenes a partir de instrucciones y descripciones de texto." },
+            { titulo: "Diseñar personajes", descripcion: "Permite crear personajes y conceptos visuales para proyectos creativos." },
+            { titulo: "Crear ilustraciones", descripcion: "Ayuda a producir ilustraciones digitales con diferentes estilos." },
+            { titulo: "Desarrollar recursos visuales", descripcion: "Permite crear elementos gráficos para proyectos y diseños." }
+        ],
+        funciones: [
+            "Generación de imágenes con IA",
+            "Creación de ilustraciones",
+            "Generación de personajes",
+            "Edición de imágenes",
+            "Personalización de estilos visuales"
+        ],
+        ventajas: [
+            "Ofrece diferentes estilos para crear imágenes.",
+            "Permite experimentar con ideas visuales.",
+            "Incluye herramientas para editar y personalizar resultados."
+        ],
+        disponibilidad: "Cuenta con acceso gratuito limitado y planes de pago con funciones y créditos adicionales.",
         enlace: "https://leonardo.ai"
     },
     {
-        id: "adobe-firefly",
+        id: "firefly",
         nombre: "Adobe Firefly",
-        categorias: ["Imágenes"],
+        categorias: ["Imágenes", "Video"],
         inicial: "A",
         color: "orange",
         destacado: false,
-        etiquetas: ["imagenes", "diseño", "generar", "editar", "creatividad", "adobe", "fotografia"],
-        descripcion: "Adobe Firefly reúne herramientas generativas para crear y editar imágenes y otros recursos visuales. Permite experimentar con ideas creativas mediante instrucciones de texto.",
+        etiquetas: ["imágenes", "diseño", "edición", "fotografía", "efectos", "creatividad", "adobe"],
+        descripcion: "Adobe Firefly es una familia de herramientas de inteligencia artificial de Adobe para generar y editar imágenes y contenido visual.",
+        queEs: "Adobe Firefly es una plataforma creativa que utiliza inteligencia artificial generativa para ayudar a crear y modificar contenido visual.",
+        usos: [
+            { titulo: "Generar imágenes", descripcion: "Crea imágenes a partir de descripciones escritas." },
+            { titulo: "Editar fotografías", descripcion: "Permite modificar imágenes y agregar o eliminar elementos." },
+            { titulo: "Crear efectos visuales", descripcion: "Ayuda a aplicar efectos y transformar elementos gráficos." },
+            { titulo: "Diseñar contenido", descripcion: "Facilita la creación de recursos visuales para proyectos creativos." }
+        ],
+        funciones: [
+            "Generación de imágenes",
+            "Relleno generativo",
+            "Expansión de imágenes",
+            "Efectos de texto",
+            "Edición de contenido visual",
+            "Generación de recursos creativos"
+        ],
+        ventajas: [
+            "Se integra con herramientas del ecosistema Adobe.",
+            "Facilita la edición y creación de imágenes.",
+            "Ofrece diferentes opciones para experimentar visualmente."
+        ],
+        disponibilidad: "Ofrece acceso con créditos generativos y diferentes planes. La disponibilidad depende del producto y la suscripción.",
         enlace: "https://firefly.adobe.com"
     },
     {
@@ -457,11 +643,31 @@ const herramientas = [
         nombre: "Ideogram",
         categorias: ["Imágenes"],
         inicial: "I",
-        color: "purple",
+        color: "blue",
         destacado: false,
-        etiquetas: ["imagenes", "diseño", "creatividad", "carteles", "texto en imagen", "ilustraciones"],
-        descripcion: "Ideogram es una herramienta de inteligencia artificial para generar imágenes a partir de descripciones. Puede utilizarse para crear carteles, composiciones gráficas, ilustraciones y diseños con texto integrado.",
-        enlace: "https://ideogram.ai/"
+        etiquetas: ["imágenes", "diseño", "tipografía", "logotipos", "carteles", "ilustración", "creatividad"],
+        descripcion: "Ideogram es una herramienta de inteligencia artificial enfocada en la generación de imágenes y diseños visuales a partir de texto.",
+        queEs: "Ideogram es una plataforma de generación de imágenes que destaca por sus capacidades para incorporar texto y elementos tipográficos en composiciones visuales.",
+        usos: [
+            { titulo: "Crear carteles", descripcion: "Permite generar diseños visuales para anuncios y carteles." },
+            { titulo: "Diseñar logotipos", descripcion: "Ayuda a explorar conceptos gráficos para identidades visuales." },
+            { titulo: "Crear imágenes con texto", descripcion: "Genera composiciones que combinan ilustraciones y elementos escritos." },
+            { titulo: "Desarrollar ideas visuales", descripcion: "Permite experimentar con estilos y conceptos creativos." }
+        ],
+        funciones: [
+            "Generación de imágenes",
+            "Creación de diseños tipográficos",
+            "Generación de carteles",
+            "Edición de imágenes",
+            "Exploración de estilos visuales"
+        ],
+        ventajas: [
+            "Destaca en la creación de imágenes con texto.",
+            "Permite generar diferentes propuestas de diseño.",
+            "Es útil para proyectos gráficos y creativos."
+        ],
+        disponibilidad: "Cuenta con acceso gratuito limitado y planes de pago con mayores capacidades.",
+        enlace: "https://ideogram.ai"
     },
     {
         id: "midjourney",
@@ -470,19 +676,60 @@ const herramientas = [
         inicial: "M",
         color: "purple",
         destacado: false,
-        etiquetas: ["imagenes", "arte", "diseño", "ilustraciones", "generador", "creatividad"],
-        descripcion: "Midjourney es una plataforma de generación de imágenes mediante inteligencia artificial. Permite transformar descripciones escritas en composiciones artísticas, ilustraciones y conceptos visuales.",
-        enlace: "https://www.midjourney.com/"
+        etiquetas: ["imágenes", "arte", "ilustración", "fotografía", "diseño", "creatividad", "estilos"],
+        descripcion: "Midjourney es una herramienta de inteligencia artificial reconocida por generar imágenes artísticas y visuales a partir de instrucciones escritas.",
+        queEs: "Midjourney es una plataforma de generación de imágenes mediante inteligencia artificial que permite transformar descripciones en composiciones visuales.",
+        usos: [
+            { titulo: "Crear arte digital", descripcion: "Genera composiciones artísticas con diferentes estilos." },
+            { titulo: "Diseñar conceptos", descripcion: "Ayuda a representar ideas para proyectos creativos." },
+            { titulo: "Crear ilustraciones", descripcion: "Permite desarrollar imágenes e ilustraciones digitales." },
+            { titulo: "Explorar estilos", descripcion: "Facilita experimentar con diferentes estilos y propuestas visuales." }
+        ],
+        funciones: [
+            "Generación de imágenes",
+            "Personalización de estilos",
+            "Variaciones de imágenes",
+            "Edición y modificación visual",
+            "Exploración de conceptos artísticos"
+        ],
+        ventajas: [
+            "Permite crear imágenes con gran variedad de estilos.",
+            "Es útil para explorar conceptos artísticos.",
+            "Ofrece opciones para personalizar los resultados."
+        ],
+        disponibilidad: "Funciona mediante planes de suscripción. Las funciones y límites dependen del plan contratado.",
+        enlace: "https://www.midjourney.com"
     },
     {
         id: "runway",
         nombre: "Runway",
         categorias: ["Video", "Imágenes"],
         inicial: "R",
-        color: "mint",
-        destacado: true,
-        etiquetas: ["videos", "edicion", "audiovisual", "generar video", "animacion", "efectos", "creatividad"],
-        descripcion: "Runway es una plataforma creativa con inteligencia artificial para generar y editar contenido audiovisual. Incluye herramientas para experimentar con videos, imágenes y efectos visuales.",
+        color: "purple",
+        destacado: false,
+        etiquetas: ["video", "edición", "animación", "efectos", "generación", "cine", "creatividad"],
+        descripcion: "Runway es una plataforma de inteligencia artificial especializada en la generación y edición de videos y contenido visual.",
+        queEs: "Runway es una herramienta creativa que utiliza modelos de inteligencia artificial para producir, transformar y editar contenido audiovisual.",
+        usos: [
+            { titulo: "Generar videos", descripcion: "Permite crear clips de video a partir de descripciones e imágenes." },
+            { titulo: "Editar contenido", descripcion: "Ofrece herramientas para modificar y mejorar videos." },
+            { titulo: "Crear efectos visuales", descripcion: "Ayuda a transformar escenas y desarrollar efectos audiovisuales." },
+            { titulo: "Producir contenido creativo", descripcion: "Facilita la creación de material audiovisual para proyectos." }
+        ],
+        funciones: [
+            "Generación de video con IA",
+            "Conversión de texto a video",
+            "Conversión de imagen a video",
+            "Edición audiovisual",
+            "Efectos visuales",
+            "Herramientas de creación multimedia"
+        ],
+        ventajas: [
+            "Combina generación y edición de contenido audiovisual.",
+            "Ofrece herramientas para experimentar con videos.",
+            "Facilita la producción de contenido creativo."
+        ],
+        disponibilidad: "Cuenta con acceso limitado y planes de pago. Los créditos y las funciones dependen de la suscripción.",
         enlace: "https://runwayml.com"
     },
     {
@@ -490,43 +737,125 @@ const herramientas = [
         nombre: "CapCut",
         categorias: ["Video"],
         inicial: "C",
-        color: "blue",
+        color: "teal",
         destacado: false,
-        etiquetas: ["videos", "edicion", "subtitulos", "redes sociales", "efectos", "contenido"],
-        descripcion: "CapCut es un editor de video que incorpora funciones inteligentes para editar clips, añadir subtítulos, aplicar efectos y preparar contenido audiovisual para redes sociales.",
+        etiquetas: ["video", "edición", "subtítulos", "efectos", "redes sociales", "audio", "contenido"],
+        descripcion: "CapCut es un editor de video que incorpora herramientas de inteligencia artificial para facilitar la creación de contenido audiovisual.",
+        queEs: "CapCut es una plataforma de edición de video que permite crear y modificar contenido mediante herramientas de edición tradicionales y funciones basadas en inteligencia artificial.",
+        usos: [
+            { titulo: "Editar videos", descripcion: "Permite cortar, unir y organizar clips de video." },
+            { titulo: "Crear contenido para redes", descripcion: "Ayuda a preparar videos para diferentes plataformas sociales." },
+            { titulo: "Agregar subtítulos", descripcion: "Ofrece herramientas para generar y editar subtítulos automáticamente." },
+            { titulo: "Mejorar videos", descripcion: "Incluye efectos, filtros y herramientas para mejorar el contenido audiovisual." }
+        ],
+        funciones: [
+            "Edición de videos",
+            "Subtítulos automáticos",
+            "Efectos y transiciones",
+            "Herramientas de audio",
+            "Plantillas de video",
+            "Funciones de edición con IA"
+        ],
+        ventajas: [
+            "Cuenta con herramientas fáciles de utilizar.",
+            "Ofrece plantillas y efectos para editar contenido.",
+            "Permite crear videos desde diferentes dispositivos."
+        ],
+        disponibilidad: "Cuenta con una versión gratuita y opciones de pago. Algunas funciones y recursos requieren una suscripción.",
         enlace: "https://www.capcut.com"
     },
     {
-        id: "kling-ai",
+        id: "kling",
         nombre: "Kling AI",
-        categorias: ["Video"],
+        categorias: ["Video", "Imágenes"],
         inicial: "K",
         color: "blue",
         destacado: false,
-        etiquetas: ["video", "animacion", "creatividad", "texto a video", "imagen a video"],
-        descripcion: "Kling AI ofrece herramientas de generación de video mediante inteligencia artificial. Permite crear clips a partir de indicaciones de texto e imágenes.",
-        enlace: "https://klingai.com/"
+        etiquetas: ["video", "imágenes", "animación", "movimiento", "generación", "creatividad"],
+        descripcion: "Kling AI es una plataforma de inteligencia artificial especializada en generar videos e imágenes a partir de instrucciones.",
+        queEs: "Kling AI es una herramienta generativa que permite transformar descripciones e imágenes en contenido visual y audiovisual.",
+        usos: [
+            { titulo: "Generar videos", descripcion: "Crea clips audiovisuales a partir de descripciones escritas." },
+            { titulo: "Animar imágenes", descripcion: "Permite convertir imágenes estáticas en escenas con movimiento." },
+            { titulo: "Crear contenido visual", descripcion: "Ayuda a desarrollar escenas y conceptos creativos." },
+            { titulo: "Experimentar con animaciones", descripcion: "Facilita explorar diferentes movimientos y estilos visuales." }
+        ],
+        funciones: [
+            "Generación de texto a video",
+            "Conversión de imagen a video",
+            "Generación de imágenes",
+            "Animación de escenas",
+            "Edición de contenido visual"
+        ],
+        ventajas: [
+            "Permite crear videos a partir de imágenes y texto.",
+            "Ofrece herramientas para generar movimiento.",
+            "Facilita la creación de contenido audiovisual."
+        ],
+        disponibilidad: "Ofrece acceso gratuito limitado y planes de pago. Los créditos y las funciones dependen del plan.",
+        enlace: "https://klingai.com"
     },
     {
         id: "pika",
         nombre: "Pika",
         categorias: ["Video"],
         inicial: "P",
-        color: "orange",
+        color: "purple",
         destacado: false,
-        etiquetas: ["video", "animacion", "efectos", "edicion", "creatividad"],
-        descripcion: "Pika es una herramienta de inteligencia artificial para crear y transformar videos. Permite experimentar con animaciones, efectos y contenido visual a partir de instrucciones.",
-        enlace: "https://pika.art/"
+        etiquetas: ["video", "animación", "efectos", "imágenes", "movimiento", "creatividad"],
+        descripcion: "Pika es una plataforma de inteligencia artificial que permite generar y transformar videos mediante instrucciones escritas e imágenes.",
+        queEs: "Pika es una herramienta creativa enfocada en la generación de videos con inteligencia artificial y la transformación de contenido visual.",
+        usos: [
+            { titulo: "Crear videos", descripcion: "Permite generar clips a partir de descripciones de texto." },
+            { titulo: "Animar imágenes", descripcion: "Ayuda a dar movimiento a imágenes estáticas." },
+            { titulo: "Aplicar efectos", descripcion: "Ofrece herramientas para transformar escenas y contenido audiovisual." },
+            { titulo: "Crear contenido creativo", descripcion: "Facilita producir clips para proyectos y publicaciones digitales." }
+        ],
+        funciones: [
+            "Generación de video",
+            "Texto a video",
+            "Imagen a video",
+            "Transformación de escenas",
+            "Efectos visuales con IA"
+        ],
+        ventajas: [
+            "Facilita la creación de clips cortos.",
+            "Permite transformar imágenes en contenido animado.",
+            "Ofrece herramientas creativas para experimentar."
+        ],
+        disponibilidad: "Cuenta con opciones de acceso gratuito limitado y planes de pago. Las condiciones pueden variar.",
+        enlace: "https://pika.art"
     },
     {
         id: "github-copilot",
         nombre: "GitHub Copilot",
         categorias: ["Programación"],
-        inicial: "GH",
-        color: "mint",
-        destacado: true,
-        etiquetas: ["programar", "codigo", "desarrollo", "programacion", "software", "programador", "autocompletar"],
-        descripcion: "GitHub Copilot es un asistente de programación que ayuda a escribir código, sugerir soluciones, explicar fragmentos y agilizar tareas durante el desarrollo de software.",
+        inicial: "G",
+        color: "blue",
+        destacado: false,
+        etiquetas: ["programar", "código", "desarrollo", "autocompletar", "depuración", "software"],
+        descripcion: "GitHub Copilot es un asistente de programación con inteligencia artificial que ayuda a escribir, explicar y revisar código.",
+        queEs: "GitHub Copilot es una herramienta desarrollada por GitHub que utiliza inteligencia artificial para apoyar a los programadores durante el desarrollo de software.",
+        usos: [
+            { titulo: "Escribir código", descripcion: "Sugiere líneas de código y funciones mientras se programa." },
+            { titulo: "Encontrar errores", descripcion: "Ayuda a identificar posibles problemas y proponer correcciones." },
+            { titulo: "Comprender código", descripcion: "Permite obtener explicaciones sobre instrucciones y fragmentos de código." },
+            { titulo: "Desarrollar proyectos", descripcion: "Ofrece asistencia durante diferentes etapas del desarrollo de software." }
+        ],
+        funciones: [
+            "Autocompletado de código",
+            "Generación de funciones",
+            "Explicación de código",
+            "Ayuda con depuración",
+            "Asistencia en el editor",
+            "Chat para programación"
+        ],
+        ventajas: [
+            "Se integra con entornos de desarrollo compatibles.",
+            "Ayuda a agilizar tareas de programación.",
+            "Facilita la comprensión de diferentes lenguajes."
+        ],
+        disponibilidad: "Ofrece opciones gratuitas y planes de pago. Las funciones y los límites dependen del plan y la cuenta.",
         enlace: "https://github.com/features/copilot"
     },
     {
@@ -534,22 +863,64 @@ const herramientas = [
         nombre: "Cursor",
         categorias: ["Programación"],
         inicial: "C",
-        color: "mint",
+        color: "blue",
         destacado: false,
-        etiquetas: ["codigo", "programacion", "desarrollo", "editor", "software", "programador"],
-        descripcion: "Cursor es un editor de código con funciones de inteligencia artificial que ayuda a comprender proyectos, generar código, realizar cambios y trabajar con archivos de programación.",
-        enlace: "https://cursor.com/"
+        etiquetas: ["programar", "código", "editor", "desarrollo", "depuración", "software", "asistente"],
+        descripcion: "Cursor es un editor de código que integra inteligencia artificial para ayudar a desarrollar, comprender y modificar proyectos de software.",
+        queEs: "Cursor es un entorno de desarrollo basado en un editor de código que incorpora herramientas de inteligencia artificial para facilitar el trabajo de programación.",
+        usos: [
+            { titulo: "Crear código", descripcion: "Ayuda a generar fragmentos de código a partir de instrucciones." },
+            { titulo: "Modificar proyectos", descripcion: "Permite solicitar cambios en diferentes partes de un proyecto." },
+            { titulo: "Encontrar errores", descripcion: "Ayuda a revisar código y proponer posibles soluciones." },
+            { titulo: "Comprender proyectos", descripcion: "Permite consultar cómo funcionan archivos y componentes del código." }
+        ],
+        funciones: [
+            "Autocompletado inteligente",
+            "Generación de código",
+            "Chat integrado",
+            "Edición asistida por IA",
+            "Análisis de archivos",
+            "Ayuda con depuración"
+        ],
+        ventajas: [
+            "Integra herramientas de IA en el editor.",
+            "Permite trabajar con el contexto de un proyecto.",
+            "Facilita la edición y comprensión del código."
+        ],
+        disponibilidad: "Ofrece un plan gratuito limitado y planes de pago con capacidades adicionales.",
+        enlace: "https://cursor.com"
     },
     {
         id: "windsurf",
         nombre: "Windsurf",
         categorias: ["Programación"],
         inicial: "W",
-        color: "blue",
+        color: "teal",
         destacado: false,
-        etiquetas: ["codigo", "programacion", "desarrollo", "editor", "software", "agentes"],
-        descripcion: "Windsurf es un entorno de desarrollo con funciones de inteligencia artificial que ayuda a explorar proyectos, escribir código y realizar tareas de programación.",
-        enlace: "https://windsurf.com/"
+        etiquetas: ["programar", "código", "desarrollo", "editor", "automatización", "software"],
+        descripcion: "Windsurf es un entorno de desarrollo que incorpora inteligencia artificial para ayudar a crear y modificar aplicaciones.",
+        queEs: "Windsurf es un editor de código con funciones de inteligencia artificial diseñado para acompañar diferentes tareas del desarrollo de software.",
+        usos: [
+            { titulo: "Desarrollar aplicaciones", descripcion: "Ayuda a construir proyectos de software mediante instrucciones." },
+            { titulo: "Editar código", descripcion: "Permite modificar archivos y generar soluciones de programación." },
+            { titulo: "Analizar proyectos", descripcion: "Ayuda a comprender la estructura y el funcionamiento del código." },
+            { titulo: "Resolver problemas", descripcion: "Ofrece asistencia para revisar errores y proponer correcciones." }
+        ],
+        funciones: [
+            "Asistencia de programación con IA",
+            "Autocompletado de código",
+            "Edición de archivos",
+            "Análisis del proyecto",
+            "Chat integrado",
+            "Generación de código"
+        ],
+        ventajas: [
+            "Integra asistencia de IA en el entorno de desarrollo.",
+            "Permite trabajar con diferentes archivos de un proyecto.",
+            "Ayuda a agilizar tareas de programación."
+        ],
+        disponibilidad: "Cuenta con opciones gratuitas y planes de pago. Las capacidades dependen del plan disponible.",
+        enlace: "https://windsurf.com"
     },
     {
         id: "replit",
@@ -558,9 +929,30 @@ const herramientas = [
         inicial: "R",
         color: "orange",
         destacado: false,
-        etiquetas: ["codigo", "programacion", "aplicaciones", "en linea", "desarrollo", "crear apps"],
-        descripcion: "Replit es un entorno de desarrollo en línea que permite crear, ejecutar y compartir aplicaciones. También ofrece herramientas de inteligencia artificial para apoyar el proceso de programación.",
-        enlace: "https://replit.com/"
+        etiquetas: ["programar", "código", "aplicaciones", "web", "desarrollo", "proyectos", "colaboración"],
+        descripcion: "Replit es una plataforma en línea para programar, ejecutar y publicar proyectos, con herramientas de inteligencia artificial.",
+        queEs: "Replit es un entorno de desarrollo en la nube que permite escribir código desde el navegador y utilizar herramientas de IA para construir aplicaciones.",
+        usos: [
+            { titulo: "Programar en línea", descripcion: "Permite crear y ejecutar código desde un navegador." },
+            { titulo: "Crear aplicaciones", descripcion: "Ayuda a desarrollar proyectos web y otras aplicaciones." },
+            { titulo: "Aprender programación", descripcion: "Ofrece un espacio para practicar diferentes lenguajes." },
+            { titulo: "Compartir proyectos", descripcion: "Facilita colaborar y publicar proyectos desarrollados." }
+        ],
+        funciones: [
+            "Editor de código en línea",
+            "Ejecución de programas",
+            "Asistencia con inteligencia artificial",
+            "Creación de aplicaciones",
+            "Colaboración en proyectos",
+            "Publicación de aplicaciones"
+        ],
+        ventajas: [
+            "Permite programar sin instalar un entorno local.",
+            "Facilita compartir proyectos.",
+            "Integra herramientas de desarrollo y asistencia con IA."
+        ],
+        disponibilidad: "Ofrece opciones gratuitas y planes de pago. Los recursos y funciones dependen del plan.",
+        enlace: "https://replit.com"
     },
     {
         id: "lovable",
@@ -569,9 +961,30 @@ const herramientas = [
         inicial: "L",
         color: "purple",
         destacado: false,
-        etiquetas: ["aplicaciones", "paginas web", "programacion", "sin codigo", "desarrollo web", "prototipos"],
-        descripcion: "Lovable permite crear aplicaciones y sitios web a partir de instrucciones en lenguaje natural. Es una herramienta para desarrollar prototipos y proyectos web describiendo lo que necesitas.",
-        enlace: "https://lovable.dev/"
+        etiquetas: ["aplicaciones", "web", "programar", "diseño", "desarrollo", "prototipos", "código"],
+        descripcion: "Lovable es una plataforma de inteligencia artificial que permite crear aplicaciones y sitios web a partir de instrucciones escritas.",
+        queEs: "Lovable es una herramienta de desarrollo asistido por IA que transforma descripciones de proyectos en aplicaciones web que se pueden editar y mejorar.",
+        usos: [
+            { titulo: "Crear sitios web", descripcion: "Permite generar páginas web a partir de instrucciones en lenguaje natural." },
+            { titulo: "Desarrollar aplicaciones", descripcion: "Ayuda a construir interfaces y funcionalidades para aplicaciones web." },
+            { titulo: "Crear prototipos", descripcion: "Facilita convertir ideas en versiones iniciales de productos digitales." },
+            { titulo: "Modificar proyectos", descripcion: "Permite solicitar cambios y mejoras mediante instrucciones." }
+        ],
+        funciones: [
+            "Generación de aplicaciones web",
+            "Creación de interfaces",
+            "Generación de código",
+            "Edición mediante instrucciones",
+            "Integración con servicios externos",
+            "Creación de prototipos"
+        ],
+        ventajas: [
+            "Permite convertir ideas en proyectos funcionales.",
+            "Reduce la necesidad de escribir todo el código manualmente.",
+            "Facilita probar y modificar prototipos."
+        ],
+        disponibilidad: "Cuenta con un plan gratuito limitado y planes de pago basados en créditos y capacidades adicionales.",
+        enlace: "https://lovable.dev"
     },
     {
         id: "bolt",
@@ -580,19 +993,61 @@ const herramientas = [
         inicial: "B",
         color: "blue",
         destacado: false,
-        etiquetas: ["aplicaciones", "paginas web", "programacion", "desarrollo", "prototipos", "codigo"],
-        descripcion: "Bolt permite crear y modificar aplicaciones web desde el navegador mediante instrucciones de texto. Puede ayudar a generar prototipos y desarrollar proyectos con tecnologías web.",
-        enlace: "https://bolt.new/"
+        etiquetas: ["programar", "aplicaciones", "web", "código", "desarrollo", "prototipos", "diseño"],
+        descripcion: "Bolt es una herramienta de desarrollo con inteligencia artificial que permite crear y ejecutar aplicaciones web a partir de instrucciones.",
+        queEs: "Bolt es una plataforma que utiliza inteligencia artificial para generar proyectos de software y permitir su edición y ejecución desde el navegador.",
+        usos: [
+            { titulo: "Crear aplicaciones web", descripcion: "Permite generar proyectos web mediante descripciones escritas." },
+            { titulo: "Diseñar interfaces", descripcion: "Ayuda a construir pantallas y componentes para aplicaciones." },
+            { titulo: "Probar proyectos", descripcion: "Permite ejecutar y visualizar aplicaciones durante su desarrollo." },
+            { titulo: "Modificar código", descripcion: "Facilita realizar cambios mediante instrucciones en lenguaje natural." }
+        ],
+        funciones: [
+            "Generación de aplicaciones",
+            "Creación de interfaces",
+            "Generación y edición de código",
+            "Vista previa de proyectos",
+            "Ejecución en el navegador",
+            "Asistencia de programación"
+        ],
+        ventajas: [
+            "Permite desarrollar prototipos rápidamente.",
+            "Combina generación de código y vista previa.",
+            "Facilita experimentar con ideas de aplicaciones."
+        ],
+        disponibilidad: "Cuenta con acceso gratuito limitado y planes de pago. El consumo depende de los créditos disponibles.",
+        enlace: "https://bolt.new"
     },
     {
         id: "elevenlabs",
         nombre: "ElevenLabs",
         categorias: ["Audio"],
-        inicial: "11",
-        color: "orange",
+        inicial: "E",
+        color: "purple",
         destacado: false,
-        etiquetas: ["audio", "voces", "texto a voz", "transcripcion", "locucion", "narracion"],
-        descripcion: "ElevenLabs ofrece herramientas de inteligencia artificial para generar voces, convertir texto en audio y trabajar con contenido hablado, narraciones y otros formatos de sonido.",
+        etiquetas: ["voz", "audio", "narración", "texto a voz", "locución", "idiomas", "sonido"],
+        descripcion: "ElevenLabs es una plataforma de inteligencia artificial especializada en generación de voz, narración y herramientas de audio.",
+        queEs: "ElevenLabs es una plataforma de audio que utiliza inteligencia artificial para generar voces sintéticas y transformar texto en contenido hablado.",
+        usos: [
+            { titulo: "Convertir texto en voz", descripcion: "Transforma textos escritos en narraciones de audio." },
+            { titulo: "Crear narraciones", descripcion: "Permite producir voces para videos, presentaciones y otros contenidos." },
+            { titulo: "Crear contenido multilingüe", descripcion: "Ofrece herramientas de generación de voz en diferentes idiomas." },
+            { titulo: "Producir audio", descripcion: "Ayuda a crear contenido hablado para proyectos digitales." }
+        ],
+        funciones: [
+            "Conversión de texto a voz",
+            "Generación de voces sintéticas",
+            "Herramientas de doblaje",
+            "Creación de narraciones",
+            "Generación de audio",
+            "Soporte para varios idiomas"
+        ],
+        ventajas: [
+            "Ofrece voces con diferentes características.",
+            "Facilita la producción de narraciones.",
+            "Incluye herramientas para contenido en varios idiomas."
+        ],
+        disponibilidad: "Cuenta con un plan gratuito limitado y diferentes planes de pago. Los créditos y derechos de uso dependen del plan.",
         enlace: "https://elevenlabs.io"
     },
     {
@@ -602,9 +1057,30 @@ const herramientas = [
         inicial: "S",
         color: "orange",
         destacado: false,
-        etiquetas: ["musica", "audio", "creatividad", "canciones", "composicion"],
-        descripcion: "Suno es una plataforma de creación musical con inteligencia artificial que permite generar canciones a partir de descripciones e ideas, explorando diferentes estilos y sonidos.",
-        enlace: "https://suno.com/"
+        etiquetas: ["música", "canciones", "audio", "composición", "creatividad", "sonido", "letras"],
+        descripcion: "Suno es una plataforma de inteligencia artificial que permite generar canciones y composiciones musicales a partir de instrucciones.",
+        queEs: "Suno es una herramienta de creación musical que utiliza inteligencia artificial para producir canciones con voces, instrumentos y diferentes estilos.",
+        usos: [
+            { titulo: "Crear canciones", descripcion: "Permite generar canciones a partir de descripciones e ideas musicales." },
+            { titulo: "Explorar estilos musicales", descripcion: "Ayuda a experimentar con diferentes géneros y sonidos." },
+            { titulo: "Desarrollar ideas", descripcion: "Facilita convertir conceptos creativos en composiciones musicales." },
+            { titulo: "Crear contenido audiovisual", descripcion: "Permite producir música para proyectos y contenidos digitales, respetando sus condiciones de uso." }
+        ],
+        funciones: [
+            "Generación de canciones",
+            "Creación de música con IA",
+            "Generación de voces",
+            "Exploración de estilos musicales",
+            "Edición de composiciones",
+            "Creación a partir de descripciones"
+        ],
+        ventajas: [
+            "Permite experimentar con diferentes estilos musicales.",
+            "Facilita transformar ideas en composiciones.",
+            "Integra voces e instrumentos en las creaciones."
+        ],
+        disponibilidad: "Ofrece acceso gratuito limitado y planes de pago. Los derechos de uso y las condiciones comerciales dependen del plan.",
+        enlace: "https://suno.com"
     },
     {
         id: "udio",
@@ -613,31 +1089,94 @@ const herramientas = [
         inicial: "U",
         color: "purple",
         destacado: false,
-        etiquetas: ["musica", "audio", "canciones", "composicion", "creatividad"],
-        descripcion: "Udio es una plataforma de creación musical con inteligencia artificial que permite experimentar con canciones y composiciones a partir de indicaciones y conceptos musicales.",
-        enlace: "https://www.udio.com/"
+        etiquetas: ["música", "canciones", "audio", "composición", "sonido", "creatividad", "géneros"],
+        descripcion: "Udio es una plataforma de inteligencia artificial orientada a la creación de música y canciones a partir de instrucciones escritas.",
+        queEs: "Udio es una herramienta de generación musical que permite explorar ideas y producir composiciones mediante modelos de inteligencia artificial.",
+        usos: [
+            { titulo: "Crear música", descripcion: "Permite generar composiciones a partir de descripciones." },
+            { titulo: "Probar géneros", descripcion: "Ayuda a experimentar con diferentes estilos y ambientes musicales." },
+            { titulo: "Desarrollar ideas musicales", descripcion: "Facilita transformar conceptos en propuestas de canciones." },
+            { titulo: "Explorar composiciones", descripcion: "Permite generar variaciones y desarrollar ideas creativas." }
+        ],
+        funciones: [
+            "Generación de música",
+            "Creación de canciones",
+            "Exploración de géneros",
+            "Generación a partir de texto",
+            "Variaciones musicales",
+            "Herramientas de edición"
+        ],
+        ventajas: [
+            "Facilita experimentar con ideas musicales.",
+            "Permite explorar diferentes géneros.",
+            "Ofrece herramientas para desarrollar composiciones."
+        ],
+        disponibilidad: "Las opciones de acceso y las funciones disponibles pueden cambiar según el servicio y sus condiciones vigentes.",
+        enlace: "https://www.udio.com"
     },
     {
         id: "descript",
         nombre: "Descript",
         categorias: ["Audio", "Video"],
         inicial: "D",
-        color: "mint",
+        color: "teal",
         destacado: false,
-        etiquetas: ["transcripcion", "audio", "edicion", "podcast", "video", "subtitulos"],
-        descripcion: "Descript es una herramienta de edición de audio y video que utiliza transcripciones de texto para facilitar la edición de grabaciones, podcasts y contenido audiovisual.",
-        enlace: "https://www.descript.com/"
+        etiquetas: ["audio", "video", "transcripción", "edición", "podcast", "subtítulos", "voz"],
+        descripcion: "Descript es una plataforma de edición de audio y video que utiliza inteligencia artificial para facilitar la transcripción y modificación de contenido.",
+        queEs: "Descript es una herramienta multimedia que permite editar grabaciones de audio y video mediante transcripciones de texto y otras funciones inteligentes.",
+        usos: [
+            { titulo: "Editar podcasts", descripcion: "Permite organizar y modificar grabaciones de audio." },
+            { titulo: "Editar videos", descripcion: "Facilita modificar videos mediante la edición de sus transcripciones." },
+            { titulo: "Transcribir grabaciones", descripcion: "Convierte contenido hablado en texto." },
+            { titulo: "Crear subtítulos", descripcion: "Ayuda a generar subtítulos para contenido audiovisual." }
+        ],
+        funciones: [
+            "Transcripción automática",
+            "Edición de audio",
+            "Edición de video",
+            "Generación de subtítulos",
+            "Eliminación de silencios",
+            "Herramientas de voz con IA"
+        ],
+        ventajas: [
+            "Permite editar contenido mediante texto.",
+            "Combina herramientas de audio y video.",
+            "Facilita la creación de podcasts y material audiovisual."
+        ],
+        disponibilidad: "Cuenta con acceso gratuito limitado y planes de pago. Las funciones dependen de la suscripción.",
+        enlace: "https://www.descript.com"
     },
     {
         id: "otter",
         nombre: "Otter",
-        categorias: ["Audio"],
+        categorias: ["Audio", "Texto", "Estudio"],
         inicial: "O",
         color: "blue",
         destacado: false,
-        etiquetas: ["transcripcion", "reuniones", "audio", "notas", "resumir", "voz"],
-        descripcion: "Otter es una herramienta de transcripción asistida por inteligencia artificial que ayuda a convertir conversaciones y reuniones en texto, además de organizar notas y resúmenes.",
-        enlace: "https://otter.ai/"
+        etiquetas: ["transcripción", "reuniones", "audio", "notas", "resúmenes", "voz", "productividad"],
+        descripcion: "Otter es una herramienta de inteligencia artificial que permite transcribir conversaciones, organizar notas y resumir reuniones.",
+        queEs: "Otter es una plataforma de transcripción y asistencia para reuniones que convierte conversaciones habladas en texto y ayuda a organizar sus contenidos.",
+        usos: [
+            { titulo: "Transcribir conversaciones", descripcion: "Convierte grabaciones y conversaciones en texto." },
+            { titulo: "Resumir reuniones", descripcion: "Ayuda a identificar los temas y puntos principales de una reunión." },
+            { titulo: "Organizar notas", descripcion: "Permite guardar y consultar información de conversaciones." },
+            { titulo: "Consultar información", descripcion: "Facilita buscar contenido dentro de las transcripciones disponibles." }
+        ],
+        funciones: [
+            "Transcripción automática",
+            "Resúmenes de reuniones",
+            "Identificación de participantes",
+            "Organización de notas",
+            "Búsqueda en transcripciones",
+            "Asistencia para reuniones"
+        ],
+        ventajas: [
+            "Facilita convertir conversaciones en texto.",
+            "Ayuda a organizar información de reuniones.",
+            "Permite consultar transcripciones posteriormente."
+        ],
+        disponibilidad: "Ofrece un plan gratuito limitado y planes de pago con funciones adicionales.",
+        enlace: "https://otter.ai"
     }
 ];
 
