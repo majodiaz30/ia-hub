@@ -29,7 +29,22 @@ if (herramienta) {
         herramienta.descripcion;
 
     document.getElementById("herramienta-que-es").textContent =
-        herramienta.descripcion;
+        herramienta.queEs || herramienta.descripcion;
+
+    // Disponibilidad
+    document.getElementById("herramienta-disponibilidad").textContent =
+        herramienta.disponibilidad ||
+        "Consulta la página oficial para conocer sus planes y funciones disponibles.";
+
+    // Ventajas
+    const contenedorVentajas =
+        document.getElementById("herramienta-ventajas");
+
+    (herramienta.ventajas || []).forEach(ventaja => {
+        const elemento = document.createElement("p");
+        elemento.textContent = ventaja;
+        contenedorVentajas.appendChild(elemento);
+    });
 
     // Logo
     const logo = document.getElementById("herramienta-logo");
