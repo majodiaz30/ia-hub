@@ -125,11 +125,19 @@ if (herramienta) {
     document.getElementById("herramienta-nombre").textContent =
         herramienta.nombre;
 
+    const idiomaHerramienta = document.documentElement.lang === "en"
+        ? "en"
+        : "es";
+
     document.getElementById("herramienta-descripcion").textContent =
-        herramienta.descripcion;
+        idiomaHerramienta === "en"
+            ? (herramienta.descripcionEn || herramienta.descripcion)
+            : herramienta.descripcion;
 
     document.getElementById("herramienta-que-es").textContent =
-        herramienta.queEs || herramienta.descripcion;
+        idiomaHerramienta === "en"
+            ? (herramienta.queEsEn || herramienta.queEs || herramienta.descripcion)
+            : (herramienta.queEs || herramienta.descripcion);
 
     // Disponibilidad
     document.getElementById("herramienta-disponibilidad").textContent =
