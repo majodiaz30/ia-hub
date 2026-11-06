@@ -3463,3 +3463,29 @@ input:focus-visible {
     font-size: 0.78rem;
     font-weight: 600;
 }
+
+/* =========================================
+   FILTRO POR PRECIO
+========================================= */
+
+.price-chip {
+    padding: 8px 14px;
+    border: 1px solid var(--line-soft);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.price-chip:hover {
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.price-chip.active {
+    border-color: var(--accent-strong);
+    background: rgba(118, 84, 246, .2);
+    color: var(--accent-soft);
+}

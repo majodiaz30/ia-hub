@@ -8,6 +8,26 @@ const resultsCount = document.getElementById("resultsCount");
 const favoriteCount = document.getElementById("favoriteCount");
 const favoritesToggle = document.getElementById("favoritesToggle");
 const filterButtons = document.querySelectorAll(".filter-chip");
+// FILTRO POR PRECIO
+const priceButtons = document.querySelectorAll(".price-chip");
+
+priceButtons.forEach(boton => {
+
+    boton.addEventListener("click", () => {
+
+        priceButtons.forEach(b =>
+            b.classList.remove("active")
+        );
+
+        boton.classList.add("active");
+
+        precioActual = boton.dataset.price;
+
+        mostrarHerramientas();
+
+    });
+
+});
 const categoryCards = document.querySelectorAll(".category-card");
 const clearFilters = document.getElementById("clearFilters");
 const resetSearch = document.getElementById("resetSearch");
@@ -18,6 +38,7 @@ const toolsSection = document.querySelector(".tools-section");
 // Estado de los filtros
 let categoriaActual = "Todas";
 let mostrarSoloFavoritos = false;
+let precioActual = "todos";
 
 // Recuperar favoritos guardados en el navegador
 let favoritos = [];
@@ -137,7 +158,11 @@ function obtenerResultados() {
             !mostrarSoloFavoritos ||
             favoritos.includes(herramienta.id);
 
-        if (!coincideCategoria || !coincideFavorito) return;
+        const coincidePrecio =
+            precioActual === "todos" ||
+            herramienta.precio === precioActual;
+
+        if (!coincideCategoria || !coincideFavorito || !coincidePrecio) return;
 
         const nombre = normalizar(herramienta.nombre);
         const categorias = normalizar(herramienta.categorias.join(" "));
