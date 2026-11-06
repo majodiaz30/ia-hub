@@ -88,6 +88,7 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#herramientas">Herramientas</a></li>
                 <li><a href="#ia-vs">IA VS</a></li>
+                <li><a href="#recomendador">Encuentra tu IA</a></li>
                 <li><a href="#categorias">Categorías</a></li>
                 <li><a href="#tutoriales">Aprender</a></li>
                 <li><a href="#novedades">Novedades</a></li>
@@ -236,6 +237,103 @@
                 <div class="ia-vs-footer">
                     <span>COMPARACIONES CON CRITERIOS CLAROS</span>
                     <span>DESCUBRE · COMPARA · ELIGE</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================
+     RECOMENDADOR DE INTELIGENCIA ARTIFICIAL
+============================================ -->
+
+        <section class="recomendador-section" id="recomendador">
+
+            <div class="recomendador-container">
+
+                <div class="recomendador-header">
+                    <span class="section-tag">RECOMENDADOR IA</span>
+
+                    <h2>
+                        ¿No sabes qué IA elegir?
+                        <span>Nosotros te ayudamos.</span>
+                    </h2>
+
+                    <p>
+                        Cuéntanos qué necesitas y encuentra las herramientas
+                        de inteligencia artificial que mejor se adaptan a ti.
+                    </p>
+                </div>
+
+                <div class="recomendador-card" id="recomendadorApp">
+
+                    <div class="recomendador-intro">
+                        <div class="recomendador-icon">
+                            <span>✦</span>
+                        </div>
+
+                        <h3>Encuentra tu IA ideal</h3>
+
+                        <p>
+                            Responde 3 preguntas rápidas y descubre
+                            cuáles herramientas pueden ayudarte.
+                        </p>
+
+                        <button type="button" class="recomendador-iniciar" id="iniciarRecomendador">
+                            Comenzar →
+                        </button>
+                    </div>
+
+                    <div class="recomendador-cuestionario" id="recomendadorCuestionario" hidden>
+
+                        <div class="recomendador-progreso">
+                            <div class="progreso-texto">
+                                <span id="progresoPregunta">Pregunta 1 de 3</span>
+                                <span id="progresoPorcentaje">33%</span>
+                            </div>
+
+                            <div class="progreso-barra">
+                                <div class="progreso-relleno" id="progresoRelleno">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="preguntaTitulo"></h3>
+
+                        <p id="preguntaDescripcion"></p>
+
+                        <div class="recomendador-opciones" id="recomendadorOpciones">
+                        </div>
+
+                        <div class="recomendador-controles">
+                            <button type="button" id="preguntaAnterior" class="recomendador-anterior" hidden>
+                                Volver
+                            </button>
+
+                            <button type="button" id="preguntaSiguiente" class="recomendador-siguiente" disabled>
+                                Continuar →
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="recomendador-resultados" id="recomendadorResultados" hidden>
+
+                        <span class="section-tag">TUS RESULTADOS</span>
+
+                        <h3>Estas IA pueden ser ideales para ti</h3>
+
+                        <p id="resumenRecomendacion"></p>
+
+                        <div class="recomendador-lista" id="listaRecomendaciones">
+                        </div>
+
+                        <button type="button" class="recomendador-reiniciar" id="reiniciarRecomendador">
+                            Volver a comenzar
+                        </button>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -822,6 +920,7 @@
 
     <script src="catalogo.js"></script>
     <script src="app.js"></script>
+    <script src="recomendador.js"></script>
 </body>
 
 </html>
