@@ -247,9 +247,15 @@ if (herramienta) {
         descripcionRelacionada.textContent = relacionada.descripcion;
 
         const enlaceRelacionado = document.createElement("a");
+
         enlaceRelacionado.href =
             `herramienta.html?id=${encodeURIComponent(relacionada.id)}`;
-        enlaceRelacionado.textContent = "Conocer herramienta →";
+
+        enlaceRelacionado.textContent =
+            `Conocer ${relacionada.nombre} →`;
+
+        enlaceRelacionado.title =
+            `Descubre qué es ${relacionada.nombre}, sus funciones y usos`;
 
         tarjeta.append(
             logoRelacionado,
