@@ -24,6 +24,31 @@ if (herramienta) {
         herramienta.queEs
     ).substring(0, 155);
 
+    // ============================================
+    // DATOS ESTRUCTURADOS PARA GOOGLE
+    // ============================================
+
+    const datosEstructurados = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": herramienta.nombre,
+        "description": descripcionSEO,
+        "applicationCategory": "AI tool",
+        "operatingSystem": "Web",
+        "url": herramienta.enlace
+    };
+
+    let scriptSchema = document.getElementById("datos-estructurados");
+
+    if (!scriptSchema) {
+        scriptSchema = document.createElement("script");
+        scriptSchema.id = "datos-estructurados";
+        scriptSchema.type = "application/ld+json";
+        document.head.appendChild(scriptSchema);
+    }
+
+    scriptSchema.textContent = JSON.stringify(datosEstructurados);
+
     // Función para crear o actualizar etiquetas META
     function actualizarMeta(nombre, contenido, atributo = "name") {
         let meta = document.querySelector(`meta[${atributo}="${nombre}"]`);
