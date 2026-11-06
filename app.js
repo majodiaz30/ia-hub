@@ -656,3 +656,45 @@ navLinks.querySelectorAll("a").forEach(enlace => {
 
 // Primera carga
 mostrarHerramientas();
+
+// ============================================
+// MODO CLARO Y OSCURO - IA HUB
+// ============================================
+
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+// Recuperar tema guardado
+let temaGuardado = localStorage.getItem("temaIAHub") || "dark";
+
+// Aplicar tema
+function aplicarTema(tema) {
+
+    document.documentElement.setAttribute("data-theme", tema);
+
+    if (tema === "light") {
+        themeIcon.textContent = "☾";
+        themeToggle.setAttribute("aria-label", "Cambiar a modo oscuro");
+        themeToggle.title = "Cambiar a modo oscuro";
+    } else {
+        themeIcon.textContent = "☀";
+        themeToggle.setAttribute("aria-label", "Cambiar a modo claro");
+        themeToggle.title = "Cambiar a modo claro";
+    }
+
+    localStorage.setItem("temaIAHub", tema);
+}
+
+// Cambiar tema al pulsar
+themeToggle.addEventListener("click", () => {
+
+    const temaActual = document.documentElement.getAttribute("data-theme");
+
+    const nuevoTema = temaActual === "dark" ? "light" : "dark";
+
+    aplicarTema(nuevoTema);
+
+});
+
+// Aplicar tema inicial
+aplicarTema(temaGuardado);

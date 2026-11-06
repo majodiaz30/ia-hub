@@ -75,6 +75,7 @@
 <body>
     <header class="header">
         <nav class="navbar" aria-label="Navegación principal">
+
             <a href="#inicio" class="logo" aria-label="IA Hub, inicio">
                 <img src="favicon.png" alt="" class="logo-image">
                 <span>IA <strong>Hub</strong></span>
@@ -96,9 +97,19 @@
                 <li><a href="#guias">Guías</a></li>
             </ul>
 
-            <a href="#herramientas" class="nav-button">
-                Explorar IA <span>↗</span>
-            </a>
+            <div class="nav-actions">
+
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo claro"
+                    title="Cambiar apariencia">
+                    <span id="themeIcon">☀</span>
+                </button>
+
+                <a href="#herramientas" class="nav-button">
+                    Explorar IA <span>↗</span>
+                </a>
+
+            </div>
+
         </nav>
     </header>
 
