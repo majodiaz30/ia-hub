@@ -2406,3 +2406,661 @@ input:focus-visible {
         text-align: center;
     }
 }
+
+/* ==========================================
+   IA HUB VS - CONFIGURACIÓN GENERAL
+========================================== */
+
+.battle-page {
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.battle-page main {
+    height: auto;
+    overflow: visible;
+}
+
+.battle-container {
+    width: min(1160px, 92%);
+    margin: 0 auto;
+}
+
+.battle-section {
+    padding: 75px 0;
+}
+
+.battle-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0fbfb3;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.battle-tag::before {
+    content: "";
+    width: 23px;
+    height: 2px;
+    background: #0fbfb3;
+}
+
+.battle-heading {
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.3;
+    margin: 12px 0;
+}
+
+.battle-description {
+    color: #a5a3b6;
+    line-height: 1.8;
+    max-width: 700px;
+    font-size: 14px;
+}
+
+/* ==========================================
+   PORTADA
+========================================== */
+
+.battle-hero {
+    position: relative;
+    padding: 85px 0 75px;
+    background:
+        radial-gradient(ellipse at 80% 45%,
+            rgba(104, 62, 190, .22), transparent 40%),
+        radial-gradient(ellipse at 15% 80%,
+            rgba(15, 191, 179, .10), transparent 40%);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.battle-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.battle-hero h1 {
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin: 22px 0;
+}
+
+.battle-hero h1 span {
+    background: linear-gradient(90deg, #0fbfb3, #a18aff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.battle-hero p {
+    color: #aaa8bd;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 570px;
+}
+
+.battle-hero-buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.battle-primary-button,
+.battle-secondary-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.battle-primary-button {
+    background: #0fbfb3;
+    color: #071a20;
+}
+
+.battle-primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(15,191,179,.2);
+}
+
+.battle-secondary-button {
+    color: white;
+    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(255,255,255,.04);
+}
+
+.battle-secondary-button:hover {
+    border-color: #0fbfb3;
+}
+
+/* VISUAL CENTRAL */
+
+.battle-art {
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.battle-art-circle {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 1px solid rgba(15,191,179,.55);
+    background: radial-gradient(circle,
+        rgba(15,191,179,.13),
+        rgba(107,67,188,.10) 55%,
+        transparent 70%);
+    box-shadow:
+        0 0 60px rgba(15,191,179,.12),
+        inset 0 0 50px rgba(115,80,220,.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotate(-8deg);
+}
+
+.battle-art-circle strong {
+    font-size: 75px;
+    letter-spacing: -7px;
+    line-height: 1;
+}
+
+.battle-art-circle span {
+    color: #0fbfb3;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.battle-art-logo {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    padding: 11px;
+    border-radius: 17px;
+    background: white;
+    box-shadow: 0 10px 35px rgba(0,0,0,.3);
+    object-fit: contain;
+}
+
+.battle-logo-1 {
+    top: 10px;
+    left: 15%;
+}
+
+.battle-logo-2 {
+    top: 30px;
+    right: 10%;
+}
+
+.battle-logo-3 {
+    bottom: 10px;
+    left: 15%;
+}
+
+.battle-logo-4 {
+    bottom: 15px;
+    right: 10%;
+}
+
+.battle-hero-note {
+    position: absolute;
+    bottom: 42%;
+    right: 0;
+    padding: 9px 14px;
+    border-radius: 9px;
+    background: #211e3b;
+    border: 1px solid rgba(255,255,255,.1);
+    color: #0fbfb3;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   INTRODUCCIÓN
+========================================== */
+
+.battle-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.battle-info-box {
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(255,255,255,.08);
+    padding: 25px;
+    border-radius: 17px;
+}
+
+.battle-info-box h3 {
+    margin: 0 0 12px;
+    font-size: 16px;
+}
+
+.battle-info-box p {
+    color: #aaa8bd;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ==========================================
+   TARJETAS DE HERRAMIENTAS
+========================================== */
+
+.battle-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.battle-tool-card {
+    position: relative;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,.09);
+    background: linear-gradient(145deg,
+        rgba(255,255,255,.055),
+        rgba(255,255,255,.015));
+    border-radius: 17px;
+    transition: .25s;
+}
+
+.battle-tool-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(15,191,179,.55);
+    background: rgba(15,191,179,.045);
+}
+
+.battle-tool-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.battle-tool-logo {
+    width: 54px;
+    height: 54px;
+    padding: 9px;
+    object-fit: contain;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.battle-tool-number {
+    color: #77758c;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.battle-tool-card h3 {
+    font-size: 17px;
+    margin: 0 0 10px;
+}
+
+.battle-tool-card p {
+    color: #a5a3b6;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
+    margin: 0;
+}
+
+.battle-tool-purpose {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 7px 10px;
+    border-radius: 7px;
+    background: rgba(15,191,179,.09);
+    color: #0fbfb3;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.battle-tool-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.battle-tool-link span {
+    color: #0fbfb3;
+}
+
+/* ==========================================
+   TABLA COMPARATIVA
+========================================== */
+
+.battle-table-wrapper {
+    margin-top: 30px;
+    overflow-x: auto;
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 15px;
+    background: rgba(255,255,255,.02);
+    -webkit-overflow-scrolling: touch;
+}
+
+.battle-table {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse;
+}
+
+.battle-table th,
+.battle-table td {
+    padding: 19px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.battle-table th {
+    background: rgba(15,191,179,.07);
+    color: #0fbfb3;
+    font-size: 11px;
+    letter-spacing: .5px;
+}
+
+.battle-table td {
+    color: #c4c2d0;
+}
+
+.battle-table td:first-child {
+    color: white;
+    font-weight: 600;
+}
+
+.battle-table tr:last-child td {
+    border-bottom: none;
+}
+
+.battle-table tr:hover td {
+    background: rgba(255,255,255,.025);
+}
+
+/* ==========================================
+   RECOMENDACIONES
+========================================== */
+
+.battle-recommendations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.battle-recommendation {
+    padding: 23px;
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 15px;
+}
+
+.battle-recommendation .recommendation-number {
+    color: #0fbfb3;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.battle-recommendation h3 {
+    font-size: 15px;
+    margin: 12px 0 8px;
+}
+
+.battle-recommendation p {
+    font-size: 12px;
+    color: #aaa8bd;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ==========================================
+   CONCLUSIÓN
+========================================== */
+
+.battle-verdict {
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(15,191,179,.24);
+    background:
+        radial-gradient(circle at 100% 0%,
+            rgba(15,191,179,.11), transparent 40%),
+        linear-gradient(135deg,
+            rgba(34,29,63,.9),
+            rgba(17,17,32,.9));
+}
+
+.battle-verdict h2 {
+    font-size: 25px;
+    margin: 14px 0;
+}
+
+.battle-verdict p {
+    color: #b1afc0;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.battle-verdict strong {
+    color: #0fbfb3;
+}
+
+/* ==========================================
+   FUENTES
+========================================== */
+
+.battle-sources {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding-top: 30px;
+}
+
+.battle-sources h2 {
+    font-size: 19px;
+}
+
+.battle-sources p,
+.battle-sources li {
+    color: #9997ab;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.battle-sources a {
+    color: #0fbfb3;
+    text-decoration: none;
+}
+
+.battle-sources a:hover {
+    text-decoration: underline;
+}
+
+.battle-update {
+    color: #77758c;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 850px) {
+
+    .battle-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .battle-art {
+        min-height: 290px;
+    }
+
+    .battle-tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .battle-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .battle-recommendations {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE - CELULARES
+========================================== */
+
+@media (max-width: 768px) {
+
+    .battle-page .navbar {
+        position: relative;
+    }
+
+    .battle-page .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .battle-page .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 20px;
+        background: #17142a;
+        border: 1px solid rgba(255,255,255,.08);
+        border-radius: 0 0 14px 14px;
+        z-index: 1000;
+    }
+
+    .battle-page .nav-links.active {
+        display: flex;
+    }
+
+    .battle-page .nav-links li a {
+        display: block;
+        padding: 13px 8px;
+    }
+
+    .battle-page .nav-button {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .battle-section {
+        padding: 52px 0;
+    }
+
+    .battle-hero {
+        padding: 55px 0;
+    }
+
+    .battle-hero h1 {
+        letter-spacing: -1px;
+        font-size: clamp(34px, 10vw, 48px);
+    }
+
+    .battle-hero p {
+        font-size: 14px;
+    }
+
+    .battle-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .battle-primary-button,
+    .battle-secondary-button {
+        width: 100%;
+    }
+
+    .battle-art {
+        min-height: 250px;
+    }
+
+    .battle-art-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .battle-art-circle strong {
+        font-size: 60px;
+    }
+
+    .battle-art-logo {
+        width: 49px;
+        height: 49px;
+    }
+
+    .battle-hero-note {
+        right: 0;
+        font-size: 9px;
+    }
+
+    .battle-tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .battle-tool-card p {
+        min-height: auto;
+    }
+
+    .battle-verdict {
+        padding: 24px;
+    }
+
+    .battle-verdict h2 {
+        font-size: 21px;
+    }
+
+    .battle-info-box {
+        padding: 20px;
+    }
+
+    .battle-container {
+        width: 90%;
+    }
+
+    .battle-table {
+        min-width: 700px;
+    }
+}
