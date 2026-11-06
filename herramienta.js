@@ -49,6 +49,40 @@ if (herramienta) {
 
     scriptSchema.textContent = JSON.stringify(datosEstructurados);
 
+    // ============================================
+    // MIGAS DE PAN PARA GOOGLE
+    // ============================================
+
+    const migasDePan = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ia-hub-bice.vercel.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": herramienta.nombre,
+                "item": window.location.href
+            }
+        ]
+    };
+
+    let scriptBreadcrumb = document.getElementById("datos-breadcrumb");
+
+    if (!scriptBreadcrumb) {
+        scriptBreadcrumb = document.createElement("script");
+        scriptBreadcrumb.id = "datos-breadcrumb";
+        scriptBreadcrumb.type = "application/ld+json";
+        document.head.appendChild(scriptBreadcrumb);
+    }
+
+    scriptBreadcrumb.textContent = JSON.stringify(migasDePan);
+
     // Función para crear o actualizar etiquetas META
     function actualizarMeta(nombre, contenido, atributo = "name") {
         let meta = document.querySelector(`meta[${atributo}="${nombre}"]`);
