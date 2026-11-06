@@ -344,8 +344,13 @@ function mostrarResultados(resultadosEncontrados) {
         nombre.textContent = `${indice + 1}. ${herramienta.nombre}`;
 
         const descripcion = document.createElement("p");
-        descripcion.textContent =
-            herramienta.descripcion;
+        descripcion.textContent = herramienta.descripcion;
+
+        // Disponibilidad de la herramienta
+        const disponibilidad = document.createElement("p");
+        disponibilidad.className = "recomendacion-disponibilidad";
+        disponibilidad.textContent =
+            herramienta.disponibilidad || "Consulta sus planes en la página oficial";
 
         const motivo = document.createElement("p");
         motivo.textContent =
@@ -368,7 +373,13 @@ function mostrarResultados(resultadosEncontrados) {
 
         enlaces.append(conocer, visitar);
 
-        informacion.append(nombre, descripcion, motivo, enlaces);
+        informacion.append(
+            nombre,
+            descripcion,
+            disponibilidad,
+            motivo,
+            enlaces
+        );
 
         tarjeta.append(logo, informacion);
 
