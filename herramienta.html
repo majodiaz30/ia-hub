@@ -121,6 +121,11 @@
     <script src="catalogo.js"></script>
     <script src="herramienta.js"></script>
 
+    <script>
+        const temaGuardado = localStorage.getItem("temaIAHub") || "dark";
+        document.documentElement.setAttribute("data-theme", temaGuardado);
+    </script>
+
 </body>
 
 </html>
