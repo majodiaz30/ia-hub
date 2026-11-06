@@ -89,6 +89,7 @@
                 <li><a href="#herramientas">Herramientas</a></li>
                 <li><a href="#ia-vs">IA VS</a></li>
                 <li><a href="#recomendador">Encuentra tu IA</a></li>
+                <li><a href="#prompts">Prompts</a></li>
                 <li><a href="#categorias">Categorías</a></li>
                 <li><a href="#tutoriales">Aprender</a></li>
                 <li><a href="#novedades">Novedades</a></li>
@@ -334,6 +335,118 @@
 
                     </div>
 
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+     BIBLIOTECA DE PROMPTS
+========================================= -->
+
+        <section class="prompts-section" id="prompts">
+
+            <div class="prompts-container">
+
+                <div class="prompts-header">
+                    <span class="section-tag">BIBLIOTECA DE PROMPTS</span>
+
+                    <h2>
+                        Potencia tus ideas con
+                        <span>los prompts adecuados.</span>
+                    </h2>
+
+                    <p>
+                        Encuentra instrucciones listas para utilizar en tus
+                        herramientas de inteligencia artificial. Copia, personaliza
+                        y consigue mejores resultados.
+                    </p>
+                </div>
+
+                <div class="prompts-intro">
+                    <div class="prompts-intro-icon">
+                        <span>✦</span>
+                    </div>
+
+                    <div>
+                        <h3>Encuentra tu próximo prompt</h3>
+                        <p>
+                            Explora nuestra colección de instrucciones para estudiar,
+                            programar, crear y mucho más.
+                        </p>
+                    </div>
+
+                    <div class="prompts-total">
+                        <strong id="totalPrompts">20</strong>
+                        <span>Prompts disponibles</span>
+                    </div>
+                </div>
+
+                <!-- BUSCADOR -->
+
+                <div class="prompts-search">
+                    <span>⌕</span>
+
+                    <input type="search" id="buscarPrompt"
+                        placeholder="¿Qué necesitas hacer? Ej. crear una página web..." autocomplete="off">
+                </div>
+
+                <!-- FILTROS -->
+
+                <div class="prompts-filtros">
+
+                    <button class="prompt-filter active" data-categoria="Todas">
+                        Todos
+                    </button>
+
+                    <button class="prompt-filter" data-categoria="Programación">
+                        Programación
+                    </button>
+
+                    <button class="prompt-filter" data-categoria="Estudio">
+                        Estudio
+                    </button>
+
+                    <button class="prompt-filter" data-categoria="Imágenes">
+                        Imágenes
+                    </button>
+
+                    <button class="prompt-filter" data-categoria="Escritura">
+                        Escritura
+                    </button>
+
+                    <button class="prompt-filter" data-categoria="Productividad">
+                        Productividad
+                    </button>
+
+                    <button class="prompt-filter" data-categoria="Negocios">
+                        Negocios
+                    </button>
+
+                    <button class="prompt-filter" data-categoria="Favoritos">
+                        Mis favoritos
+                    </button>
+
+                </div>
+
+                <!-- RESULTADOS -->
+
+                <div class="prompts-resultados">
+                    <div class="prompts-resultados-header">
+                        <h3>Explora los prompts</h3>
+                        <span id="cantidadPrompts">20 resultados</span>
+                    </div>
+
+                    <div class="prompts-grid" id="promptsGrid">
+                        <!-- Las tarjetas se generan con JavaScript -->
+                    </div>
+
+                    <div class="prompts-vacios" id="promptsVacios" hidden>
+                        <span>⌕</span>
+                        <h3>No encontramos prompts</h3>
+                        <p>Prueba con otra búsqueda o categoría.</p>
+                    </div>
                 </div>
 
             </div>
@@ -948,6 +1061,7 @@
     <script src="catalogo.js"></script>
     <script src="app.js"></script>
     <script src="recomendador.js"></script>
+    <script src="prompts.js"></script>
 </body>
 
 </html>
