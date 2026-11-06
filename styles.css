@@ -5207,3 +5207,19 @@ a,
     height: 27px;
     stroke-width: 1.8;
 }
+
+/* LOGOS DE LAS IA RECOMENDADAS */
+
+.recommendation-tools span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.recommendation-tools img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
