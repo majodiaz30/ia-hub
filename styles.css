@@ -3902,3 +3902,44 @@ input:focus-visible {
     background: rgba(240, 107, 155, .10);
     color: #f06b9b;
 }
+
+/* COMPARTIR PROMPTS */
+
+.prompt-compartir {
+    align-self: flex-start;
+    margin: 0 0 12px;
+    padding: 8px 12px;
+    border: 1px solid var(--line-soft);
+    border-radius: 9px;
+    background: transparent;
+    color: var(--muted);
+    font-family: inherit;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.prompt-compartir:hover {
+    border-color: var(--accent);
+    background: rgba(118, 84, 246, .10);
+    color: var(--accent-soft);
+}
+
+/* ETIQUETA DE PROMPTS DESTACADOS */
+
+.prompt-destacado {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid rgba(118, 84, 246, .35);
+    border-radius: 20px;
+    background: rgba(118, 84, 246, .12);
+    color: var(--accent-soft);
+    font-size: .7rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.prompt-card-top {
+    flex-wrap: wrap;
+}

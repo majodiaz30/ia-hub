@@ -177,6 +177,10 @@ const promptsVacios = document.getElementById("promptsVacios");
 
 let categoriaPromptActual = "Todas";
 
+// PROMPTS DESTACADOS
+const promptsDestacados = [1, 2, 5, 7, 9, 12, 15, 18];
+
+
 // FAVORITOS GUARDADOS
 let promptsFavoritos = [];
 
@@ -217,7 +221,9 @@ function mostrarPrompts() {
             (
                 categoriaPromptActual === "Favoritos"
                     ? promptsFavoritos.includes(prompt.id)
-                    : prompt.categoria === categoriaPromptActual
+                    : categoriaPromptActual === "Destacados"
+                        ? promptsDestacados.includes(prompt.id)
+                        : prompt.categoria === categoriaPromptActual
             );
 
         const texto = (
@@ -265,7 +271,19 @@ function mostrarPrompts() {
         icono.className = "prompt-card-icon";
         icono.textContent = iconosPrompts[prompt.categoria] || "✦";
 
-        parteSuperior.append(categoria, icono);
+        if (promptsDestacados.includes(prompt.id)) {
+
+            const etiquetaDestacado = document.createElement("span");
+            etiquetaDestacado.className = "prompt-destacado";
+            etiquetaDestacado.textContent = "✦ Destacado";
+
+            parteSuperior.append(categoria, etiquetaDestacado, icono);
+
+        } else {
+
+            parteSuperior.append(categoria, icono);
+
+        }
 
         const titulo = document.createElement("h3");
         titulo.textContent = prompt.titulo;
@@ -335,6 +353,51 @@ function mostrarPrompts() {
 
         });
 
+        // BOTÓN COMPARTIR
+
+        const botonCompartir = document.createElement("button");
+        botonCompartir.type = "button";
+        botonCompartir.className = "prompt-compartir";
+        botonCompartir.textContent = "↗ Compartir";
+
+        botonCompartir.addEventListener("click", async () => {
+
+            const datosCompartir = {
+                title: prompt.titulo,
+                text: prompt.prompt,
+                url: window.location.href
+            };
+
+            try {
+
+                if (navigator.share) {
+
+                    await navigator.share(datosCompartir);
+
+                } else {
+
+                    await navigator.clipboard.writeText(
+                        `${prompt.titulo}\n\n${prompt.prompt}\n\nDescubre más en IA Hub: ${window.location.href}`
+                    );
+
+                    botonCompartir.textContent = "✓ Copiado";
+
+                    setTimeout(() => {
+                        botonCompartir.textContent = "↗ Compartir";
+                    }, 1800);
+
+                }
+
+            } catch (error) {
+
+                if (error.name !== "AbortError") {
+                    console.error("No se pudo compartir:", error);
+                }
+
+            }
+
+        });
+
         const botonCopiar = document.createElement("button");
         botonCopiar.type = "button";
         botonCopiar.className = "prompt-copiar";
@@ -371,9 +434,9 @@ function mostrarPrompts() {
             contenido,
             botonVerMas,
             botonFavorito,
+            botonCompartir,
             botonCopiar
         );
-
         promptsGrid.appendChild(tarjeta);
 
     });
