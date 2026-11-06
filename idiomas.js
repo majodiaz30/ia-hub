@@ -101,9 +101,10 @@ const busquedasInglesIAHub = {
 
 /* Rutas correctas según el idioma */
 function rutaHerramientaIAHub(id) {
-    const archivo = `herramienta.html?id=${encodeURIComponent(id)}`;
 
-    return idiomaIAHub === "en"
-        ? `../${archivo}`
-        : archivo;
+    const ruta = document.documentElement.lang === "en"
+        ? "/en/herramienta.html"
+        : "/herramienta.html";
+
+    return `${ruta}?id=${encodeURIComponent(id)}`;
 }
