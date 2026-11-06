@@ -20,8 +20,8 @@ if (herramienta) {
     // ============================================
 
     const descripcionSEO = (
-        herramienta.queEs ||
-        herramienta.descripcion
+        herramienta.descripcion ||
+        herramienta.queEs
     ).substring(0, 155);
 
     // Función para crear o actualizar etiquetas META
