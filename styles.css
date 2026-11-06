@@ -5038,3 +5038,172 @@ a,
     border-left: 3px solid #079e96;
     border-radius: 8px;
 }
+
+/* AVISO DE AFILIADOS */
+.affiliate-disclosure {
+    max-width: 420px;
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #aaa5bd;
+    opacity: 0.85;
+}
+
+.chatgpt-footer .affiliate-disclosure {
+    max-width: 600px;
+    margin: 12px auto;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #aaa5bd;
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   RECOMENDACIONES IA HUB
+========================================= */
+
+.recommendations-section {
+    padding: 85px 6%;
+    background: var(--bg);
+}
+
+.recommendations-heading {
+    max-width: 750px;
+    margin-bottom: 35px;
+}
+
+.recommendations-heading h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 42px);
+    color: var(--text);
+    margin: 12px 0;
+}
+
+.recommendations-heading p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.recommendation-card {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    background: linear-gradient(145deg, var(--surface), var(--bg-soft));
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+}
+
+.recommendation-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background: var(--surface-2);
+    border-radius: 15px;
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+
+.recommendation-category {
+    color: var(--accent-soft);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.recommendation-card h3 {
+    font-family: var(--font-display);
+    color: var(--text);
+    font-size: 21px;
+    margin: 12px 0;
+}
+
+.recommendation-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.recommendation-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    margin-bottom: 24px;
+}
+
+.recommendation-tools span {
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    color: var(--accent-soft);
+    padding: 7px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.recommendation-card a {
+    display: inline-block;
+    color: var(--mint);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.recommendation-card a:hover {
+    color: var(--accent-soft);
+}
+
+.recommendations-note {
+    margin-top: 24px;
+    color: var(--faint);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .recommendations-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .recommendations-section {
+        padding: 60px 5%;
+    }
+
+    .recommendations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recommendation-card {
+        padding: 24px;
+    }
+}
+
+.recommendation-icon {
+    color: var(--accent-soft);
+}
+
+.recommendation-icon svg {
+    width: 27px;
+    height: 27px;
+    stroke-width: 1.8;
+}

@@ -58,6 +58,8 @@
         "inLanguage": "es"
     }
     </script>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
 </head>
 
 <body>
@@ -518,6 +520,155 @@
                 </button>
             </div>
         </section>
+
+
+
+        <!-- RECOMENDACIONES DE IA HUB -->
+        <section class="recommendations-section" id="recomendaciones">
+
+            <div class="recommendations-heading">
+                <div>
+                    <span class="section-kicker">SELECCIÓN IA HUB</span>
+                    <h2>Las mejores IA según lo que necesitas</h2>
+                    <p>
+                        No todas las herramientas sirven para lo mismo.
+                        Descubre nuestras recomendaciones según tus objetivos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="recommendations-grid">
+
+                <!-- ESCRITURA -->
+                <article class="recommendation-card">
+                    <div class="recommendation-icon">
+                        <i data-lucide="pen-line"></i>
+                    </div>
+
+                    <span class="recommendation-category">ESCRITURA</span>
+                    <h3>Para escribir y crear contenido</h3>
+                    <p>Redacta textos, organiza ideas y mejora tus escritos.</p>
+
+                    <div class="recommendation-tools">
+                        <span>ChatGPT</span>
+                        <span>Claude</span>
+                    </div>
+
+                    <a href="herramienta.html?id=chatgpt">
+                        Explorar recomendación ↗
+                    </a>
+                </article>
+
+                <!-- ESTUDIO -->
+                <article class="recommendation-card">
+                    <div class="recommendation-icon">
+                        <i data-lucide="book-open"></i>
+                    </div>
+
+                    <span class="recommendation-category">ESTUDIO</span>
+                    <h3>Para estudiar y aprender</h3>
+                    <p>Comprende temas, investiga y organiza tus apuntes.</p>
+
+                    <div class="recommendation-tools">
+                        <span>NotebookLM</span>
+                        <span>Gemini</span>
+                    </div>
+
+                    <a href="herramienta.html?id=notebooklm">
+                        Explorar recomendación ↗
+                    </a>
+                </article>
+
+                <!-- PROGRAMACIÓN -->
+                <article class="recommendation-card">
+                    <div class="recommendation-icon">
+                        <i data-lucide="code-xml"></i>
+                    </div>
+
+                    <span class="recommendation-category">PROGRAMACIÓN</span>
+                    <h3>Para programar más fácilmente</h3>
+                    <p>Recibe ayuda para escribir, entender y corregir código.</p>
+
+                    <div class="recommendation-tools">
+                        <span>Cursor</span>
+                        <span>GitHub Copilot</span>
+                    </div>
+
+                    <a href="herramienta.html?id=cursor">
+                        Explorar recomendación ↗
+                    </a>
+                </article>
+
+                <!-- DISEÑO -->
+                <article class="recommendation-card">
+                    <div class="recommendation-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+
+                    <span class="recommendation-category">DISEÑO</span>
+                    <h3>Para diseñar y crear imágenes</h3>
+                    <p>Crea diseños, ilustraciones y contenido visual.</p>
+
+                    <div class="recommendation-tools">
+                        <span>Canva</span>
+                        <span>Leonardo AI</span>
+                    </div>
+
+                    <a href="herramienta.html?id=canva">
+                        Explorar recomendación ↗
+                    </a>
+                </article>
+
+                <!-- VIDEO -->
+                <article class="recommendation-card">
+                    <div class="recommendation-icon">
+                        <i data-lucide="clapperboard"></i>
+                    </div>
+
+                    <span class="recommendation-category">VIDEO</span>
+                    <h3>Para crear videos con IA</h3>
+                    <p>Genera escenas, experimenta con efectos y crea videos.</p>
+
+                    <div class="recommendation-tools">
+                        <span>Runway</span>
+                        <span>Kling AI</span>
+                    </div>
+
+                    <a href="herramienta.html?id=runway">
+                        Explorar recomendación ↗
+                    </a>
+                </article>
+
+                <!-- AUDIO -->
+                <article class="recommendation-card">
+                    <div class="recommendation-icon">
+                        <i data-lucide="headphones"></i>
+                    </div>
+
+                    <span class="recommendation-category">AUDIO</span>
+                    <h3>Para crear voces y música</h3>
+                    <p>Genera narraciones, voces artificiales y música.</p>
+
+                    <div class="recommendation-tools">
+                        <span>ElevenLabs</span>
+                        <span>Suno</span>
+                    </div>
+
+                    <a href="herramienta.html?id=elevenlabs">
+                        Explorar recomendación ↗
+                    </a>
+                </article>
+
+            </div>
+
+            <p class="recommendations-note">
+                Recomendaciones editoriales basadas en las funciones de cada herramienta.
+                Ninguna posición se compra.
+            </p>
+
+        </section>
+
+
 
         <section class="tools-section">
             <div class="tools-heading">
@@ -1073,6 +1224,12 @@
                     y encuentra herramientas de IA para estudiar, programar,
                     diseñar, escribir y crear contenido.
                 </p>
+
+                <p class="affiliate-disclosure">
+                    Aviso: IA Hub puede recibir una comisión si te registras o
+                    compras mediante algunos de nuestros enlaces, sin costo
+                    adicional para ti. Esto no afecta nuestras recomendaciones.
+                </p>
             </div>
             <div class="footer-links">
                 <div>
@@ -1097,6 +1254,14 @@
     <script src="app.js"></script>
     <script src="recomendador.js"></script>
     <script src="prompts.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof lucide !== "undefined") {
+                lucide.createIcons();
+            }
+        });
+    </script>
 </body>
 
 </html>
