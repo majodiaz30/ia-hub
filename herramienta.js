@@ -15,6 +15,7 @@ if (herramienta) {
 
     document.title = `${herramienta.nombre}: qué es, funciones y usos | IA Hub`;
 
+
     // ============================================
     // SEO DINÁMICO PARA CADA HERRAMIENTA
     // ============================================
@@ -119,7 +120,7 @@ if (herramienta) {
         document.head.appendChild(canonical);
     }
 
-    canonical.href = window.location.href;
+    canonical.href = `https://ia-hub-bice.vercel.app/herramienta.html?id=${encodeURIComponent(herramienta.id)}`;
 
     document.getElementById("herramienta-nombre").textContent =
         herramienta.nombre;
