@@ -4002,3 +4002,41 @@ input:focus-visible {
     color: var(--accent);
     font-size: .72rem;
 }
+
+.prompt-herramienta-link,
+.prompt-herramienta-etiqueta {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid rgba(15, 191, 179, .20);
+    border-radius: 7px;
+    background: rgba(15, 191, 179, .06);
+    color: var(--accent);
+    font-size: .72rem;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.prompt-herramienta-link:hover {
+    background: rgba(15, 191, 179, .16);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.prompt-restaurar {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px 5px 10px 0;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--muted);
+    font-size: .75rem;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.prompt-restaurar:hover {
+    color: #ff8585;
+    border-color: rgba(255, 133, 133, .4);
+    background: rgba(255, 133, 133, .06);
+}

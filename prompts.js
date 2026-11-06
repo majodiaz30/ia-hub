@@ -204,6 +204,25 @@ const promptsDestacados = [1, 2, 5, 7, 9, 12, 15, 18];
 // FAVORITOS GUARDADOS
 let promptsFavoritos = [];
 
+// PERSONALIZACIONES GUARDADAS
+
+let promptsPersonalizados = {};
+
+try {
+    promptsPersonalizados = JSON.parse(
+        localStorage.getItem("promptsPersonalizados")
+    ) || {};
+} catch (error) {
+    promptsPersonalizados = {};
+}
+
+function guardarPersonalizaciones() {
+    localStorage.setItem(
+        "promptsPersonalizados",
+        JSON.stringify(promptsPersonalizados)
+    );
+}
+
 try {
     promptsFavoritos = JSON.parse(
         localStorage.getItem("promptsFavoritos")
@@ -323,10 +342,34 @@ function mostrarPrompts() {
         const listaHerramientas = document.createElement("div");
         listaHerramientas.className = "prompt-herramientas-lista";
 
+        const enlacesHerramientas = {
+            "ChatGPT": "chatgpt",
+            "Gemini": "gemini",
+            "Claude": "claude",
+            "Microsoft Copilot": "copilot",
+            "Copilot": "copilot",
+            "Perplexity": "perplexity",
+            "NotebookLM": "notebooklm",
+            "Canva": "canva",
+            "Ideogram": "ideogram",
+            "Adobe Firefly": "firefly",
+            "Leonardo AI": "leonardo",
+            "Midjourney": "midjourney"
+        };
+
         (prompt.herramientas || []).forEach(nombre => {
 
-            const etiqueta = document.createElement("span");
+            const etiqueta = document.createElement("a");
             etiqueta.textContent = nombre;
+
+            const idHerramienta = enlacesHerramientas[nombre];
+
+            if (idHerramienta) {
+                etiqueta.href = `herramienta.html?id=${idHerramienta}`;
+                etiqueta.className = "prompt-herramienta-link";
+            } else {
+                etiqueta.className = "prompt-herramienta-etiqueta";
+            }
 
             listaHerramientas.appendChild(etiqueta);
 
@@ -339,7 +382,8 @@ function mostrarPrompts() {
 
         const contenido = document.createElement("div");
         contenido.className = "prompt-contenido";
-        contenido.textContent = prompt.prompt;
+        contenido.textContent =
+            promptsPersonalizados[prompt.id] || prompt.prompt;
 
         // BOTÓN PERSONALIZAR
 
@@ -360,12 +404,34 @@ function mostrarPrompts() {
                 botonPersonalizar.textContent = "✓ Terminar edición";
 
             } else {
-
                 contenido.contentEditable = "false";
+
+                promptsPersonalizados[prompt.id] = contenido.textContent;
+                guardarPersonalizaciones();
 
                 botonPersonalizar.textContent = "✎ Personalizar";
 
             }
+
+        });
+
+        // RESTAURAR PROMPT ORIGINAL
+
+        const botonRestaurar = document.createElement("button");
+        botonRestaurar.type = "button";
+        botonRestaurar.className = "prompt-restaurar";
+        botonRestaurar.textContent = "↺ Restaurar original";
+
+        botonRestaurar.addEventListener("click", () => {
+
+            contenido.contentEditable = "false";
+            contenido.classList.remove("editando");
+            contenido.textContent = prompt.prompt;
+
+            delete promptsPersonalizados[prompt.id];
+            guardarPersonalizaciones();
+
+            botonPersonalizar.textContent = "✎ Personalizar";
 
         });
 
@@ -508,6 +574,7 @@ function mostrarPrompts() {
             contenido,
             botonVerMas,
             botonPersonalizar,
+            botonRestaurar,
             botonFavorito,
             botonCompartir,
             botonCopiar
