@@ -7,6 +7,7 @@ const recomendador = {
     preguntaActual: 0,
     respuestas: {
         categoria: "",
+        contexto: "",
         presupuesto: "",
         nivel: ""
     }
@@ -74,7 +75,29 @@ const preguntasRecomendador = [
             { valor: "intermedio", nombre: "Intermedio", icono: "◉" },
             { valor: "avanzado", nombre: "Avanzado", icono: "◎" }
         ]
-    }
+    },
+    {
+        clave: "contexto",
+        titulo: "¿Para qué utilizarás principalmente la IA?",
+        descripcion: "Esto nos ayudará a encontrar herramientas adecuadas para tu situación.",
+        opciones: [
+            {
+                valor: "personal",
+                nombre: "Uso personal",
+                icono: "◇"
+            },
+            {
+                valor: "academico",
+                nombre: "Estudios y universidad",
+                icono: "▤"
+            },
+            {
+                valor: "profesional",
+                nombre: "Trabajo y proyectos profesionales",
+                icono: "▣"
+            }
+        ]
+    },
 ];
 
 // ============================================
@@ -205,7 +228,7 @@ function generarRecomendaciones() {
     cuestionario.hidden = true;
     resultados.hidden = false;
 
-    const { categoria, presupuesto, nivel } = recomendador.respuestas;
+    const { categoria, contexto, presupuesto, nivel } = recomendador.respuestas;
 
     const herramientasEvaluadas = herramientas.map(herramienta => {
 
@@ -216,6 +239,28 @@ function generarRecomendaciones() {
         if (herramienta.categorias.includes(categoria)) {
             puntuacion += 10;
             motivos.push(`Está relacionada con ${categoria.toLowerCase()}`);
+        }
+
+        // Recomendaciones según el contexto de uso
+        if (contexto === "personal") {
+            if (["chatgpt", "gemini", "copilot", "canva"].includes(herramienta.id)) {
+                puntuacion += 4;
+                motivos.push("Puede ayudarte en actividades personales");
+            }
+        }
+
+        if (contexto === "academico") {
+            if (["chatgpt", "gemini", "notebooklm", "elicit"].includes(herramienta.id)) {
+                puntuacion += 5;
+                motivos.push("Es útil para estudiar e investigar");
+            }
+        }
+
+        if (contexto === "profesional") {
+            if (["claude", "chatgpt", "copilot", "cursor", "github-copilot", "gamma"].includes(herramienta.id)) {
+                puntuacion += 5;
+                motivos.push("Puede apoyar tareas y proyectos profesionales");
+            }
         }
 
         // Coincidencia por presupuesto
@@ -400,6 +445,7 @@ function reiniciarRecomendador() {
 
     recomendador.respuestas = {
         categoria: "",
+        contexto: "",
         presupuesto: "",
         nivel: ""
     };
