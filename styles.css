@@ -3943,3 +3943,62 @@ input:focus-visible {
 .prompt-card-top {
     flex-wrap: wrap;
 }
+
+/* PERSONALIZAR PROMPTS */
+
+.prompt-personalizar {
+    align-self: flex-start;
+    margin: 0 0 12px;
+    padding: 8px 12px;
+    border: 1px solid rgba(118, 84, 246, .35);
+    border-radius: 9px;
+    background: rgba(118, 84, 246, .08);
+    color: var(--accent-soft);
+    font-family: inherit;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.prompt-personalizar:hover {
+    background: rgba(118, 84, 246, .2);
+}
+
+.prompt-contenido.editando {
+    max-height: 1000px;
+    min-height: 130px;
+    border-color: var(--accent);
+    outline: none;
+    cursor: text;
+    white-space: pre-wrap;
+}
+
+/* HERRAMIENTAS RECOMENDADAS */
+
+.prompt-herramientas {
+    margin-bottom: 16px;
+}
+
+.prompt-herramientas > span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.prompt-herramientas-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.prompt-herramientas-lista span {
+    padding: 5px 9px;
+    border: 1px solid rgba(15, 191, 179, .20);
+    border-radius: 7px;
+    background: rgba(15, 191, 179, .06);
+    color: var(--accent);
+    font-size: .72rem;
+}
