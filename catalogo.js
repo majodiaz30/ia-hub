@@ -212,6 +212,8 @@ const herramientas = [
         etiquetas: ["presentaciones", "diapositivas", "documentos", "diseño", "exposiciones"],
         descripcion: "Plataforma de inteligencia artificial que permite crear presentaciones, documentos y páginas visuales.",
         enlace: "https://gamma.app",
+        enlaceAfiliado: "",
+        afiliadoActivo: false,
         queEs: "Gamma es una herramienta de creación de contenido visual que utiliza inteligencia artificial para organizar ideas en presentaciones y documentos.",
         usos: [
             { titulo: "Presentaciones", descripcion: "Crea diapositivas a partir de instrucciones o contenido." },
@@ -564,6 +566,8 @@ const herramientas = [
         etiquetas: ["voz", "audio", "locucion", "narracion", "texto a voz", "podcast"],
         descripcion: "Plataforma de inteligencia artificial especializada en generación de voz y herramientas de audio.",
         enlace: "https://elevenlabs.io",
+        enlaceAfiliado: "",
+        afiliadoActivo: false,
         queEs: "ElevenLabs es una plataforma que utiliza inteligencia artificial para generar voces y trabajar con contenido de audio.",
         usos: [
             { titulo: "Narraciones", descripcion: "Convierte textos en contenido hablado." },
@@ -627,6 +631,8 @@ const herramientas = [
         etiquetas: ["editar audio", "editar video", "podcast", "transcribir", "subtitulos"],
         descripcion: "Herramienta de edición de audio y video que incorpora inteligencia artificial para facilitar la creación de contenido.",
         enlace: "https://www.descript.com",
+        enlaceAfiliado: "",
+        afiliadoActivo: false,
         queEs: "Descript es una plataforma de edición multimedia que permite trabajar con audio y video mediante herramientas basadas en texto.",
         usos: [
             { titulo: "Editar podcasts", descripcion: "Organiza y modifica grabaciones de audio." },
@@ -648,6 +654,8 @@ const herramientas = [
         etiquetas: ["transcribir", "audio", "reuniones", "notas", "resumir", "voz"],
         descripcion: "Asistente de inteligencia artificial para transcribir conversaciones y organizar notas de reuniones.",
         enlace: "https://otter.ai",
+        enlaceAfiliado: "",
+        afiliadoActivo: false,
         queEs: "Otter.ai es una plataforma que utiliza inteligencia artificial para convertir conversaciones y grabaciones en texto.",
         usos: [
             { titulo: "Transcribir", descripcion: "Convierte grabaciones y conversaciones en texto." },

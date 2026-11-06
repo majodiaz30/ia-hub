@@ -155,14 +155,28 @@ if (herramienta) {
     logo.alt = `Logo de ${herramienta.nombre}`;
 
     // Enlaces oficiales
-    document.getElementById("herramienta-enlace").href =
-        herramienta.enlace;
+    // Enlaces a la herramienta
+    const urlVisita =
+        herramienta.afiliadoActivo && herramienta.enlaceAfiliado
+            ? herramienta.enlaceAfiliado
+            : herramienta.enlace;
 
-    document.getElementById("herramienta-enlace-final").href =
-        herramienta.enlace;
+    const relVisita =
+        herramienta.afiliadoActivo && herramienta.enlaceAfiliado
+            ? "sponsored noopener noreferrer"
+            : "noopener noreferrer";
 
-    document.getElementById("herramienta-enlace-planes").href =
-        herramienta.enlace;
+    const enlacesVisita = [
+        document.getElementById("herramienta-enlace"),
+        document.getElementById("herramienta-enlace-final"),
+        document.getElementById("herramienta-enlace-planes")
+    ];
+
+    enlacesVisita.forEach(enlace => {
+        enlace.href = urlVisita;
+        enlace.target = "_blank";
+        enlace.rel = relVisita;
+    });
 
     // Categorías
     const contenedorCategorias =

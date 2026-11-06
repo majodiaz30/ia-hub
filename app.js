@@ -295,6 +295,14 @@ function mostrarSugerencias() {
     searchSuggestions.classList.add("active");
 }
 
+function obtenerEnlaceVisita(herramienta) {
+    if (herramienta.afiliadoActivo && herramienta.enlaceAfiliado) {
+        return herramienta.enlaceAfiliado;
+    }
+
+    return herramienta.enlace;
+}
+
 // Crear una tarjeta sin insertar texto del catálogo mediante HTML inseguro
 function crearTarjeta(herramienta) {
     const tarjeta = document.createElement("article");
@@ -352,9 +360,15 @@ function crearTarjeta(herramienta) {
 
     const enlace = document.createElement("a");
     enlace.className = "tool-link";
-    enlace.href = herramienta.enlace;
+    const enlaceVisita = obtenerEnlaceVisita(herramienta);
+
+    enlace.href = enlaceVisita;
     enlace.target = "_blank";
-    enlace.rel = "noopener noreferrer";
+
+    enlace.rel = herramienta.afiliadoActivo && herramienta.enlaceAfiliado
+        ? "sponsored noopener noreferrer"
+        : "noopener noreferrer";
+
     enlace.textContent = "Visitar herramienta ↗";
 
     const botonFavorito = document.createElement("button");
@@ -484,10 +498,16 @@ function mostrarDetalle(herramienta, botonOrigen) {
     // Enlace oficial
     const visitar = document.createElement("a");
     visitar.className = "detail-visit";
-    visitar.href = herramienta.enlace;
+    const enlaceVisita = obtenerEnlaceVisita(herramienta);
+
+    visitar.href = enlaceVisita;
     visitar.target = "_blank";
-    visitar.rel = "noopener noreferrer";
-    visitar.textContent = "Visitar página oficial ↗";
+
+    visitar.rel = herramienta.afiliadoActivo && herramienta.enlaceAfiliado
+        ? "sponsored noopener noreferrer"
+        : "noopener noreferrer";
+
+    visitar.textContent = "Visitar página ↗";
 
     // Construir ventana
     modal.append(
