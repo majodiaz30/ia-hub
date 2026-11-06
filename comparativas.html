@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,463 +6,1265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>IA VS | Comparativas de inteligencia artificial | IA Hub</title>
+
     <meta name="description"
-        content="Comparamos las mejores herramientas de inteligencia artificial para programar. Descubre cuál te conviene según tus necesidades.">
+        content="Comparamos ChatGPT, Claude, Gemini, Cursor, GitHub Copilot y DeepSeek. Descubre qué inteligencia artificial se adapta mejor a tus necesidades de programación.">
 
     <meta name="robots" content="index, follow">
 
     <link rel="canonical"
         href="https://ia-hub-bice.vercel.app/comparativas.html">
 
+    <link rel="icon" href="favicon.png">
+
     <link rel="stylesheet" href="styles.css">
 
-    <title>¿Cuál es la mejor IA para programar? | IA Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <style>
-        .comparativas-main {
-            max-width: 1100px;
+
+        /* =================================
+           CONFIGURACIÓN GENERAL
+        ================================= */
+
+        .battle-page {
+            overflow: hidden;
+            min-height: 100vh;
+        }
+
+        .battle-container {
+            width: min(1160px, 92%);
             margin: auto;
-            padding: 60px 24px;
         }
 
-        .comparativas-hero {
-            text-align: center;
-            margin-bottom: 55px;
+        .battle-section {
+            padding: 75px 0;
         }
 
-        .comparativas-hero .etiqueta {
+        .battle-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             color: #0fbfb3;
-            font-weight: 600;
+            font-size: 12px;
+            font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            font-size: 13px;
         }
 
-        .comparativas-hero h1 {
-            font-size: clamp(30px, 5vw, 48px);
-            margin: 18px 0;
+        .battle-tag::before {
+            content: "";
+            width: 23px;
+            height: 2px;
+            background: #0fbfb3;
         }
 
-        .comparativas-hero p {
-            max-width: 720px;
-            margin: auto;
-            line-height: 1.8;
-            color: #aaa;
-        }
-
-        .comparativa-intro {
-            margin-bottom: 35px;
-            line-height: 1.8;
-        }
-
-        .ia-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin: 30px 0 55px;
-        }
-
-        .ia-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 16px;
-            padding: 24px;
-            transition: transform .2s, border-color .2s;
-        }
-
-        .ia-card:hover {
-            transform: translateY(-4px);
-            border-color: #0fbfb3;
-        }
-
-        .ia-card h3 {
+        .battle-heading {
+            font-size: clamp(27px, 4vw, 38px);
+            line-height: 1.3;
             margin: 12px 0;
         }
 
-        .ia-card p {
-            color: #aaa;
-            line-height: 1.7;
+        .battle-description {
+            color: #a5a3b6;
+            line-height: 1.8;
+            max-width: 700px;
             font-size: 14px;
         }
 
-        .ia-card a {
-            display: inline-block;
-            margin-top: 15px;
-            color: #0fbfb3;
+        /* =================================
+           PORTADA
+        ================================= */
+
+        .battle-hero {
+            position: relative;
+            padding: 85px 0 75px;
+            background:
+                radial-gradient(ellipse at 80% 45%,
+                    rgba(104, 62, 190, .22), transparent 40%),
+                radial-gradient(ellipse at 15% 80%,
+                    rgba(15, 191, 179, .10), transparent 40%);
+            border-bottom: 1px solid rgba(255,255,255,.07);
+        }
+
+        .battle-hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .battle-hero h1 {
+            font-size: clamp(38px, 6vw, 66px);
+            line-height: 1.12;
+            letter-spacing: -2px;
+            margin: 22px 0;
+        }
+
+        .battle-hero h1 span {
+            background: linear-gradient(90deg, #0fbfb3, #a18aff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .battle-hero p {
+            color: #aaa8bd;
+            font-size: 15px;
+            line-height: 1.9;
+            max-width: 570px;
+        }
+
+        .battle-hero-buttons {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .battle-primary-button,
+        .battle-secondary-button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 22px;
+            border-radius: 10px;
             text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            transition: .25s;
+        }
+
+        .battle-primary-button {
+            background: #0fbfb3;
+            color: #071a20;
+        }
+
+        .battle-primary-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(15,191,179,.2);
+        }
+
+        .battle-secondary-button {
+            color: white;
+            border: 1px solid rgba(255,255,255,.15);
+            background: rgba(255,255,255,.04);
+        }
+
+        .battle-secondary-button:hover {
+            border-color: #0fbfb3;
+        }
+
+        /* VISUAL CENTRAL */
+
+        .battle-art {
+            min-height: 330px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .battle-art-circle {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            border: 1px solid rgba(15,191,179,.55);
+            background: radial-gradient(circle,
+                rgba(15,191,179,.13),
+                rgba(107,67,188,.10) 55%,
+                transparent 70%);
+            box-shadow:
+                0 0 60px rgba(15,191,179,.12),
+                inset 0 0 50px rgba(115,80,220,.10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transform: rotate(-8deg);
+        }
+
+        .battle-art-circle strong {
+            font-size: 75px;
+            letter-spacing: -7px;
+            line-height: 1;
+        }
+
+        .battle-art-circle span {
+            color: #0fbfb3;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .battle-art-logo {
+            position: absolute;
+            width: 62px;
+            height: 62px;
+            padding: 11px;
+            border-radius: 17px;
+            background: white;
+            box-shadow: 0 10px 35px rgba(0,0,0,.3);
+            object-fit: contain;
+        }
+
+        .battle-logo-1 {
+            top: 10px;
+            left: 15%;
+        }
+
+        .battle-logo-2 {
+            top: 30px;
+            right: 10%;
+        }
+
+        .battle-logo-3 {
+            bottom: 10px;
+            left: 15%;
+        }
+
+        .battle-logo-4 {
+            bottom: 15px;
+            right: 10%;
+        }
+
+        .battle-hero-note {
+            position: absolute;
+            bottom: 42%;
+            right: 0;
+            padding: 9px 14px;
+            border-radius: 9px;
+            background: #211e3b;
+            border: 1px solid rgba(255,255,255,.1);
+            color: #0fbfb3;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        /* =================================
+           PRESENTACIÓN
+        ================================= */
+
+        .battle-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .battle-info-box {
+            background: rgba(255,255,255,.035);
+            border: 1px solid rgba(255,255,255,.08);
+            padding: 25px;
+            border-radius: 17px;
+        }
+
+        .battle-info-box h3 {
+            margin: 0 0 12px;
+            font-size: 16px;
+        }
+
+        .battle-info-box p {
+            color: #aaa8bd;
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* =================================
+           TARJETAS DE HERRAMIENTAS
+        ================================= */
+
+        .battle-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 35px;
+        }
+
+        .battle-tool-card {
+            position: relative;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,.09);
+            background: linear-gradient(145deg,
+                rgba(255,255,255,.055),
+                rgba(255,255,255,.015));
+            border-radius: 17px;
+            transition: .25s;
+        }
+
+        .battle-tool-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(15,191,179,.55);
+            background: rgba(15,191,179,.045);
+        }
+
+        .battle-tool-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .battle-tool-logo {
+            width: 54px;
+            height: 54px;
+            padding: 9px;
+            object-fit: contain;
+            border-radius: 14px;
+            background: #fff;
+        }
+
+        .battle-tool-number {
+            color: #77758c;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .battle-tool-card h3 {
+            font-size: 17px;
+            margin: 0 0 10px;
+        }
+
+        .battle-tool-card p {
+            color: #a5a3b6;
+            font-size: 13px;
+            line-height: 1.8;
+            min-height: 70px;
+            margin: 0;
+        }
+
+        .battle-tool-purpose {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 7px 10px;
+            border-radius: 7px;
+            background: rgba(15,191,179,.09);
+            color: #0fbfb3;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .battle-tool-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,.08);
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
             font-weight: 600;
         }
 
-        .comparativa-seccion {
-            margin: 55px 0;
+        .battle-tool-link span {
+            color: #0fbfb3;
         }
 
-        .comparativa-seccion h2 {
-            margin-bottom: 18px;
-        }
+        /* =================================
+           TABLA COMPARATIVA
+        ================================= */
 
-        .tabla-contenedor {
+        .battle-table-wrapper {
+            margin-top: 30px;
             overflow-x: auto;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,.09);
+            border-radius: 15px;
+            background: rgba(255,255,255,.02);
         }
 
-        .tabla-comparativa {
+        .battle-table {
             width: 100%;
+            min-width: 750px;
             border-collapse: collapse;
-            min-width: 650px;
         }
 
-        .tabla-comparativa th,
-        .tabla-comparativa td {
-            padding: 17px;
+        .battle-table th,
+        .battle-table td {
+            padding: 19px 20px;
             text-align: left;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            line-height: 1.6;
+            border-bottom: 1px solid rgba(255,255,255,.07);
+            font-size: 12px;
+            line-height: 1.7;
         }
 
-        .tabla-comparativa th {
+        .battle-table th {
+            background: rgba(15,191,179,.07);
             color: #0fbfb3;
-            background: rgba(255,255,255,0.04);
+            font-size: 11px;
+            letter-spacing: .5px;
         }
 
-        .tabla-comparativa td {
-            color: #ccc;
+        .battle-table td {
+            color: #c4c2d0;
         }
 
-        .conclusion {
-            background: rgba(15,191,179,0.08);
-            border: 1px solid rgba(15,191,179,0.25);
-            padding: 28px;
-            border-radius: 16px;
+        .battle-table td:first-child {
+            color: white;
+            font-weight: 600;
+        }
+
+        .battle-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .battle-table tr:hover td {
+            background: rgba(255,255,255,.025);
+        }
+
+        /* =================================
+           RECOMENDACIONES
+        ================================= */
+
+        .battle-recommendations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .battle-recommendation {
+            padding: 23px;
+            background: rgba(255,255,255,.035);
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 15px;
+        }
+
+        .battle-recommendation .recommendation-number {
+            color: #0fbfb3;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .battle-recommendation h3 {
+            font-size: 15px;
+            margin: 12px 0 8px;
+        }
+
+        .battle-recommendation p {
+            font-size: 12px;
+            color: #aaa8bd;
             line-height: 1.8;
+            margin: 0;
         }
 
-        .fuentes {
-            margin-top: 40px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+        /* =================================
+           CONCLUSIÓN
+        ================================= */
+
+        .battle-verdict {
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(15,191,179,.24);
+            background:
+                radial-gradient(circle at 100% 0%,
+                    rgba(15,191,179,.11), transparent 40%),
+                linear-gradient(135deg,
+                    rgba(34,29,63,.9),
+                    rgba(17,17,32,.9));
         }
 
-        .fuentes a {
+        .battle-verdict h2 {
+            font-size: 25px;
+            margin: 14px 0;
+        }
+
+        .battle-verdict p {
+            color: #b1afc0;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .battle-verdict strong {
             color: #0fbfb3;
         }
 
-        .fecha-actualizacion {
-            color: #999;
-            font-size: 13px;
-            margin-top: 18px;
+        /* =================================
+           FUENTES
+        ================================= */
+
+        .battle-sources {
+            border-top: 1px solid rgba(255,255,255,.08);
+            padding-top: 30px;
         }
 
-        @media(max-width: 600px) {
-            .comparativas-main {
-                padding: 40px 18px;
-            }
+        .battle-sources h2 {
+            font-size: 19px;
         }
+
+        .battle-sources p,
+        .battle-sources li {
+            color: #9997ab;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .battle-sources a {
+            color: #0fbfb3;
+            text-decoration: none;
+        }
+
+        .battle-sources a:hover {
+            text-decoration: underline;
+        }
+
+        .battle-update {
+            color: #77758c;
+            font-size: 11px;
+            margin-top: 25px;
+        }
+
+        /* =================================
+           RESPONSIVE
+        ================================= */
+
+        @media(max-width: 850px) {
+
+            .battle-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .battle-art {
+                min-height: 290px;
+            }
+
+            .battle-tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .battle-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .battle-recommendations {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media(max-width: 550px) {
+
+            .battle-section {
+                padding: 52px 0;
+            }
+
+            .battle-hero {
+                padding: 55px 0;
+            }
+
+            .battle-hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .battle-art {
+                min-height: 250px;
+            }
+
+            .battle-art-circle {
+                width: 180px;
+                height: 180px;
+            }
+
+            .battle-art-circle strong {
+                font-size: 60px;
+            }
+
+            .battle-art-logo {
+                width: 49px;
+                height: 49px;
+            }
+
+            .battle-tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .battle-verdict {
+                padding: 24px;
+            }
+
+        }
+
     </style>
 </head>
 
-<body>
+<body class="battle-page">
+
+    <!-- ENCABEZADO -->
 
     <header class="header">
-        <a href="index.html" class="logo">
-            <span class="logo-mark">✦</span>
-            <span>IA <strong>Hub</strong></span>
-        </a>
+        <nav class="navbar" aria-label="Navegación principal">
 
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="index.html#herramientas">Herramientas</a>
-            <a href="comparativas.html">Comparativas</a>
+            <a href="index.html" class="logo">
+                <img src="favicon.png" alt="" class="logo-image">
+                <span>IA <strong>Hub</strong></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#herramientas">Herramientas</a></li>
+                <li><a href="comparativas.html">IA VS</a></li>
+                <li><a href="index.html#categorias">Categorías</a></li>
+            </ul>
+
+            <a href="#comparacion" class="nav-button">
+                Comparar IA <span>↗</span>
+            </a>
+
         </nav>
     </header>
 
-    <main class="comparativas-main">
 
-        <section class="comparativas-hero">
+    <main>
 
-            <span class="etiqueta">IA HUB VS</span>
+        <!-- PORTADA -->
 
-            <h1>¿Cuál es la mejor IA para programar?</h1>
+        <section class="battle-hero">
 
-            <p>
-                ChatGPT, Claude, Gemini, GitHub Copilot,
-                Cursor y DeepSeek: descubre qué ofrece cada
-                herramienta y cuál puede ayudarte más
-                según tu forma de programar.
-            </p>
+            <div class="battle-container battle-hero-grid">
 
-            <p class="fecha-actualizacion">
-                Última actualización: 6 de noviembre de 2026
-            </p>
+                <div>
 
-        </section>
+                    <span class="battle-tag">
+                        IA HUB VS · COMPARATIVAS
+                    </span>
 
-        <section class="comparativa-intro">
+                    <h1>
+                        ¿Qué IA es mejor
+                        <span>para programar?</span>
+                    </h1>
 
-            <h2>La inteligencia artificial también programa</h2>
-
-            <p>
-                Actualmente existen diferentes herramientas de
-                inteligencia artificial que ayudan a escribir código,
-                encontrar errores, explicar conceptos y desarrollar
-                proyectos de software.
-            </p>
-
-            <p>
-                Sin embargo, no todas funcionan de la misma manera.
-                Algunas están diseñadas para conversar y resolver
-                dudas, mientras que otras se integran directamente
-                en los editores de código y pueden trabajar con
-                varios archivos de un proyecto.
-            </p>
-
-            <p>
-                Vamos a conocer sus diferencias para descubrir
-                cuál se adapta mejor a cada necesidad.
-            </p>
-
-        </section>
-
-        <section class="comparativa-seccion">
-
-            <h2>Las 6 IAs que vamos a comparar</h2>
-
-            <div class="ia-grid">
-
-                <article class="ia-card">
-                    <h3>ChatGPT</h3>
                     <p>
-                        Ayuda a generar código, explicar conceptos,
-                        resolver dudas y analizar errores mediante
-                        conversaciones.
+                        Seis herramientas de inteligencia artificial,
+                        diferentes formas de programar y una pregunta:
+                        ¿cuál se adapta mejor a lo que necesitas?
                     </p>
-                    <a href="herramienta.html?id=chatgpt">
-                        Conocer ChatGPT →
-                    </a>
-                </article>
 
-                <article class="ia-card">
-                    <h3>Claude</h3>
-                    <p>
-                        Permite analizar código y trabajar con
-                        proyectos mediante herramientas como
-                        Claude Code.
-                    </p>
-                    <a href="herramienta.html?id=claude">
-                        Conocer Claude →
-                    </a>
-                </article>
+                    <div class="battle-hero-buttons">
 
-                <article class="ia-card">
-                    <h3>Gemini</h3>
-                    <p>
-                        Asistente de Google que puede ayudar
-                        a escribir código, explicar problemas
-                        y desarrollar soluciones.
-                    </p>
-                    <a href="herramienta.html?id=gemini">
-                        Conocer Gemini →
-                    </a>
-                </article>
+                        <a href="#comparacion"
+                           class="battle-primary-button">
+                            Ver comparativa <span>↗</span>
+                        </a>
 
-                <article class="ia-card">
-                    <h3>GitHub Copilot</h3>
-                    <p>
-                        Asistente integrado en entornos de
-                        desarrollo que ofrece sugerencias
-                        y funciones de programación.
-                    </p>
-                    <a href="herramienta.html?id=github-copilot">
-                        Conocer GitHub Copilot →
-                    </a>
-                </article>
+                        <a href="#herramientas"
+                           class="battle-secondary-button">
+                            Conocer las IA
+                        </a>
 
-                <article class="ia-card">
-                    <h3>Cursor</h3>
-                    <p>
-                        Editor de código con inteligencia artificial
-                        capaz de analizar proyectos y modificar
-                        diferentes archivos.
-                    </p>
-                    <a href="herramienta.html?id=cursor">
-                        Conocer Cursor →
-                    </a>
-                </article>
+                    </div>
 
-                <article class="ia-card">
-                    <h3>DeepSeek</h3>
-                    <p>
-                        Asistente de inteligencia artificial que
-                        puede ayudar a generar código, razonar
-                        y resolver consultas técnicas.
-                    </p>
-                    <a href="herramienta.html?id=deepseek">
-                        Conocer DeepSeek →
-                    </a>
-                </article>
+                </div>
+
+
+                <div class="battle-art">
+
+                    <div class="battle-art-circle">
+                        <strong>IA</strong>
+                        <span>VS</span>
+                    </div>
+
+                    <img class="battle-art-logo battle-logo-1"
+                         src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128"
+                         alt="ChatGPT">
+
+                    <img class="battle-art-logo battle-logo-2"
+                         src="https://www.google.com/s2/favicons?domain=claude.ai&sz=128"
+                         alt="Claude">
+
+                    <img class="battle-art-logo battle-logo-3"
+                         src="https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128"
+                         alt="Gemini">
+
+                    <img class="battle-art-logo battle-logo-4"
+                         src="https://www.google.com/s2/favicons?domain=cursor.com&sz=128"
+                         alt="Cursor">
+
+                    <span class="battle-hero-note">
+                        PROGRAMMING
+                    </span>
+
+                </div>
 
             </div>
 
         </section>
 
-        <section class="comparativa-seccion">
 
-            <h2>Comparación general</h2>
+        <!-- INTRODUCCIÓN -->
 
-            <p>
-                Estas son las principales diferencias entre
-                las herramientas según su enfoque y forma de uso.
-            </p>
+        <section class="battle-section">
 
-            <div class="tabla-contenedor">
+            <div class="battle-container battle-intro">
 
-                <table class="tabla-comparativa">
+                <div>
 
-                    <thead>
-                        <tr>
-                            <th>Herramienta</th>
-                            <th>Enfoque principal</th>
-                            <th>Ideal para</th>
-                        </tr>
-                    </thead>
+                    <span class="battle-tag">
+                        ANTES DE ELEGIR
+                    </span>
 
-                    <tbody>
+                    <h2 class="battle-heading">
+                        No todas las IA programan de la misma manera
+                    </h2>
 
-                        <tr>
-                            <td>ChatGPT</td>
-                            <td>Asistente conversacional</td>
-                            <td>Aprender, generar y explicar código</td>
-                        </tr>
+                    <p class="battle-description">
+                        Algunas funcionan como asistentes con los que
+                        puedes conversar y aprender. Otras se integran
+                        directamente en tu editor y pueden ayudarte
+                        a modificar archivos y desarrollar proyectos.
+                    </p>
 
-                        <tr>
-                            <td>Claude</td>
-                            <td>Asistente y agente de programación</td>
-                            <td>Analizar código y trabajar en proyectos</td>
-                        </tr>
+                </div>
 
-                        <tr>
-                            <td>Gemini</td>
-                            <td>Asistente de inteligencia artificial</td>
-                            <td>Resolver consultas y desarrollar código</td>
-                        </tr>
+                <div class="battle-info-box">
 
-                        <tr>
-                            <td>GitHub Copilot</td>
-                            <td>Asistente integrado en el editor</td>
-                            <td>Obtener sugerencias mientras programas</td>
-                        </tr>
+                    <h3>¿Cómo haremos la comparación?</h3>
 
-                        <tr>
-                            <td>Cursor</td>
-                            <td>Editor de código con IA</td>
-                            <td>Modificar y analizar proyectos</td>
-                        </tr>
+                    <p>
+                        Revisaremos el enfoque, las funciones y los
+                        escenarios de uso de cada herramienta.
+                        No asignaremos puntuaciones sin realizar
+                        pruebas equivalentes y documentadas.
+                    </p>
 
-                        <tr>
-                            <td>DeepSeek</td>
-                            <td>Asistente conversacional</td>
-                            <td>Consultas técnicas y generación de código</td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
+                </div>
 
             </div>
 
         </section>
 
-        <section class="comparativa-seccion">
 
-            <h2>¿Cuál deberías elegir?</h2>
+        <!-- HERRAMIENTAS -->
 
-            <div class="conclusion">
+        <section class="battle-section" id="herramientas">
 
-                <p>
-                    <strong>Si estás aprendiendo a programar:</strong>
-                    puedes comenzar con ChatGPT, Gemini o DeepSeek
-                    para hacer preguntas y comprender conceptos.
+            <div class="battle-container">
+
+                <span class="battle-tag">
+                    LOS PARTICIPANTES
+                </span>
+
+                <h2 class="battle-heading">
+                    Conoce las 6 herramientas
+                </h2>
+
+                <p class="battle-description">
+                    Estas son las herramientas seleccionadas
+                    para nuestra comparativa de programación.
                 </p>
 
-                <p>
-                    <strong>Si quieres ayuda dentro de tu editor:</strong>
-                    GitHub Copilot es una alternativa integrada
-                    en diferentes entornos de desarrollo.
-                </p>
 
-                <p>
-                    <strong>Si trabajas con proyectos completos:</strong>
-                    Cursor y Claude Code ofrecen flujos de trabajo
-                    orientados a analizar y modificar archivos.
-                </p>
+                <div class="battle-tools-grid">
 
-                <p>
-                    No existe una única herramienta ganadora para
-                    todos los programadores. La mejor elección
-                    depende del proyecto, la experiencia y las
-                    funciones que necesites.
-                </p>
+
+                    <!-- CHATGPT -->
+
+                    <article class="battle-tool-card">
+
+                        <div class="battle-tool-top">
+
+                            <img class="battle-tool-logo"
+                                 src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128"
+                                 alt="Logo de ChatGPT">
+
+                            <span class="battle-tool-number">01 / 06</span>
+
+                        </div>
+
+                        <h3>ChatGPT</h3>
+
+                        <p>
+                            Asistente conversacional para generar
+                            código, explicar conceptos, analizar
+                            errores y aprender programación.
+                        </p>
+
+                        <span class="battle-tool-purpose">
+                            APRENDER Y GENERAR CÓDIGO
+                        </span>
+
+                        <a href="herramienta.html?id=chatgpt"
+                           class="battle-tool-link">
+                            Explorar herramienta <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- CLAUDE -->
+
+                    <article class="battle-tool-card">
+
+                        <div class="battle-tool-top">
+
+                            <img class="battle-tool-logo"
+                                 src="https://www.google.com/s2/favicons?domain=claude.ai&sz=128"
+                                 alt="Logo de Claude">
+
+                            <span class="battle-tool-number">02 / 06</span>
+
+                        </div>
+
+                        <h3>Claude</h3>
+
+                        <p>
+                            Asistente de IA con herramientas
+                            orientadas al análisis de código
+                            y desarrollo de proyectos.
+                        </p>
+
+                        <span class="battle-tool-purpose">
+                            ANÁLISIS Y DESARROLLO
+                        </span>
+
+                        <a href="herramienta.html?id=claude"
+                           class="battle-tool-link">
+                            Explorar herramienta <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- GEMINI -->
+
+                    <article class="battle-tool-card">
+
+                        <div class="battle-tool-top">
+
+                            <img class="battle-tool-logo"
+                                 src="https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128"
+                                 alt="Logo de Gemini">
+
+                            <span class="battle-tool-number">03 / 06</span>
+
+                        </div>
+
+                        <h3>Gemini</h3>
+
+                        <p>
+                            Asistente de Google que puede ayudar
+                            a generar código, resolver consultas
+                            y comprender conceptos técnicos.
+                        </p>
+
+                        <span class="battle-tool-purpose">
+                            CONSULTAS Y PROGRAMACIÓN
+                        </span>
+
+                        <a href="herramienta.html?id=gemini"
+                           class="battle-tool-link">
+                            Explorar herramienta <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- GITHUB COPILOT -->
+
+                    <article class="battle-tool-card">
+
+                        <div class="battle-tool-top">
+
+                            <img class="battle-tool-logo"
+                                 src="https://www.google.com/s2/favicons?domain=github.com&sz=128"
+                                 alt="Logo de GitHub Copilot">
+
+                            <span class="battle-tool-number">04 / 06</span>
+
+                        </div>
+
+                        <h3>GitHub Copilot</h3>
+
+                        <p>
+                            Asistente de programación que ofrece
+                            sugerencias y funciones integradas
+                            en entornos de desarrollo.
+                        </p>
+
+                        <span class="battle-tool-purpose">
+                            AYUDA MIENTRAS PROGRAMAS
+                        </span>
+
+                        <a href="herramienta.html?id=github-copilot"
+                           class="battle-tool-link">
+                            Explorar herramienta <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- CURSOR -->
+
+                    <article class="battle-tool-card">
+
+                        <div class="battle-tool-top">
+
+                            <img class="battle-tool-logo"
+                                 src="https://www.google.com/s2/favicons?domain=cursor.com&sz=128"
+                                 alt="Logo de Cursor">
+
+                            <span class="battle-tool-number">05 / 06</span>
+
+                        </div>
+
+                        <h3>Cursor</h3>
+
+                        <p>
+                            Editor de código con IA integrada
+                            para analizar proyectos, editar archivos
+                            y ayudar en el desarrollo.
+                        </p>
+
+                        <span class="battle-tool-purpose">
+                            EDITAR PROYECTOS
+                        </span>
+
+                        <a href="herramienta.html?id=cursor"
+                           class="battle-tool-link">
+                            Explorar herramienta <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- DEEPSEEK -->
+
+                    <article class="battle-tool-card">
+
+                        <div class="battle-tool-top">
+
+                            <img class="battle-tool-logo"
+                                 src="https://www.google.com/s2/favicons?domain=deepseek.com&sz=128"
+                                 alt="Logo de DeepSeek">
+
+                            <span class="battle-tool-number">06 / 06</span>
+
+                        </div>
+
+                        <h3>DeepSeek</h3>
+
+                        <p>
+                            Asistente de inteligencia artificial
+                            que puede ayudar con razonamiento,
+                            consultas técnicas y generación de código.
+                        </p>
+
+                        <span class="battle-tool-purpose">
+                            RAZONAMIENTO Y CÓDIGO
+                        </span>
+
+                        <a href="herramienta.html?id=deepseek"
+                           class="battle-tool-link">
+                            Explorar herramienta <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                </div>
 
             </div>
 
         </section>
 
-        <section class="fuentes">
 
-            <h2>Fuentes y referencias</h2>
+        <!-- COMPARACIÓN -->
 
-            <p>
-                Para elaborar esta comparativa se consultaron
-                documentación y referencias sobre las funciones
-                de las herramientas:
-            </p>
+        <section class="battle-section" id="comparacion">
 
-            <ul>
-                <li>
-                    <a href="https://docs.github.com/en/copilot"
-                        target="_blank" rel="noopener noreferrer">
-                        Documentación oficial de GitHub Copilot
-                    </a>
-                </li>
+            <div class="battle-container">
 
-                <li>
-                    <a href="https://docs.cursor.com/"
-                        target="_blank" rel="noopener noreferrer">
-                        Documentación de Cursor
-                    </a>
-                </li>
+                <span class="battle-tag">
+                    CARA A CARA
+                </span>
 
-                <li>
-                    <a href="https://claude.com/es/product/claude-code"
-                        target="_blank" rel="noopener noreferrer">
-                        Claude Code
-                    </a>
-                </li>
+                <h2 class="battle-heading">
+                    Comparación general
+                </h2>
 
-                <li>
-                    <a href="https://arxiv.org/abs/2602.08915"
-                        target="_blank" rel="noopener noreferrer">
-                        Investigación sobre agentes de programación
-                    </a>
-                </li>
-            </ul>
+                <p class="battle-description">
+                    Diferencias de enfoque y funciones.
+                    La herramienta más adecuada depende
+                    de la tarea que quieras realizar.
+                </p>
 
-            <p>
-                Las funciones, modelos y planes pueden cambiar.
-                Consulta siempre las páginas oficiales para
-                conocer la información más reciente.
-            </p>
+
+                <div class="battle-table-wrapper">
+
+                    <table class="battle-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>HERRAMIENTA</th>
+                                <th>ENFOQUE</th>
+                                <th>DESTACA EN</th>
+                                <th>TIPO DE USO</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>ChatGPT</td>
+                                <td>Asistente conversacional</td>
+                                <td>Explicaciones y generación de código</td>
+                                <td>Chat y herramientas de desarrollo</td>
+                            </tr>
+
+                            <tr>
+                                <td>Claude</td>
+                                <td>Asistente y agente de código</td>
+                                <td>Análisis y trabajo con proyectos</td>
+                                <td>Chat y Claude Code</td>
+                            </tr>
+
+                            <tr>
+                                <td>Gemini</td>
+                                <td>Asistente multimodal</td>
+                                <td>Consultas y ayuda técnica</td>
+                                <td>Chat y herramientas de desarrollo</td>
+                            </tr>
+
+                            <tr>
+                                <td>GitHub Copilot</td>
+                                <td>Asistente de programación</td>
+                                <td>Sugerencias e integración en el editor</td>
+                                <td>Entornos de desarrollo</td>
+                            </tr>
+
+                            <tr>
+                                <td>Cursor</td>
+                                <td>Editor con IA</td>
+                                <td>Edición y análisis de proyectos</td>
+                                <td>Editor de código</td>
+                            </tr>
+
+                            <tr>
+                                <td>DeepSeek</td>
+                                <td>Asistente conversacional</td>
+                                <td>Razonamiento y generación de código</td>
+                                <td>Chat y API</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECOMENDACIONES -->
+
+        <section class="battle-section">
+
+            <div class="battle-container">
+
+                <span class="battle-tag">
+                    SEGÚN LO QUE NECESITAS
+                </span>
+
+                <h2 class="battle-heading">
+                    ¿Cuál te conviene elegir?
+                </h2>
+
+                <p class="battle-description">
+                    Una recomendación inicial según el tipo
+                    de trabajo que quieras realizar.
+                </p>
+
+
+                <div class="battle-recommendations">
+
+                    <article class="battle-recommendation">
+
+                        <span class="recommendation-number">01 · APRENDIZAJE</span>
+
+                        <h3>Si estás aprendiendo a programar</h3>
+
+                        <p>
+                            ChatGPT, Gemini y DeepSeek pueden ayudarte
+                            a hacer preguntas, comprender conceptos
+                            y practicar con ejemplos.
+                        </p>
+
+                    </article>
+
+
+                    <article class="battle-recommendation">
+
+                        <span class="recommendation-number">02 · EDITOR</span>
+
+                        <h3>Si quieres ayuda mientras programas</h3>
+
+                        <p>
+                            GitHub Copilot puede integrarse
+                            en tu entorno de desarrollo para
+                            ofrecer sugerencias de código.
+                        </p>
+
+                    </article>
+
+
+                    <article class="battle-recommendation">
+
+                        <span class="recommendation-number">03 · PROYECTOS</span>
+
+                        <h3>Si trabajas con varios archivos</h3>
+
+                        <p>
+                            Cursor y Claude Code ofrecen
+                            herramientas para analizar y trabajar
+                            con proyectos de software.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSIÓN -->
+
+        <section class="battle-section">
+
+            <div class="battle-container">
+
+                <div class="battle-verdict">
+
+                    <span class="battle-tag">
+                        EL VEREDICTO
+                    </span>
+
+                    <h2>
+                        Entonces, ¿cuál es la mejor IA para programar?
+                    </h2>
+
+                    <p>
+                        No existe una ganadora universal.
+                        <strong>ChatGPT, Claude, Gemini y DeepSeek</strong>
+                        pueden servir como asistentes para aprender,
+                        consultar y generar código.
+                    </p>
+
+                    <p>
+                        <strong>GitHub Copilot y Cursor</strong>
+                        tienen un enfoque más integrado en el
+                        entorno donde se escribe y modifica código.
+                    </p>
+
+                    <p>
+                        La mejor elección dependerá de tu experiencia,
+                        tu proyecto, las funciones que necesites
+                        y el presupuesto disponible.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FUENTES -->
+
+        <section class="battle-section">
+
+            <div class="battle-container battle-sources">
+
+                <h2>Fuentes oficiales</h2>
+
+                <p>
+                    Consulta las páginas oficiales para conocer
+                    sus características, planes y funciones actuales.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <a href="https://openai.com/"
+                           target="_blank" rel="noopener noreferrer">
+                            OpenAI
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://claude.com/"
+                           target="_blank" rel="noopener noreferrer">
+                            Claude
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://gemini.google.com/"
+                           target="_blank" rel="noopener noreferrer">
+                            Google Gemini
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://docs.github.com/en/copilot"
+                           target="_blank" rel="noopener noreferrer">
+                            GitHub Copilot
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://cursor.com/"
+                           target="_blank" rel="noopener noreferrer">
+                            Cursor
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.deepseek.com/"
+                           target="_blank" rel="noopener noreferrer">
+                            DeepSeek
+                        </a>
+                    </li>
+
+                </ul>
+
+                <p>
+                    Las características pueden cambiar con nuevas
+                    versiones y actualizaciones de cada plataforma.
+                </p>
+
+                <p class="battle-update">
+                    Página informativa · IA Hub · Actualizada el 6 de noviembre de 2026
+                </p>
+
+            </div>
 
         </section>
 
     </main>
 
+
+    <!-- PIE DE PÁGINA -->
+
     <footer class="footer">
 
         <div class="footer-bottom">
+
             <span>© 2026 IA Hub. Todos los derechos reservados.</span>
+
             <a href="index.html">Volver al inicio</a>
+
         </div>
 
     </footer>
