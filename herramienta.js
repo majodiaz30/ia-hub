@@ -13,7 +13,7 @@ const herramienta = herramientas.find(
 // Mostrar la información
 if (herramienta) {
 
-    document.title = `${herramienta.nombre} | IA Hub`;
+    document.title = `${herramienta.nombre}: qué es, funciones y usos | IA Hub`;
 
     // ============================================
     // SEO DINÁMICO PARA CADA HERRAMIENTA
