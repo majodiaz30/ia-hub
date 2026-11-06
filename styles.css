@@ -5261,3 +5261,43 @@ a,
 .language-divider {
     color: var(--faint);
 }
+
+/* =========================================
+   IA HUB - CORRECCIÓN DE DESBORDAMIENTO
+========================================= */
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, video, svg {
+    max-width: 100%;
+}
+
+section, main, header, footer {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .nav-actions {
+        flex-wrap: wrap;
+    }
+
+    .language-switcher {
+        flex-shrink: 0;
+    }
+
+}
