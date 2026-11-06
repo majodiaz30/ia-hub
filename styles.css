@@ -5223,3 +5223,41 @@ a,
     border-radius: 5px;
     flex-shrink: 0;
 }
+
+/* =========================================
+   SELECTOR DE IDIOMAS
+========================================= */
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    white-space: nowrap;
+}
+
+.language-switcher svg {
+    width: 17px;
+    height: 17px;
+    color: var(--accent-soft);
+}
+
+.language-switcher a {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.language-switcher a:hover,
+.language-switcher a.language-active {
+    color: var(--accent-soft);
+}
+
+.language-divider {
+    color: var(--faint);
+}
