@@ -660,3 +660,54 @@ const herramientas = [
     }
 
 ];
+
+// ============================================
+// DISPONIBILIDAD Y MODELO DE PRECIOS
+// ============================================
+
+const preciosHerramientas = {
+    // Texto, estudio y asistentes
+    chatgpt: "freemium",
+    gemini: "freemium",
+    claude: "freemium",
+    copilot: "freemium",
+    deepseek: "gratis",
+    grok: "freemium",
+    perplexity: "freemium",
+    notebooklm: "freemium",
+    elicit: "freemium",
+    gamma: "freemium",
+
+    // Imágenes y diseño
+    canva: "freemium",
+    leonardo: "freemium",
+    firefly: "freemium",
+    ideogram: "freemium",
+    midjourney: "pago",
+
+    // Video
+    runway: "freemium",
+    capcut: "freemium",
+    kling: "freemium",
+    pika: "freemium",
+
+    // Programación
+    "github-copilot": "freemium",
+    cursor: "freemium",
+    windsurf: "freemium",
+    replit: "freemium",
+    lovable: "freemium",
+    bolt: "freemium",
+
+    // Audio y música
+    elevenlabs: "freemium",
+    suno: "freemium",
+    udio: "freemium",
+    descript: "freemium",
+    otter: "freemium"
+};
+
+// Asignar disponibilidad a cada herramienta
+herramientas.forEach(herramienta => {
+    herramienta.precio = preciosHerramientas[herramienta.id] || "freemium";
+});
