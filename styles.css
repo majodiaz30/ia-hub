@@ -5301,3 +5301,53 @@ section, main, header, footer {
     }
 
 }
+
+/* =========================================
+   IA HUB - CORRECCIÓN DEL NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    max-width: 100%;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-width: 0;
+}
+
+.nav-links {
+    min-width: 0;
+}
+
+.nav-links a {
+    white-space: nowrap;
+}
+
+.nav-actions {
+    flex-shrink: 0;
+}
+
+/* Ajustes para pantallas medianas */
+@media (min-width: 769px) and (max-width: 1100px) {
+
+    .nav-container {
+        gap: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .nav-actions {
+        gap: 8px;
+    }
+}
