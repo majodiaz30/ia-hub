@@ -179,6 +179,54 @@ const bibliotecaPrompts = [
 ];
 
 // ============================================
+// IDIOMA DE LOS PROMPTS
+// ============================================
+
+const promptsEnIngles = document.documentElement.lang === "en";
+
+const textosPrompts = {
+    resultado: promptsEnIngles ? "result" : "resultado",
+    resultados: promptsEnIngles ? "results" : "resultados",
+    destacado: promptsEnIngles ? "Featured" : "Destacado",
+    ideal: promptsEnIngles ? "Best for:" : "Ideal para:",
+    personalizar: promptsEnIngles ? "✎ Customize" : "✎ Personalizar",
+    terminar: promptsEnIngles ? "✓ Finish editing" : "✓ Terminar edición",
+    restaurar: promptsEnIngles ? "↺ Restore original" : "↺ Restaurar original",
+    verMas: promptsEnIngles ? "Show more" : "Ver más",
+    verMenos: promptsEnIngles ? "Show less" : "Ver menos",
+    favorito: promptsEnIngles ? "♡ Favorite" : "♡ Favorito",
+    guardado: promptsEnIngles ? "♥ Saved" : "♥ Guardado",
+    compartir: promptsEnIngles ? "↗ Share" : "↗ Compartir",
+    copiado: promptsEnIngles ? "✓ Copied" : "✓ Copiado",
+    copiar: promptsEnIngles ? "Copy prompt" : "Copiar prompt",
+    errorCopiar: promptsEnIngles ? "Could not copy" : "No se pudo copiar"
+};
+
+const categoriasPromptsEn = {
+    "Programación": "Coding",
+    "Estudio": "Studying",
+    "Imágenes": "Images",
+    "Escritura": "Writing",
+    "Productividad": "Productivity",
+    "Negocios": "Business"
+};
+
+// Aplicar las traducciones en la página inglesa
+if (promptsEnIngles && typeof traduccionesPromptsEn !== "undefined") {
+
+    bibliotecaPrompts.forEach(prompt => {
+
+        const traduccion = traduccionesPromptsEn[prompt.id];
+
+        if (traduccion) {
+            Object.assign(prompt, traduccion);
+        }
+
+    });
+
+}
+
+// ============================================
 // FUNCIONES DE LA BIBLIOTECA
 // ============================================
 
