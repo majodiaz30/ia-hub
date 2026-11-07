@@ -425,7 +425,9 @@ function mostrarPrompts() {
             const idHerramienta = enlacesHerramientas[nombre];
 
             if (idHerramienta) {
-                etiqueta.href = `herramienta.html?id=${idHerramienta}`;
+                etiqueta.href = promptsEnIngles
+                    ? `/en/herramienta.html?id=${idHerramienta}`
+                    : `/herramienta.html?id=${idHerramienta}`;
                 etiqueta.className = "prompt-herramienta-link";
             } else {
                 etiqueta.className = "prompt-herramienta-etiqueta";
