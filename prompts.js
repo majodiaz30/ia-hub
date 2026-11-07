@@ -340,7 +340,9 @@ function mostrarPrompts() {
     promptsGrid.innerHTML = "";
 
     cantidadPrompts.textContent =
-        `${resultados.length} ${resultados.length === 1 ? "resultado" : "resultados"}`;
+        `${resultados.length} ${resultados.length === 1
+            ? textosPrompts.resultado
+            : textosPrompts.resultados}`;
 
     totalPrompts.textContent = bibliotecaPrompts.length;
 
@@ -372,7 +374,7 @@ function mostrarPrompts() {
 
             const etiquetaDestacado = document.createElement("span");
             etiquetaDestacado.className = "prompt-destacado";
-            etiquetaDestacado.textContent = "✦ Destacado";
+            etiquetaDestacado.textContent = `✦ ${textosPrompts.destacado}`;
 
             parteSuperior.append(categoria, etiquetaDestacado, icono);
 
@@ -395,7 +397,7 @@ function mostrarPrompts() {
         herramientasRecomendadas.className = "prompt-herramientas";
 
         const tituloHerramientas = document.createElement("span");
-        tituloHerramientas.textContent = "Ideal para:";
+        tituloHerramientas.textContent = textosPrompts.ideal;
 
         const listaHerramientas = document.createElement("div");
         listaHerramientas.className = "prompt-herramientas-lista";
@@ -448,7 +450,7 @@ function mostrarPrompts() {
         const botonPersonalizar = document.createElement("button");
         botonPersonalizar.type = "button";
         botonPersonalizar.className = "prompt-personalizar";
-        botonPersonalizar.textContent = "✎ Personalizar";
+        botonPersonalizar.textContent = textosPrompts.personalizar;
 
         botonPersonalizar.addEventListener("click", () => {
 
@@ -459,7 +461,7 @@ function mostrarPrompts() {
                 contenido.contentEditable = "true";
                 contenido.focus();
 
-                botonPersonalizar.textContent = "✓ Terminar edición";
+                botonPersonalizar.textContent = textosPrompts.terminar;
 
             } else {
                 contenido.contentEditable = "false";
@@ -478,7 +480,7 @@ function mostrarPrompts() {
         const botonRestaurar = document.createElement("button");
         botonRestaurar.type = "button";
         botonRestaurar.className = "prompt-restaurar";
-        botonRestaurar.textContent = "↺ Restaurar original";
+        botonRestaurar.textContent = textosPrompts.restaurar;
 
         botonRestaurar.addEventListener("click", () => {
 
@@ -496,15 +498,13 @@ function mostrarPrompts() {
         const botonVerMas = document.createElement("button");
         botonVerMas.type = "button";
         botonVerMas.className = "prompt-ver-mas";
-        botonVerMas.textContent = "Ver más";
+        botonVerMas.textContent = textosPrompts.verMas;
 
         botonVerMas.addEventListener("click", () => {
 
             const expandido = contenido.classList.toggle("expandido");
 
-            botonVerMas.textContent = expandido
-                ? "Ver menos"
-                : "Ver más";
+            botonVerMas.textContent = expandido ? textosPrompts.verMenos : textosPrompts.verMas;
 
         });
 
@@ -519,7 +519,7 @@ function mostrarPrompts() {
 
             const esFavorito = promptsFavoritos.includes(prompt.id);
 
-            botonFavorito.textContent = esFavorito ? "♥ Guardado" : "♡ Favorito";
+            botonFavorito.textContent = esFavorito ? textosPrompts.guardado : textosPrompts.favorito;
 
             botonFavorito.classList.toggle("activo", esFavorito);
 
@@ -555,7 +555,7 @@ function mostrarPrompts() {
         const botonCompartir = document.createElement("button");
         botonCompartir.type = "button";
         botonCompartir.className = "prompt-compartir";
-        botonCompartir.textContent = "↗ Compartir";
+        botonCompartir.textContent = textosPrompts.compartir;
 
         botonCompartir.addEventListener("click", async () => {
 
@@ -577,7 +577,7 @@ function mostrarPrompts() {
                         `${prompt.titulo}\n\n${prompt.prompt}\n\nDescubre más en IA Hub: ${window.location.href}`
                     );
 
-                    botonCompartir.textContent = "✓ Copiado";
+                    botonCompartir.textContent = textosPrompts.copiado;
 
                     setTimeout(() => {
                         botonCompartir.textContent = "↗ Compartir";
@@ -598,7 +598,7 @@ function mostrarPrompts() {
         const botonCopiar = document.createElement("button");
         botonCopiar.type = "button";
         botonCopiar.className = "prompt-copiar";
-        botonCopiar.textContent = "Copiar prompt";
+        botonCopiar.textContent = textosPrompts.copiar;
 
         botonCopiar.addEventListener("click", async () => {
 
@@ -606,7 +606,7 @@ function mostrarPrompts() {
 
                 await navigator.clipboard.writeText(contenido.textContent);
 
-                botonCopiar.textContent = "✓ Copiado";
+                botonCopiar.textContent = textosPrompts.copiado;
                 botonCopiar.classList.add("copiado");
 
                 setTimeout(() => {
@@ -616,7 +616,7 @@ function mostrarPrompts() {
 
             } catch (error) {
 
-                botonCopiar.textContent = "No se pudo copiar";
+                botonCopiar.textContent = textosPrompts.errorCopiar;
 
                 console.error("Error al copiar:", error);
 
