@@ -242,13 +242,27 @@ const traduccionesCatalogo = {
     },
 
     "lovable": {
-        descripcionEn: "AI-powered platform for creating websites, prototypes, and web applications using natural language instructions.",
+        descripcionEn: "Lovable is an AI-powered development platform that allows users to create websites and web applications through written instructions, making design, programming, and digital project creation more accessible.",
+
         etiquetasEn: [
-            "website builder", "applications",
-            "programming", "web development", "design"
+            "website builder",
+            "web applications",
+            "artificial intelligence",
+            "programming",
+            "web development",
+            "web design",
+            "website creation",
+            "no-code applications",
+            "prototypes",
+            "frontend",
+            "backend",
+            "databases",
+            "AI development"
         ],
-        queEsEn: "Lovable is an AI development tool that lets users build web applications by describing what they want to create."
+
+        queEsEn: "Lovable is an artificial intelligence tool designed to transform ideas into functional web applications. Users can describe what they want to build using natural language, and the platform generates an initial version of the project, including interfaces and code. Users can also request modifications through additional instructions."
     },
+
 
     "bolt": {
         descripcionEn: "AI development platform for generating websites and applications directly in the browser.",
@@ -634,16 +648,59 @@ const detallesCatalogoEn = {
         disponibilidadEn: "Offers free access and paid plans."
     },
 
+
     lovable: {
         usosEn: [
-            { titulo: "Website creation", descripcion: "Generate web interfaces from descriptions." },
-            { titulo: "Application development", descripcion: "Build prototypes and web applications." },
-            { titulo: "Interface design", descripcion: "Transform ideas into visual components." }
+            {
+                titulo: "Website creation",
+                descripcion: "Build landing pages, portfolios, informational websites, and business websites using written instructions."
+            },
+            {
+                titulo: "Web application development",
+                descripcion: "Create applications with multiple screens, forms, and features based on your project's requirements."
+            },
+            {
+                titulo: "Rapid prototyping",
+                descripcion: "Turn an idea into an initial application that can be previewed, tested, and improved."
+            },
+            {
+                titulo: "Interface design",
+                descripcion: "Generate visual layouts, components, and page structures that can be customized through prompts."
+            },
+            {
+                titulo: "Academic projects",
+                descripcion: "Explore software ideas, learn about application structures, and create demonstrations for educational projects."
+            },
+            {
+                titulo: "Business tools",
+                descripcion: "Develop prototypes for dashboards, booking systems, and applications that help organize information."
+            }
         ],
-        funcionesEn: ["Application generation", "Interface design", "Code generation"],
-        ventajasEn: ["Simplifies prototyping", "Supports development through prompts", "Combines design and coding"],
-        disponibilidadEn: "Offers a limited free plan and paid subscriptions."
+
+        funcionesEn: [
+            "AI-powered website generation",
+            "Application creation using natural language",
+            "Automatic interface design",
+            "Code generation and editing",
+            "Project modifications through conversations",
+            "Application previews",
+            "Integration with compatible services and databases",
+            "Web project publishing",
+            "Rapid prototyping"
+        ],
+
+        ventajasEn: [
+            "Start projects without writing all the code manually",
+            "Turn ideas into functional prototypes",
+            "Combine design and development in one platform",
+            "Request changes using natural language",
+            "Reduce the time needed to create an initial version",
+            "Useful for beginners and experienced developers"
+        ],
+
+        disponibilidadEn: "Lovable offers a free plan with usage limits and several paid subscription options. Features, capabilities, and limits depend on the selected plan."
     },
+
 
     bolt: {
         usosEn: [
