@@ -1,32 +1,174 @@
 
-// Obtener el identificador de la herramienta desde la URL
+/* ============================================
+   IA HUB - DETALLE DE HERRAMIENTAS
+   ESPAÑOL E INGLÉS
+============================================ */
+
+// Obtener el identificador desde la URL
 const parametros = new URLSearchParams(window.location.search);
 const idHerramienta = parametros.get("id");
 
+// Detectar idioma
+const idiomaHerramienta =
+    document.documentElement.lang === "en" ? "en" : "es";
 
-// Buscar la herramienta seleccionada
+const esIngles = idiomaHerramienta === "en";
+
+// Buscar herramienta
 const herramienta = herramientas.find(
     elemento => elemento.id === idHerramienta
 );
 
 
-// Mostrar la información
+// ============================================
+// FUNCIONES AUXILIARES
+// ============================================
+
+// Seleccionar texto según el idioma
+function obtenerTexto(campo, valorAlternativo = "") {
+
+    if (!herramienta) return valorAlternativo;
+
+    if (esIngles) {
+        return herramienta[campo + "En"] ||
+            herramienta[campo] ||
+            valorAlternativo;
+    }
+
+    return herramienta[campo] || valorAlternativo;
+}
+
+
+// Seleccionar listas según el idioma
+function obtenerLista(campo) {
+
+    if (!herramienta) return [];
+
+    if (esIngles) {
+        return herramienta[campo + "En"] ||
+            herramienta[campo] ||
+            [];
+    }
+
+    return herramienta[campo] || [];
+}
+
+
+// Crear o actualizar etiquetas META
+function actualizarMeta(nombre, contenido, atributo = "name") {
+
+    let meta = document.querySelector(
+        `meta[${atributo}="${nombre}"]`
+    );
+
+    if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute(atributo, nombre);
+        document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", contenido);
+}
+
+
+// Obtener logo de una herramienta
+function obtenerLogo(enlace) {
+
+    try {
+        const dominio = new URL(enlace).hostname;
+
+        return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(dominio)}&sz=128`;
+
+    } catch (error) {
+        return "";
+    }
+}
+
+
+// ============================================
+// MOSTRAR HERRAMIENTA
+// ============================================
+
 if (herramienta) {
 
-    document.title = `${herramienta.nombre}: qué es, funciones y usos | IA Hub`;
-
-
     // ============================================
-    // SEO DINÁMICO PARA CADA HERRAMIENTA
+    // TÍTULO Y SEO
     // ============================================
+
+    document.title = esIngles
+        ? `${herramienta.nombre}: Features, Benefits and Uses | IA Hub`
+        : `${herramienta.nombre}: qué es, funciones y usos | IA Hub`;
+
 
     const descripcionSEO = (
-        herramienta.descripcion ||
-        herramienta.queEs
+        obtenerTexto("descripcion") ||
+        obtenerTexto("queEs")
     ).substring(0, 155);
 
+
+    actualizarMeta("description", descripcionSEO);
+
+    actualizarMeta(
+        "og:title",
+        `${herramienta.nombre} | IA Hub`,
+        "property"
+    );
+
+    actualizarMeta(
+        "og:description",
+        descripcionSEO,
+        "property"
+    );
+
+    actualizarMeta(
+        "og:type",
+        "website",
+        "property"
+    );
+
+    actualizarMeta(
+        "og:url",
+        window.location.href,
+        "property"
+    );
+
+    actualizarMeta("twitter:card", "summary");
+
+    actualizarMeta(
+        "twitter:title",
+        `${herramienta.nombre} | IA Hub`
+    );
+
+    actualizarMeta(
+        "twitter:description",
+        descripcionSEO
+    );
+
+
     // ============================================
-    // DATOS ESTRUCTURADOS PARA GOOGLE
+    // URL CANÓNICA
+    // ============================================
+
+    let canonical = document.querySelector(
+        'link[rel="canonical"]'
+    );
+
+    if (!canonical) {
+        canonical = document.createElement("link");
+        canonical.rel = "canonical";
+        document.head.appendChild(canonical);
+    }
+
+    const rutaCanonica = esIngles
+        ? "/en/herramienta.html"
+        : "/herramienta.html";
+
+    canonical.href =
+        `https://ia-hub-bice.vercel.app${rutaCanonica}?id=${encodeURIComponent(herramienta.id)}`;
+
+
+    // ============================================
+    // DATOS ESTRUCTURADOS
     // ============================================
 
     const datosEstructurados = {
@@ -39,20 +181,30 @@ if (herramienta) {
         "url": herramienta.enlace
     };
 
-    let scriptSchema = document.getElementById("datos-estructurados");
+    let scriptSchema = document.getElementById(
+        "datos-estructurados"
+    );
 
     if (!scriptSchema) {
+
         scriptSchema = document.createElement("script");
         scriptSchema.id = "datos-estructurados";
         scriptSchema.type = "application/ld+json";
+
         document.head.appendChild(scriptSchema);
     }
 
-    scriptSchema.textContent = JSON.stringify(datosEstructurados);
+    scriptSchema.textContent =
+        JSON.stringify(datosEstructurados);
+
 
     // ============================================
-    // MIGAS DE PAN PARA GOOGLE
+    // MIGAS DE PAN
     // ============================================
+
+    const urlInicio = esIngles
+        ? "https://ia-hub-bice.vercel.app/en/"
+        : "https://ia-hub-bice.vercel.app/";
 
     const migasDePan = {
         "@context": "https://schema.org",
@@ -61,118 +213,121 @@ if (herramienta) {
             {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Inicio",
-                "item": "https://ia-hub-bice.vercel.app/"
+                "name": esIngles ? "Home" : "Inicio",
+                "item": urlInicio
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": herramienta.nombre,
-                "item": window.location.href
+                "item": canonical.href
             }
         ]
     };
 
-    let scriptBreadcrumb = document.getElementById("datos-breadcrumb");
+    let scriptBreadcrumb = document.getElementById(
+        "datos-breadcrumb"
+    );
 
     if (!scriptBreadcrumb) {
+
         scriptBreadcrumb = document.createElement("script");
         scriptBreadcrumb.id = "datos-breadcrumb";
         scriptBreadcrumb.type = "application/ld+json";
+
         document.head.appendChild(scriptBreadcrumb);
     }
 
-    scriptBreadcrumb.textContent = JSON.stringify(migasDePan);
+    scriptBreadcrumb.textContent =
+        JSON.stringify(migasDePan);
 
-    // Función para crear o actualizar etiquetas META
-    function actualizarMeta(nombre, contenido, atributo = "name") {
-        let meta = document.querySelector(`meta[${atributo}="${nombre}"]`);
 
-        if (!meta) {
-            meta = document.createElement("meta");
-            meta.setAttribute(atributo, nombre);
-            document.head.appendChild(meta);
-        }
-
-        meta.setAttribute("content", contenido);
-    }
-
-    // Descripción para Google
-    actualizarMeta("description", descripcionSEO);
-
-    // Open Graph para compartir enlaces
-    actualizarMeta("og:title", `${herramienta.nombre} | IA Hub`, "property");
-    actualizarMeta("og:description", descripcionSEO, "property");
-    actualizarMeta("og:type", "website", "property");
-    actualizarMeta("og:url", window.location.href, "property");
-
-    // Twitter
-    actualizarMeta("twitter:card", "summary");
-    actualizarMeta("twitter:title", `${herramienta.nombre} | IA Hub`);
-    actualizarMeta("twitter:description", descripcionSEO);
-
-    // URL canónica
-    let canonical = document.querySelector('link[rel="canonical"]');
-
-    if (!canonical) {
-        canonical = document.createElement("link");
-        canonical.rel = "canonical";
-        document.head.appendChild(canonical);
-    }
-
-    canonical.href = `https://ia-hub-bice.vercel.app/herramienta.html?id=${encodeURIComponent(herramienta.id)}`;
+    // ============================================
+    // NOMBRE
+    // ============================================
 
     document.getElementById("herramienta-nombre").textContent =
         herramienta.nombre;
 
-    const idiomaHerramienta = document.documentElement.lang === "en"
-        ? "en"
-        : "es";
+
+    // ============================================
+    // DESCRIPCIÓN
+    // ============================================
 
     document.getElementById("herramienta-descripcion").textContent =
-        idiomaHerramienta === "en"
-            ? (herramienta.descripcionEn || herramienta.descripcion)
-            : herramienta.descripcion;
+        obtenerTexto("descripcion");
+
+
+    // ============================================
+    // QUÉ ES
+    // ============================================
 
     document.getElementById("herramienta-que-es").textContent =
-        idiomaHerramienta === "en"
-            ? (herramienta.queEsEn || herramienta.queEs || herramienta.descripcion)
-            : (herramienta.queEs || herramienta.descripcion);
+        obtenerTexto("queEs", obtenerTexto("descripcion"));
 
-    // Disponibilidad
+
+    // ============================================
+    // DISPONIBILIDAD
+    // ============================================
+
+    const mensajeDisponibilidad = esIngles
+        ? "Visit the official website for available plans and features."
+        : "Consulta la página oficial para conocer sus planes y funciones disponibles.";
+
     document.getElementById("herramienta-disponibilidad").textContent =
-        herramienta.disponibilidad ||
-        "Consulta la página oficial para conocer sus planes y funciones disponibles.";
+        obtenerTexto("disponibilidad", mensajeDisponibilidad);
 
-    // Ventajas
+
+    // ============================================
+    // VENTAJAS
+    // ============================================
+
     const contenedorVentajas =
         document.getElementById("herramienta-ventajas");
 
-    (herramienta.ventajas || []).forEach(ventaja => {
+    contenedorVentajas.innerHTML = "";
+
+    const ventajas = obtenerLista("ventajas");
+
+    ventajas.forEach(ventaja => {
+
         const elemento = document.createElement("p");
+
         elemento.textContent = ventaja;
+
         contenedorVentajas.appendChild(elemento);
+
     });
 
-    // Logo
+
+    // ============================================
+    // LOGO
+    // ============================================
+
     const logo = document.getElementById("herramienta-logo");
-    const dominio = new URL(herramienta.enlace).hostname;
 
-    logo.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(dominio)}&sz=128`;
+    logo.src = obtenerLogo(herramienta.enlace);
 
-    logo.alt = `Logo de ${herramienta.nombre}`;
+    logo.alt = esIngles
+        ? `${herramienta.nombre} logo`
+        : `Logo de ${herramienta.nombre}`;
 
-    // Enlaces oficiales
-    // Enlaces a la herramienta
-    const urlVisita =
-        herramienta.afiliadoActivo && herramienta.enlaceAfiliado
-            ? herramienta.enlaceAfiliado
-            : herramienta.enlace;
 
-    const relVisita =
-        herramienta.afiliadoActivo && herramienta.enlaceAfiliado
-            ? "sponsored noopener noreferrer"
-            : "noopener noreferrer";
+    // ============================================
+    // ENLACES OFICIALES Y AFILIADOS
+    // ============================================
+
+    const tieneAfiliado =
+        herramienta.afiliadoActivo &&
+        herramienta.enlaceAfiliado;
+
+    const urlVisita = tieneAfiliado
+        ? herramienta.enlaceAfiliado
+        : herramienta.enlace;
+
+    const relVisita = tieneAfiliado
+        ? "sponsored noopener noreferrer"
+        : "noopener noreferrer";
 
     const enlacesVisita = [
         document.getElementById("herramienta-enlace"),
@@ -181,47 +336,104 @@ if (herramienta) {
     ];
 
     enlacesVisita.forEach(enlace => {
+
+        if (!enlace) return;
+
         enlace.href = urlVisita;
         enlace.target = "_blank";
         enlace.rel = relVisita;
+
     });
 
-    // Categorías
+
+    // ============================================
+    // CATEGORÍAS
+    // ============================================
+
     const contenedorCategorias =
         document.getElementById("herramienta-categorias");
 
+    contenedorCategorias.innerHTML = "";
+
+    const categoriasEn = {
+        "Texto": "Writing",
+        "Imágenes": "Images",
+        "Video": "Video",
+        "Programación": "Coding",
+        "Estudio": "Study",
+        "Audio": "Audio"
+    };
+
     herramienta.categorias.forEach(categoria => {
+
         const etiqueta = document.createElement("span");
-        etiqueta.textContent = categoria;
+
+        etiqueta.textContent = esIngles
+            ? (categoriasEn[categoria] || categoria)
+            : categoria;
+
         contenedorCategorias.appendChild(etiqueta);
+
     });
 
-    // Funciones y etiquetas
+
+    // ============================================
+    // FUNCIONES
+    // ============================================
+
     const contenedorEtiquetas =
         document.getElementById("herramienta-etiquetas");
 
-    const funciones = herramienta.funciones || herramienta.etiquetas || [];
+    contenedorEtiquetas.innerHTML = "";
+
+    const funciones = obtenerLista("funciones");
 
     funciones.forEach(funcion => {
+
         const elemento = document.createElement("span");
+
         elemento.textContent = funcion;
+
         contenedorEtiquetas.appendChild(elemento);
+
     });
 
-    // Usos principales
+
+    // ============================================
+    // USOS PRINCIPALES
+    // ============================================
+
     const contenedorUsos =
         document.getElementById("herramienta-usos");
 
-    const usos = herramienta.usos || herramienta.etiquetas.slice(0, 4).map(uso => ({
-        titulo: uso.charAt(0).toUpperCase() + uso.slice(1),
-        descripcion: `Explora las posibilidades de ${herramienta.nombre} relacionadas con ${uso}.`
-    }));
+    contenedorUsos.innerHTML = "";
+
+    let usos = obtenerLista("usos");
+
+    // Alternativa si una herramienta no tiene usos
+    if (usos.length === 0) {
+
+        const etiquetas = obtenerLista("etiquetas");
+
+        usos = etiquetas.slice(0, 4).map(uso => ({
+
+            titulo:
+                uso.charAt(0).toUpperCase() + uso.slice(1),
+
+            descripcion: esIngles
+                ? `Explore how ${herramienta.nombre} can help with ${uso}.`
+                : `Explora las posibilidades de ${herramienta.nombre} relacionadas con ${uso}.`
+
+        }));
+    }
 
     usos.forEach((uso, indice) => {
+
         const bloque = document.createElement("div");
 
         const numero = document.createElement("span");
-        numero.textContent = String(indice + 1).padStart(2, "0");
+        numero.textContent =
+            String(indice + 1).padStart(2, "0");
 
         const titulo = document.createElement("h3");
         titulo.textContent = uso.titulo;
@@ -230,55 +442,83 @@ if (herramienta) {
         descripcion.textContent = uso.descripcion;
 
         bloque.append(numero, titulo, descripcion);
+
         contenedorUsos.appendChild(bloque);
+
     });
 
-    // Herramientas relacionadas
-    const contenedorRelacionadas = document.getElementById(
-        "herramientas-relacionadas"
 
-    );
+    // ============================================
+    // HERRAMIENTAS RELACIONADAS
+    // ============================================
 
-    console.log("Herramientas relacionadas:", herramientas.length);
-    console.log("Contenedor:", contenedorRelacionadas);
-    console.log("Herramienta actual:", herramienta.nombre);
+    const contenedorRelacionadas =
+        document.getElementById("herramientas-relacionadas");
+
+    contenedorRelacionadas.innerHTML = "";
 
     const relacionadas = herramientas
         .filter(elemento =>
+
             elemento.id !== herramienta.id &&
+
             elemento.categorias.some(categoria =>
                 herramienta.categorias.includes(categoria)
             )
+
         )
         .slice(0, 3);
 
+
     relacionadas.forEach(relacionada => {
+
         const tarjeta = document.createElement("article");
+
         tarjeta.className = "related-card";
 
-        const dominioRelacionado = new URL(relacionada.enlace).hostname;
 
+        // Logo
         const logoRelacionado = document.createElement("img");
+
         logoRelacionado.src =
-            `https://www.google.com/s2/favicons?domain=${encodeURIComponent(dominioRelacionado)}&sz=128`;
-        logoRelacionado.alt = `Logo de ${relacionada.nombre}`;
+            obtenerLogo(relacionada.enlace);
 
+        logoRelacionado.alt = esIngles
+            ? `${relacionada.nombre} logo`
+            : `Logo de ${relacionada.nombre}`;
+
+
+        // Nombre
         const nombreRelacionado = document.createElement("h3");
-        nombreRelacionado.textContent = relacionada.nombre;
 
-        const descripcionRelacionada = document.createElement("p");
-        descripcionRelacionada.textContent = relacionada.descripcion;
+        nombreRelacionado.textContent =
+            relacionada.nombre;
 
-        const enlaceRelacionado = document.createElement("a");
+
+        // Descripción
+        const descripcionRelacionada =
+            document.createElement("p");
+
+        descripcionRelacionada.textContent = esIngles
+            ? (relacionada.descripcionEn || relacionada.descripcion)
+            : relacionada.descripcion;
+
+
+        // Enlace
+        const enlaceRelacionado =
+            document.createElement("a");
 
         enlaceRelacionado.href =
             `herramienta.html?id=${encodeURIComponent(relacionada.id)}`;
 
-        enlaceRelacionado.textContent =
-            `Conocer ${relacionada.nombre} →`;
+        enlaceRelacionado.textContent = esIngles
+            ? `Explore ${relacionada.nombre} →`
+            : `Conocer ${relacionada.nombre} →`;
 
-        enlaceRelacionado.title =
-            `Descubre qué es ${relacionada.nombre}, sus funciones y usos`;
+        enlaceRelacionado.title = esIngles
+            ? `Discover ${relacionada.nombre}, its features and uses`
+            : `Descubre qué es ${relacionada.nombre}, sus funciones y usos`;
+
 
         tarjeta.append(
             logoRelacionado,
@@ -288,12 +528,25 @@ if (herramienta) {
         );
 
         contenedorRelacionadas.appendChild(tarjeta);
+
     });
+
+
+// ============================================
+// HERRAMIENTA NO ENCONTRADA
+// ============================================
 
 } else {
 
-    // Si no existe la herramienta, mostrar un mensaje
-    document.querySelector(".chatgpt-main").textContent =
-        "No encontramos esta herramienta. Regresa al catálogo de IA Hub.";
+    const contenedorPrincipal =
+        document.querySelector(".chatgpt-main");
+
+    if (contenedorPrincipal) {
+
+        contenedorPrincipal.textContent = esIngles
+            ? "We couldn't find this AI tool. Return to the IA Hub catalog."
+            : "No encontramos esta herramienta. Regresa al catálogo de IA Hub.";
+
+    }
 
 }
