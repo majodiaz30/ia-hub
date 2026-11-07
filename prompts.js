@@ -310,7 +310,11 @@ function mostrarPrompts() {
                     ? promptsFavoritos.includes(prompt.id)
                     : categoriaPromptActual === "Destacados"
                         ? promptsDestacados.includes(prompt.id)
-                        : prompt.categoria === categoriaPromptActual
+                        : prompt.categoria === (
+                            promptsEnIngles
+                                ? categoriasPromptsEn[categoriaPromptActual] || categoriaPromptActual
+                                : categoriaPromptActual
+                        )
             );
 
         const texto = (
@@ -356,7 +360,13 @@ function mostrarPrompts() {
 
         const icono = document.createElement("span");
         icono.className = "prompt-card-icon";
-        icono.textContent = iconosPrompts[prompt.categoria] || "✦";
+        const categoriaOriginal = promptsEnIngles
+            ? Object.keys(categoriasPromptsEn).find(
+                clave => categoriasPromptsEn[clave] === prompt.categoria
+            )
+            : prompt.categoria;
+
+        icono.textContent = iconosPrompts[categoriaOriginal] || "✦";
 
         if (promptsDestacados.includes(prompt.id)) {
 
