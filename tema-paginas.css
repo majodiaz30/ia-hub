@@ -1,0 +1,39 @@
+
+/* MODO CLARO PARA PÁGINAS LEGALES */
+
+:root[data-theme="light"] body {
+    background: #f8f9fd;
+    color: #19172b;
+}
+
+:root[data-theme="light"] header,
+:root[data-theme="light"] footer {
+    border-color: #dedee8;
+}
+
+:root[data-theme="light"] .logo {
+    color: #19172b;
+}
+
+:root[data-theme="light"] h1 {
+    color: #19172b;
+}
+
+:root[data-theme="light"] .introduccion,
+:root[data-theme="light"] .seccion p,
+:root[data-theme="light"] .seccion li,
+:root[data-theme="light"] ul,
+:root[data-theme="light"] p {
+    color: #50546b;
+}
+
+:root[data-theme="light"] .seccion {
+    background: #ffffff;
+    border-color: #e2e3ee;
+}
+
+:root[data-theme="light"] .actualizacion,
+:root[data-theme="light"] .fecha,
+:root[data-theme="light"] footer {
+    color: #687086;
+}
