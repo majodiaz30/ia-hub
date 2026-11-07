@@ -202,6 +202,7 @@ const herramientas = [
         disponibilidad: "Cuenta con opciones gratuitas y planes de pago."
     },
 
+
     {
         id: "gamma",
         nombre: "Gamma",
@@ -209,21 +210,76 @@ const herramientas = [
         inicial: "G",
         color: "purple",
         destacado: true,
-        etiquetas: ["presentaciones", "diapositivas", "documentos", "diseño", "exposiciones"],
-        descripcion: "Plataforma de inteligencia artificial que permite crear presentaciones, documentos y páginas visuales.",
+
+        etiquetas: [
+            "presentaciones",
+            "diapositivas",
+            "powerpoint",
+            "documentos",
+            "diseño",
+            "exposiciones",
+            "estudiantes",
+            "inteligencia artificial",
+            "crear presentaciones",
+            "presentaciones con ia",
+            "gamma app"
+        ],
+
+        descripcion: "Crea presentaciones, documentos y páginas web con inteligencia artificial. Gamma transforma tus ideas en contenido visual organizado, sin necesidad de diseñar cada diapositiva desde cero.",
+
         enlace: "https://gamma.app",
         enlaceAfiliado: "",
         afiliadoActivo: false,
-        queEs: "Gamma es una herramienta de creación de contenido visual que utiliza inteligencia artificial para organizar ideas en presentaciones y documentos.",
+
+        queEs: "Gamma es una plataforma de inteligencia artificial especializada en crear presentaciones, documentos y páginas web visuales. Permite transformar una idea, un texto o un esquema en contenido estructurado con diseños modernos. Es una alternativa para estudiantes, docentes, emprendedores y profesionales que necesitan presentar información de manera clara y atractiva.",
+
         usos: [
-            { titulo: "Presentaciones", descripcion: "Crea diapositivas a partir de instrucciones o contenido." },
-            { titulo: "Exposiciones", descripcion: "Organiza información para explicar temas." },
-            { titulo: "Documentos", descripcion: "Permite desarrollar documentos con diseños visuales." }
+            {
+                titulo: "Presentaciones académicas",
+                descripcion: "Crea presentaciones para exposiciones, trabajos universitarios y proyectos escolares a partir de un tema o instrucciones."
+            },
+            {
+                titulo: "Presentaciones profesionales",
+                descripcion: "Organiza propuestas de negocio, informes, proyectos y reuniones mediante diapositivas visuales."
+            },
+            {
+                titulo: "Documentos visuales",
+                descripcion: "Convierte información escrita en documentos organizados con títulos, imágenes y secciones."
+            },
+            {
+                titulo: "Páginas web",
+                descripcion: "Crea páginas visuales sencillas para presentar ideas, proyectos o información sin comenzar desde cero."
+            },
+            {
+                titulo: "Transformar contenido",
+                descripcion: "Utiliza textos o esquemas existentes como punto de partida para generar presentaciones más organizadas."
+            }
         ],
-        funciones: ["Presentaciones", "Documentos", "Diseño visual", "Generación de contenido"],
-        ventajas: ["Ahorra tiempo al crear presentaciones", "Ofrece diseños visuales", "Facilita organizar ideas"],
-        disponibilidad: "Cuenta con un plan gratuito con límites y opciones de pago."
+
+        funciones: [
+            "Generación de presentaciones con IA",
+            "Creación de documentos visuales",
+            "Creación de páginas web",
+            "Diseños y plantillas personalizables",
+            "Generación y edición de contenido",
+            "Incorporación de imágenes y elementos visuales",
+            "Organización automática de información",
+            "Opciones para compartir y exportar presentaciones"
+        ],
+
+        ventajas: [
+            "Permite crear un primer borrador de presentación en poco tiempo",
+            "No requiere conocimientos avanzados de diseño",
+            "Facilita organizar información extensa",
+            "Ofrece diseños visuales modernos",
+            "Permite personalizar el contenido generado",
+            "Es útil para estudiantes y profesionales",
+            "Ayuda a transformar ideas en presentaciones estructuradas"
+        ],
+
+        disponibilidad: "Gamma ofrece un plan gratuito con créditos y funcionalidades limitadas, además de planes de pago con mayores capacidades. Los límites, precios y funciones disponibles pueden cambiar."
     },
+
 
     // ============================================
     // IMÁGENES Y DISEÑO
