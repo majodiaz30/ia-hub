@@ -566,6 +566,7 @@ const herramientas = [
         disponibilidad: "Cuenta con acceso gratuito y planes de pago."
     },
 
+
     {
         id: "lovable",
         nombre: "Lovable",
@@ -573,19 +574,80 @@ const herramientas = [
         inicial: "L",
         color: "mint",
         destacado: false,
-        etiquetas: ["crear paginas web", "aplicaciones", "programar", "desarrollo web", "diseño"],
-        descripcion: "Plataforma que utiliza inteligencia artificial para crear aplicaciones y sitios web a partir de instrucciones.",
-        enlace: "https://lovable.dev",
-        queEs: "Lovable es una herramienta de desarrollo que permite construir aplicaciones web describiendo lo que se quiere crear.",
-        usos: [
-            { titulo: "Crear páginas web", descripcion: "Genera interfaces web a partir de descripciones." },
-            { titulo: "Crear aplicaciones", descripcion: "Desarrolla prototipos y aplicaciones web." },
-            { titulo: "Diseñar interfaces", descripcion: "Transforma ideas en componentes visuales." }
+
+        etiquetas: [
+            "crear paginas web",
+            "crear aplicaciones",
+            "inteligencia artificial",
+            "programar",
+            "desarrollo web",
+            "diseño web",
+            "crear sitios web",
+            "aplicaciones sin codigo",
+            "prototipos",
+            "frontend",
+            "backend",
+            "bases de datos",
+            "desarrollo con ia"
         ],
-        funciones: ["Generación de aplicaciones", "Diseño de interfaces", "Generación de código"],
-        ventajas: ["Facilita crear prototipos", "Permite desarrollar mediante instrucciones", "Combina diseño y programación"],
-        disponibilidad: "Cuenta con un plan gratuito limitado y planes de pago."
+
+        descripcion: "Lovable es una plataforma de desarrollo con inteligencia artificial que permite crear sitios web y aplicaciones mediante instrucciones escritas, facilitando el diseño, la programación y la creación de proyectos digitales.",
+
+        enlace: "https://lovable.dev",
+
+        queEs: "Lovable es una herramienta de inteligencia artificial diseñada para transformar ideas en aplicaciones web funcionales. Los usuarios pueden describir lo que desean construir mediante lenguaje natural y la plataforma genera una primera versión del proyecto, incluyendo interfaces y código. También permite realizar modificaciones mediante nuevas instrucciones.",
+
+        usos: [
+            {
+                titulo: "Crear páginas web",
+                descripcion: "Permite desarrollar páginas de presentación, portafolios, sitios informativos y páginas para negocios a partir de instrucciones escritas."
+            },
+            {
+                titulo: "Desarrollar aplicaciones web",
+                descripcion: "Ayuda a construir aplicaciones con diferentes pantallas, formularios y funcionalidades, según las necesidades del proyecto."
+            },
+            {
+                titulo: "Crear prototipos",
+                descripcion: "Facilita transformar una idea en una versión inicial de una aplicación para visualizarla, probarla y mejorarla."
+            },
+            {
+                titulo: "Diseñar interfaces",
+                descripcion: "Genera diseños visuales con componentes, secciones y estructuras que pueden modificarse mediante instrucciones."
+            },
+            {
+                titulo: "Desarrollar proyectos académicos",
+                descripcion: "Puede utilizarse para explorar ideas de software, aprender sobre estructuras de aplicaciones y crear demostraciones de proyectos."
+            },
+            {
+                titulo: "Crear herramientas para negocios",
+                descripcion: "Ayuda a desarrollar prototipos de paneles administrativos, sistemas de reservas y aplicaciones para organizar información."
+            }
+        ],
+
+        funciones: [
+            "Generación de sitios web mediante inteligencia artificial",
+            "Creación de aplicaciones a partir de instrucciones",
+            "Diseño automático de interfaces",
+            "Generación y edición de código",
+            "Modificación de proyectos mediante conversaciones",
+            "Vista previa de aplicaciones",
+            "Integración con servicios y bases de datos compatibles",
+            "Publicación de proyectos web",
+            "Creación rápida de prototipos"
+        ],
+
+        ventajas: [
+            "Permite comenzar un proyecto sin escribir todo el código manualmente",
+            "Facilita transformar ideas en prototipos funcionales",
+            "Combina diseño y desarrollo en una misma plataforma",
+            "Permite solicitar cambios mediante lenguaje natural",
+            "Ayuda a reducir el tiempo necesario para crear una primera versión",
+            "Es útil tanto para principiantes como para personas con conocimientos de programación"
+        ],
+
+        disponibilidad: "Lovable ofrece un plan gratuito con límites de uso y diferentes planes de pago. Algunas funciones, capacidades y límites dependen del plan seleccionado."
     },
+
 
     {
         id: "bolt",
