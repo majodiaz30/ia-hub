@@ -297,3 +297,36 @@ body {
         margin-right: 0;
     }
 }
+
+/* SELECTOR DE IDIOMAS */
+
+.tutorial-language {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.tutorial-language a {
+    color: #aaa5c9;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.tutorial-language a:hover,
+.tutorial-language a.active {
+    color: #9678ff;
+}
+
+.tutorial-language span {
+    color: #777196;
+}
+
+@media (max-width: 600px) {
+    .tutorial-language {
+        gap: 7px;
+        font-size: 12px;
+    }
+}
