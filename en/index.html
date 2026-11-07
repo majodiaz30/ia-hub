@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO PRINCIPAL -->
-    <title>IA Hub | Encuentra las mejores herramientas de inteligencia artificial</title>
+    <!-- SEO -->
+    <title>IA Hub | Discover and Compare the Best AI Tools</title>
 
     <meta name="description"
-        content="Compara y descubre herramientas de inteligencia artificial para estudiar, programar, escribir, diseñar, crear imágenes y mucho más. Encuentra tu IA ideal en IA Hub.">
+        content="Discover and compare AI tools for studying, coding, writing, designing, creating images, videos, and more. Find the best AI tools for your needs.">
 
     <meta name="author" content="IA Hub">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, follow">
     <meta name="theme-color" content="#0d0b1c">
 
-    <link rel="canonical" href="https://ia-hub-bice.vercel.app/">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Change to index, follow when the English version is complete -->
+    <link rel="canonical" href="https://ia-hub-bice.vercel.app/en/">
+    <link rel="icon" type="image/png" href="../favicon.png">
 
-    <!-- REDES SOCIALES -->
+    <link rel="alternate" hreflang="es" href="https://ia-hub-bice.vercel.app/">
+    <link rel="alternate" hreflang="en" href="https://ia-hub-bice.vercel.app/en/">
+    <link rel="alternate" hreflang="x-default" href="https://ia-hub-bice.vercel.app/">
+
+    <!-- SOCIAL MEDIA -->
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_CO">
-    <meta property="og:title" content="IA Hub | Encuentra tu herramienta de inteligencia artificial ideal">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="IA Hub | Find the Best AI Tools">
     <meta property="og:description"
-        content="Explora, compara y encuentra herramientas de IA para estudiar, programar, diseñar, crear y trabajar.">
+        content="Explore and compare artificial intelligence tools for studying, coding, designing, writing, and creating content.">
     <meta property="og:site_name" content="IA Hub">
-    <meta property="og:url" content="https://ia-hub-bice.vercel.app/">
+    <meta property="og:url" content="https://ia-hub-bice.vercel.app/en/">
     <meta property="og:image" content="https://ia-hub-bice.vercel.app/og-image.png">
-    <meta property="og:image:alt" content="IA Hub, directorio de herramientas de inteligencia artificial">
+    <meta property="og:image:alt" content="IA Hub AI tools directory">
 
-    <!-- TWITTER / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="IA Hub | Herramientas de inteligencia artificial">
-    <meta name="twitter:description"
-        content="Descubre y compara herramientas de IA para estudiar, programar, diseñar y mucho más.">
+    <meta name="twitter:title" content="IA Hub | Discover AI Tools">
+    <meta name="twitter:description" content="Discover and compare AI tools for studying, coding, designing, and more.">
     <meta name="twitter:image" content="https://ia-hub-bice.vercel.app/og-image.png">
 
-    <!-- FUENTES -->
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -44,18 +47,18 @@
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- ESTILOS -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="/styles.css?v=2">
 
-    <!-- DATOS ESTRUCTURADOS -->
+    <!-- STRUCTURED DATA -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "IA Hub",
-        "url": "https://ia-hub-bice.vercel.app/",
-        "description": "Directorio para descubrir y comparar herramientas de inteligencia artificial para estudiar, crear, escribir, diseñar, programar y trabajar.",
-        "inLanguage": "es"
+        "url": "https://ia-hub-bice.vercel.app/en/",
+        "description": "Discover and compare AI tools for writing, studying, coding, designing, and creating content.",
+        "inLanguage": "en"
     }
     </script>
 
@@ -63,51 +66,53 @@
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <header class="header">
 
-        <nav class="navbar" aria-label="Navegación principal">
+        <nav class="navbar" aria-label="Main navigation">
 
-            <a href="#inicio" class="logo" aria-label="IA Hub, inicio">
-                <img src="favicon.png" alt="" class="logo-image">
+            <a href="#inicio" class="logo" aria-label="IA Hub home">
+                <img src="../favicon.png" alt="" class="logo-image">
                 <span>IA <strong>Hub</strong></span>
             </a>
 
-            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#herramientas">Herramientas</a></li>
-                <li><a href="#recomendaciones">Recomendaciones</a></li>
-                <li><a href="#ia-vs">IA VS</a></li>
-                <li><a href="#recomendador">Encuentra tu IA</a></li>
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#herramientas">AI Tools</a></li>
+                <li><a href="#recomendaciones">Recommendations</a></li>
+                <li><a href="#ia-vs">AI VS</a></li>
+                <li><a href="#recomendador">Find Your AI</a></li>
                 <li><a href="#prompts">Prompts</a></li>
-                <li><a href="#categorias">Categorías</a></li>
-                <li><a href="#tutoriales">Aprender</a></li>
-                <li><a href="#novedades">Novedades</a></li>
-                <li><a href="#guias">Guías</a></li>
+                <li><a href="#categorias">Categories</a></li>
+                <li><a href="#tutoriales">Learn</a></li>
+                <li><a href="#novedades">News</a></li>
+                <li><a href="#guias">Guides</a></li>
             </ul>
 
             <div class="nav-actions">
 
-                <!-- SELECTOR DE IDIOMAS -->
-                <div class="language-switcher" aria-label="Seleccionar idioma">
+                <!-- LANGUAGE SWITCHER -->
+                <div class="language-switcher" aria-label="Select language">
                     <i data-lucide="globe" aria-hidden="true"></i>
-                    <a href="index.html" class="language-active" lang="es" aria-current="page">ES</a>
+                    <a href="../index.html" lang="es">ES</a>
                     <span class="language-divider">|</span>
-                    <a href="en/index.html" lang="en">EN</a>
+                    <a href="index.html" class="language-active" lang="en" aria-current="page">EN</a>
                 </div>
 
-                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo claro"
-                    title="Cambiar apariencia">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme"
+                    title="Change appearance">
                     <span id="themeIcon">☀</span>
                 </button>
 
                 <a href="#herramientas" class="nav-button">
-                    Explorar IA <span>↗</span>
+                    Explore AI <span>↗</span>
                 </a>
 
             </div>
@@ -117,24 +122,43 @@
     </header>
 
     <main>
+
+        <!-- HERO -->
         <section class="hero" id="inicio">
+
             <div class="hero-content">
-                <span class="eyebrow"><span class="eyebrow-dot"></span> EXPLORA EL UNIVERSO DE LA IA</span>
-                <h1>Descubre y compara herramientas de <span>inteligencia artificial.</span></h1>
+
+                <span class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    EXPLORE THE WORLD OF AI
+                </span>
+
+                <h1>
+                    Discover and compare
+                    <span>artificial intelligence tools.</span>
+                </h1>
 
                 <p class="hero-description">
-                    Encuentra las mejores herramientas de IA para estudiar, programar,
-                    escribir, diseñar, crear imágenes y mejorar tu productividad.
-                    Compara sus funciones y descubre cuál se adapta a tus necesidades.
+                    Find the best AI tools for studying, coding,
+                    writing, designing, creating images, and boosting
+                    productivity. Compare their features and discover
+                    which ones fit your needs.
                 </p>
+
                 <div class="hero-buttons">
-                    <a href="#herramientas" class="btn-primary">Descubrir herramientas <span>→</span></a>
-                    <a href="#categorias" class="btn-secondary">Explorar categorías</a>
+                    <a href="#herramientas" class="btn-primary">
+                        Discover AI Tools <span>→</span>
+                    </a>
+                    <a href="#categorias" class="btn-secondary">
+                        Explore Categories
+                    </a>
                 </div>
+
                 <div class="hero-note">
                     <span class="note-icon">✧</span>
-                    <span>Explora, compara y encuentra nuevas posibilidades.</span>
+                    <span>Explore, compare, and discover new possibilities.</span>
                 </div>
+
             </div>
 
             <div class="hero-visual" aria-hidden="true">
@@ -145,44 +169,59 @@
                 <div class="orbit-dot dot-one"></div>
                 <div class="orbit-dot dot-two"></div>
                 <div class="orbit-dot dot-three"></div>
+
                 <div class="ai-core">
                     <span class="core-spark">✦</span>
-                    <span class="core-label">IA</span>
-                    <span class="core-caption">IDEAS SIN LÍMITES</span>
+                    <span class="core-label">AI</span>
+                    <span class="core-caption">LIMITLESS IDEAS</span>
                 </div>
+
                 <div class="floating-card floating-card-top">
                     <span class="floating-icon purple">✧</span>
-                    <span><strong>Creatividad</strong><small>Nuevas ideas</small></span>
+                    <span>
+                        <strong>Creativity</strong>
+                        <small>Fresh ideas</small>
+                    </span>
                 </div>
+
                 <div class="floating-card floating-card-bottom">
                     <span class="floating-icon mint">⌘</span>
-                    <span><strong>Productividad</strong><small>Más posibilidades</small></span>
+                    <span>
+                        <strong>Productivity</strong>
+                        <small>More possibilities</small>
+                    </span>
                 </div>
             </div>
+
         </section>
 
+        <!-- SEARCH -->
         <section class="search-section" id="herramientas">
+
             <div class="search-inner">
+
                 <div class="search-heading">
-                    <span class="section-kicker">DIRECTORIO IA</span>
-                    <h2>¿Qué quieres crear hoy?</h2>
-                    <p>Busca por nombre, categoría o lo que necesitas hacer.</p>
+                    <span class="section-kicker">AI DIRECTORY</span>
+                    <h2>What do you want to create today?</h2>
+                    <p>Search by name, category, or what you want to accomplish.</p>
                 </div>
+
                 <div class="search-box">
                     <span class="search-symbol" aria-hidden="true">⌕</span>
-                    <input type="search" id="searchInput" placeholder="Ej. crear imágenes, estudiar, escribir..."
-                        aria-label="Buscar herramientas de IA" autocomplete="off">
+
+                    <input type="search" id="searchInput" placeholder="E.g. generate images, study, write..."
+                        aria-label="Search AI tools" autocomplete="off">
+
                     <div class="search-suggestions" id="searchSuggestions"></div>
-                    <button id="searchButton" type="button">Buscar</button>
+
+                    <button id="searchButton" type="button">Search</button>
                 </div>
+
             </div>
+
         </section>
 
-
-        <!-- ============================================
-     IA VS - COMPARATIVAS
-============================================ -->
-
+        <!-- AI VS -->
         <section class="ia-vs-section" id="ia-vs">
 
             <div class="ia-vs-container">
@@ -191,13 +230,13 @@
                     <span class="section-tag">IA HUB VS</span>
 
                     <h2>
-                        ¿Qué inteligencia artificial es
-                        <span>mejor para cada tarea?</span>
+                        Which AI tool is
+                        <span>best for each task?</span>
                     </h2>
 
                     <p>
-                        Comparamos las herramientas de inteligencia artificial
-                        para ayudarte a elegir la mejor según lo que necesitas.
+                        We compare artificial intelligence tools to help
+                        you choose the best option for your needs.
                     </p>
                 </div>
 
@@ -205,80 +244,67 @@
 
                     <div class="ia-vs-content">
 
-                        <span class="ia-vs-label">COMPARATIVA DESTACADA</span>
+                        <span class="ia-vs-label">FEATURED COMPARISON</span>
 
-                        <h3>¿Cuál es la mejor IA para programar?</h3>
+                        <h3>What is the best AI for coding?</h3>
 
                         <p>
-                            ChatGPT, Claude, Gemini, Cursor y otras herramientas
-                            frente a frente. Descubre sus diferencias,
-                            ventajas y en qué destaca cada una.
+                            ChatGPT, Claude, Gemini, Cursor, and other
+                            tools compared side by side. Discover their
+                            differences, advantages, and strengths.
                         </p>
 
                         <div class="ia-vs-logos">
-
                             <img src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128" alt="ChatGPT">
-
                             <img src="https://www.google.com/s2/favicons?domain=claude.ai&sz=128" alt="Claude">
-
                             <img src="https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128" alt="Gemini">
-
                             <img src="https://www.google.com/s2/favicons?domain=cursor.com&sz=128" alt="Cursor">
-
                             <img src="https://www.google.com/s2/favicons?domain=github.com&sz=128" alt="GitHub Copilot">
-
                         </div>
 
                         <a href="comparativas.html" class="ia-vs-button">
-                            Ver comparativa
-                            <span>↗</span>
+                            View Comparison <span>↗</span>
                         </a>
 
                     </div>
 
                     <div class="ia-vs-visual">
-
                         <div class="ia-vs-circle">
-                            <span>IA</span>
+                            <span>AI</span>
                             <strong>VS</strong>
                         </div>
-
                         <div class="ia-vs-floating ia-vs-one">CODE</div>
                         <div class="ia-vs-floating ia-vs-two">AI</div>
                         <div class="ia-vs-floating ia-vs-three">&lt;/&gt;</div>
-
                     </div>
 
                 </div>
 
                 <div class="ia-vs-footer">
-                    <span>COMPARACIONES CON CRITERIOS CLAROS</span>
-                    <span>DESCUBRE · COMPARA · ELIGE</span>
+                    <span>COMPARISONS WITH CLEAR CRITERIA</span>
+                    <span>DISCOVER · COMPARE · CHOOSE</span>
                 </div>
 
             </div>
 
         </section>
 
-        <!-- ============================================
-     RECOMENDADOR DE INTELIGENCIA ARTIFICIAL
-============================================ -->
-
+        <!-- AI RECOMMENDER -->
         <section class="recomendador-section" id="recomendador">
 
             <div class="recomendador-container">
 
                 <div class="recomendador-header">
-                    <span class="section-tag">RECOMENDADOR IA</span>
+                    <span class="section-tag">AI RECOMMENDER</span>
 
                     <h2>
-                        ¿No sabes qué IA elegir?
-                        <span>Nosotros te ayudamos.</span>
+                        Not sure which AI to choose?
+                        <span>We can help.</span>
                     </h2>
 
                     <p>
-                        Cuéntanos qué necesitas y encuentra las herramientas
-                        de inteligencia artificial que mejor se adaptan a ti.
+                        Tell us what you need and discover AI tools
+                        that best match your goals.
                     </p>
                 </div>
 
@@ -289,15 +315,15 @@
                             <span>✦</span>
                         </div>
 
-                        <h3>Encuentra tu IA ideal</h3>
+                        <h3>Find Your Ideal AI Tool</h3>
 
                         <p>
-                            Responde 4 preguntas rápidas y descubre
-                            cuáles herramientas pueden ayudarte.
+                            Answer 4 quick questions and discover
+                            which AI tools could help you.
                         </p>
 
                         <button type="button" class="recomendador-iniciar" id="iniciarRecomendador">
-                            Comenzar →
+                            Get Started →
                         </button>
                     </div>
 
@@ -305,48 +331,45 @@
 
                         <div class="recomendador-progreso">
                             <div class="progreso-texto">
-                                <span id="progresoPregunta">Pregunta 1 de 3</span>
-                                <span id="progresoPorcentaje">33%</span>
+                                <span id="progresoPregunta">Question 1 of 4</span>
+                                <span id="progresoPorcentaje">25%</span>
                             </div>
 
                             <div class="progreso-barra">
-                                <div class="progreso-relleno" id="progresoRelleno">
-                                </div>
+                                <div class="progreso-relleno" id="progresoRelleno"></div>
                             </div>
                         </div>
 
                         <h3 id="preguntaTitulo"></h3>
-
                         <p id="preguntaDescripcion"></p>
 
-                        <div class="recomendador-opciones" id="recomendadorOpciones">
-                        </div>
+                        <div class="recomendador-opciones" id="recomendadorOpciones"></div>
 
                         <div class="recomendador-controles">
+
                             <button type="button" id="preguntaAnterior" class="recomendador-anterior" hidden>
-                                Volver
+                                Back
                             </button>
 
                             <button type="button" id="preguntaSiguiente" class="recomendador-siguiente" disabled>
-                                Continuar →
+                                Continue →
                             </button>
-                        </div>
 
+                        </div>
                     </div>
 
                     <div class="recomendador-resultados" id="recomendadorResultados" hidden>
 
-                        <span class="section-tag">TUS RESULTADOS</span>
+                        <span class="section-tag">YOUR RESULTS</span>
 
-                        <h3>Estas IA pueden ser ideales para ti</h3>
+                        <h3>These AI Tools Could Be Right for You</h3>
 
                         <p id="resumenRecomendacion"></p>
 
-                        <div class="recomendador-lista" id="listaRecomendaciones">
-                        </div>
+                        <div class="recomendador-lista" id="listaRecomendaciones"></div>
 
                         <button type="button" class="recomendador-reiniciar" id="reiniciarRecomendador">
-                            Volver a comenzar
+                            Start Again
                         </button>
 
                     </div>
@@ -357,210 +380,210 @@
 
         </section>
 
-        <!-- =========================================
-     BIBLIOTECA DE PROMPTS
-========================================= -->
-
+        <!-- PROMPT LIBRARY -->
         <section class="prompts-section" id="prompts">
 
             <div class="prompts-container">
 
                 <div class="prompts-header">
-                    <span class="section-tag">BIBLIOTECA DE PROMPTS</span>
+                    <span class="section-tag">PROMPT LIBRARY</span>
 
                     <h2>
-                        Potencia tus ideas con
-                        <span>los prompts adecuados.</span>
+                        Bring your ideas to life with
+                        <span>the right prompts.</span>
                     </h2>
 
                     <p>
-                        Encuentra instrucciones listas para utilizar en tus
-                        herramientas de inteligencia artificial. Copia, personaliza
-                        y consigue mejores resultados.
+                        Find ready-to-use instructions for your AI tools.
+                        Copy, customize, and get better results.
                     </p>
                 </div>
 
                 <div class="prompts-intro">
+
                     <div class="prompts-intro-icon">
                         <span>✦</span>
                     </div>
 
                     <div>
-                        <h3>Encuentra tu próximo prompt</h3>
+                        <h3>Find Your Next Prompt</h3>
                         <p>
-                            Explora nuestra colección de instrucciones para estudiar,
-                            programar, crear y mucho más.
+                            Explore prompts for studying, coding,
+                            creating content, and much more.
                         </p>
                     </div>
 
                     <div class="prompts-total">
                         <strong id="totalPrompts">20</strong>
-                        <span>Prompts disponibles</span>
+                        <span>Available Prompts</span>
                     </div>
-                </div>
 
-                <!-- BUSCADOR -->
+                </div>
 
                 <div class="prompts-search">
                     <span>⌕</span>
-
-                    <input type="search" id="buscarPrompt"
-                        placeholder="¿Qué necesitas hacer? Ej. crear una página web..." autocomplete="off">
+                    <input type="search" id="buscarPrompt" placeholder="What do you want to do? E.g. build a website..."
+                        autocomplete="off">
                 </div>
-
-                <!-- FILTROS -->
 
                 <div class="prompts-filtros">
 
                     <button class="prompt-filter active" data-categoria="Todas">
-                        Todos
+                        All
                     </button>
 
                     <button class="prompt-filter" data-categoria="Destacados">
-                        ✦ Destacados
+                        ✦ Featured
                     </button>
 
                     <button class="prompt-filter" data-categoria="Programación">
-                        Programación
+                        Coding
                     </button>
 
                     <button class="prompt-filter" data-categoria="Estudio">
-                        Estudio
+                        Studying
                     </button>
 
                     <button class="prompt-filter" data-categoria="Imágenes">
-                        Imágenes
+                        Images
                     </button>
 
                     <button class="prompt-filter" data-categoria="Escritura">
-                        Escritura
+                        Writing
                     </button>
 
                     <button class="prompt-filter" data-categoria="Productividad">
-                        Productividad
+                        Productivity
                     </button>
 
                     <button class="prompt-filter" data-categoria="Negocios">
-                        Negocios
+                        Business
                     </button>
 
                     <button class="prompt-filter" data-categoria="Favoritos">
-                        Mis favoritos
+                        My Favorites
                     </button>
 
                 </div>
 
-                <!-- RESULTADOS -->
-
                 <div class="prompts-resultados">
+
                     <div class="prompts-resultados-header">
-                        <h3>Explora los prompts</h3>
-                        <span id="cantidadPrompts">20 resultados</span>
+                        <h3>Explore Prompts</h3>
+                        <span id="cantidadPrompts">20 results</span>
                     </div>
 
-                    <div class="prompts-grid" id="promptsGrid">
-                        <!-- Las tarjetas se generan con JavaScript -->
-                    </div>
+                    <div class="prompts-grid" id="promptsGrid"></div>
 
                     <div class="prompts-vacios" id="promptsVacios" hidden>
                         <span>⌕</span>
-                        <h3>No encontramos prompts</h3>
-                        <p>Prueba con otra búsqueda o categoría.</p>
+                        <h3>No Prompts Found</h3>
+                        <p>Try another search or category.</p>
                     </div>
+
                 </div>
 
             </div>
 
         </section>
 
-
+        <!-- CATEGORIES -->
         <section class="categories-section" id="categorias">
+
             <div class="section-heading">
                 <div>
-                    <span class="section-kicker">ENCUENTRA TU HERRAMIENTA</span>
-                    <h2>Explora por categorías</h2>
-                    <p>Elige lo que necesitas y descubre herramientas para conseguirlo.</p>
+                    <span class="section-kicker">FIND YOUR TOOL</span>
+                    <h2>Explore by Category</h2>
+                    <p>Choose what you need and discover tools to help you achieve it.</p>
                 </div>
             </div>
+
             <div class="categories-grid">
+
                 <button type="button" class="category-card" data-category="Texto">
                     <span class="category-icon icon-text">✎</span>
                     <span class="category-copy">
-                        <strong>Escritura</strong>
-                        <small>IA para escribir, redactar y crear textos</small>
+                        <strong>Writing</strong>
+                        <small>AI for writing, editing, and creating text</small>
                     </span>
                     <span class="category-arrow">↗</span>
                 </button>
+
                 <button type="button" class="category-card" data-category="Imágenes">
                     <span class="category-icon icon-image">▧</span>
                     <span class="category-copy">
-                        <strong>Imágenes</strong>
-                        <small>IA para generar imágenes y diseños</small>
+                        <strong>Images</strong>
+                        <small>AI for generating images and designs</small>
                     </span>
                     <span class="category-arrow">↗</span>
                 </button>
+
                 <button type="button" class="category-card" data-category="Video">
                     <span class="category-icon icon-video">▷</span>
                     <span class="category-copy">
                         <strong>Video</strong>
-                        <small>IA para crear y editar videos</small>
+                        <small>AI for creating and editing videos</small>
                     </span>
                     <span class="category-arrow">↗</span>
                 </button>
+
                 <button type="button" class="category-card" data-category="Programación">
                     <span class="category-icon icon-code">&lt;/&gt;</span>
                     <span class="category-copy">
-                        <strong>Programación</strong>
-                        <small>IA para programar y desarrollar software</small>
+                        <strong>Coding</strong>
+                        <small>AI for programming and software development</small>
                     </span>
                     <span class="category-arrow">↗</span>
                 </button>
+
                 <button type="button" class="category-card" data-category="Estudio">
                     <span class="category-icon icon-study">▤</span>
                     <span class="category-copy">
-                        <strong>Estudio</strong>
-                        <small>IA para estudiar, aprender e investigar</small>
+                        <strong>Studying</strong>
+                        <small>AI for learning, studying, and research</small>
                     </span>
                     <span class="category-arrow">↗</span>
                 </button>
+
                 <button type="button" class="category-card" data-category="Audio">
                     <span class="category-icon icon-audio">♫</span>
                     <span class="category-copy">
                         <strong>Audio</strong>
-                        <small>IA para generar voces, música y transcribir audio</small>
+                        <small>AI for voices, music, and transcription</small>
                     </span>
                     <span class="category-arrow">↗</span>
                 </button>
+
             </div>
+
         </section>
 
-
-
-        <!-- RECOMENDACIONES DE IA HUB -->
+        <!-- EDITORIAL RECOMMENDATIONS -->
         <section class="recommendations-section" id="recomendaciones">
 
             <div class="recommendations-heading">
                 <div>
-                    <span class="section-kicker">SELECCIÓN IA HUB</span>
-                    <h2>Las mejores IA según lo que necesitas</h2>
+                    <span class="section-kicker">IA HUB PICKS</span>
+                    <h2>Best AI Tools for Your Needs</h2>
                     <p>
-                        No todas las herramientas sirven para lo mismo.
-                        Descubre nuestras recomendaciones según tus objetivos.
+                        Not every AI tool is designed for the same purpose.
+                        Explore our recommendations based on your goals.
                     </p>
                 </div>
             </div>
 
             <div class="recommendations-grid">
 
-                <!-- ESCRITURA -->
+                <!-- WRITING -->
                 <article class="recommendation-card">
+
                     <div class="recommendation-icon">
                         <i data-lucide="pen-line"></i>
                     </div>
 
-                    <span class="recommendation-category">ESCRITURA</span>
-                    <h3>Para escribir y crear contenido</h3>
-                    <p>Redacta textos, organiza ideas y mejora tus escritos.</p>
+                    <span class="recommendation-category">WRITING</span>
+                    <h3>For Writing and Content Creation</h3>
+                    <p>Write content, organize ideas, and improve your writing.</p>
 
                     <div class="recommendation-tools">
                         <span>
@@ -573,20 +596,23 @@
                             Claude
                         </span>
                     </div>
+
                     <a href="herramienta.html?id=chatgpt">
-                        Explorar recomendación ↗
+                        Explore Recommendation ↗
                     </a>
+
                 </article>
 
-                <!-- ESTUDIO -->
+                <!-- STUDYING -->
                 <article class="recommendation-card">
+
                     <div class="recommendation-icon">
                         <i data-lucide="book-open"></i>
                     </div>
 
-                    <span class="recommendation-category">ESTUDIO</span>
-                    <h3>Para estudiar y aprender</h3>
-                    <p>Comprende temas, investiga y organiza tus apuntes.</p>
+                    <span class="recommendation-category">STUDYING</span>
+                    <h3>For Studying and Learning</h3>
+                    <p>Understand topics, conduct research, and organize notes.</p>
 
                     <div class="recommendation-tools">
                         <span>
@@ -602,19 +628,21 @@
                     </div>
 
                     <a href="herramienta.html?id=notebooklm">
-                        Explorar recomendación ↗
+                        Explore Recommendation ↗
                     </a>
+
                 </article>
 
-                <!-- PROGRAMACIÓN -->
+                <!-- CODING -->
                 <article class="recommendation-card">
+
                     <div class="recommendation-icon">
                         <i data-lucide="code-xml"></i>
                     </div>
 
-                    <span class="recommendation-category">PROGRAMACIÓN</span>
-                    <h3>Para programar más fácilmente</h3>
-                    <p>Recibe ayuda para escribir, entender y corregir código.</p>
+                    <span class="recommendation-category">CODING</span>
+                    <h3>For Easier Programming</h3>
+                    <p>Get help writing, understanding, and debugging code.</p>
 
                     <div class="recommendation-tools">
                         <span>
@@ -628,19 +656,21 @@
                     </div>
 
                     <a href="herramienta.html?id=cursor">
-                        Explorar recomendación ↗
+                        Explore Recommendation ↗
                     </a>
+
                 </article>
 
-                <!-- DISEÑO -->
+                <!-- DESIGN -->
                 <article class="recommendation-card">
+
                     <div class="recommendation-icon">
                         <i data-lucide="palette"></i>
                     </div>
 
-                    <span class="recommendation-category">DISEÑO</span>
-                    <h3>Para diseñar y crear imágenes</h3>
-                    <p>Crea diseños, ilustraciones y contenido visual.</p>
+                    <span class="recommendation-category">DESIGN</span>
+                    <h3>For Designing and Creating Images</h3>
+                    <p>Create designs, illustrations, and visual content.</p>
 
                     <div class="recommendation-tools">
                         <span>
@@ -655,19 +685,21 @@
                     </div>
 
                     <a href="herramienta.html?id=canva">
-                        Explorar recomendación ↗
+                        Explore Recommendation ↗
                     </a>
+
                 </article>
 
                 <!-- VIDEO -->
                 <article class="recommendation-card">
+
                     <div class="recommendation-icon">
                         <i data-lucide="clapperboard"></i>
                     </div>
 
                     <span class="recommendation-category">VIDEO</span>
-                    <h3>Para crear videos con IA</h3>
-                    <p>Genera escenas, experimenta con efectos y crea videos.</p>
+                    <h3>For Creating AI Videos</h3>
+                    <p>Generate scenes, experiment with effects, and create videos.</p>
 
                     <div class="recommendation-tools">
                         <span>
@@ -683,19 +715,21 @@
                     </div>
 
                     <a href="herramienta.html?id=runway">
-                        Explorar recomendación ↗
+                        Explore Recommendation ↗
                     </a>
+
                 </article>
 
                 <!-- AUDIO -->
                 <article class="recommendation-card">
+
                     <div class="recommendation-icon">
                         <i data-lucide="headphones"></i>
                     </div>
 
                     <span class="recommendation-category">AUDIO</span>
-                    <h3>Para crear voces y música</h3>
-                    <p>Genera narraciones, voces artificiales y música.</p>
+                    <h3>For Creating Voices and Music</h3>
+                    <p>Generate narrations, AI voices, and music.</p>
 
                     <div class="recommendation-tools">
                         <span>
@@ -710,98 +744,110 @@
                     </div>
 
                     <a href="herramienta.html?id=elevenlabs">
-                        Explorar recomendación ↗
+                        Explore Recommendation ↗
                     </a>
+
                 </article>
 
             </div>
 
             <p class="recommendations-note">
-                Recomendaciones editoriales basadas en las funciones de cada herramienta.
-                Ninguna posición se compra.
+                Editorial recommendations based on each tool's features.
+                Rankings are not for sale.
             </p>
 
         </section>
 
-
-
+        <!-- AI TOOLS CATALOG -->
         <section class="tools-section">
+
             <div class="tools-heading">
                 <div>
-                    <span class="section-kicker">CATÁLOGO</span>
-                    <h2>Explora las mejores herramientas de inteligencia artificial</h2>
+                    <span class="section-kicker">AI CATALOG</span>
+                    <h2>Explore the Best Artificial Intelligence Tools</h2>
                     <p>
-                        Descubre y compara herramientas de IA para estudiar, programar,
-                        generar imágenes, crear videos, escribir textos y mejorar tu productividad.
-                        Encuentra opciones gratuitas y de pago según tus necesidades.
+                        Discover and compare AI tools for studying,
+                        coding, generating images, creating videos,
+                        writing, and improving productivity.
+                        Find free and paid options for your needs.
                     </p>
                 </div>
+
                 <button class="favorites-toggle" id="favoritesToggle" type="button" aria-pressed="false">
-                    <span>♡</span> Mis favoritos <span class="favorite-count" id="favoriteCount">0</span>
+                    <span>♡</span>
+                    My Favorites
+                    <span class="favorite-count" id="favoriteCount">0</span>
                 </button>
             </div>
 
-            <div class="filter-row" aria-label="Filtros de herramientas">
-                <button class="filter-chip active" type="button" data-filter="Todas">Todas</button>
-                <button class="filter-chip" type="button" data-filter="Texto">Escritura</button>
-                <button class="filter-chip" type="button" data-filter="Imágenes">Imágenes</button>
+            <div class="filter-row" aria-label="AI tool filters">
+
+                <button class="filter-chip active" type="button" data-filter="Todas">All</button>
+
+                <button class="filter-chip" type="button" data-filter="Texto">Writing</button>
+
+                <button class="filter-chip" type="button" data-filter="Imágenes">Images</button>
+
                 <button class="filter-chip" type="button" data-filter="Video">Video</button>
-                <button class="filter-chip" type="button" data-filter="Programación">Programación</button>
-                <button class="filter-chip" type="button" data-filter="Estudio">Estudio</button>
+
+                <button class="filter-chip" type="button" data-filter="Programación">Coding</button>
+
+                <button class="filter-chip" type="button" data-filter="Estudio">Studying</button>
+
                 <button class="filter-chip" type="button" data-filter="Audio">Audio</button>
+
             </div>
 
-            <!-- FILTRO POR PRECIO -->
             <div class="price-filter">
 
-                <span class="price-filter-label">Disponibilidad:</span>
+                <span class="price-filter-label">Availability:</span>
 
                 <div class="price-filter-options">
 
-                    <button class="price-chip active" type="button" data-price="todos">
-                        Todas
-                    </button>
+                    <button class="price-chip active" type="button" data-price="todos">All</button>
 
-                    <button class="price-chip" type="button" data-price="gratis">
-                        Gratis
-                    </button>
+                    <button class="price-chip" type="button" data-price="gratis">Free</button>
 
-                    <button class="price-chip" type="button" data-price="freemium">
-                        Freemium
-                    </button>
+                    <button class="price-chip" type="button" data-price="freemium">Freemium</button>
 
-                    <button class="price-chip" type="button" data-price="pago">
-                        De pago
-                    </button>
+                    <button class="price-chip" type="button" data-price="pago">Paid</button>
 
                 </div>
 
             </div>
 
             <div class="results-info">
-                <span id="resultsCount">Mostrando herramientas</span>
-                <button id="clearFilters" class="clear-filters" type="button">Limpiar filtros</button>
+                <span id="resultsCount">Showing AI tools</span>
+
+                <button id="clearFilters" class="clear-filters" type="button">
+                    Clear Filters
+                </button>
             </div>
 
             <div class="tools-grid" id="toolsGrid" aria-live="polite"></div>
+
             <div class="no-results" id="noResults" hidden>
                 <span>⌕</span>
-                <h3>No encontramos resultados</h3>
-                <p>Prueba con otro término o cambia los filtros.</p>
-                <button type="button" class="btn-secondary" id="resetSearch">Ver todas las herramientas</button>
+                <h3>No Results Found</h3>
+                <p>Try another search term or change your filters.</p>
+                <button type="button" class="btn-secondary" id="resetSearch">
+                    View All AI Tools
+                </button>
             </div>
+
         </section>
 
+        <!-- AI NEWS -->
         <section class="news-section" id="novedades">
 
             <div class="news-heading">
                 <div>
-                    <span class="section-kicker">EL UNIVERSO DE LA IA</span>
-                    <h2>Noticias y novedades sobre inteligencia artificial</h2>
+                    <span class="section-kicker">THE WORLD OF AI</span>
+                    <h2>Artificial Intelligence News and Updates</h2>
                     <p>
-                        Mantente al día con las últimas noticias, actualizaciones,
-                        nuevos modelos y avances de inteligencia artificial.
-                        Descubre qué ofrecen las principales plataformas de IA.
+                        Stay up to date with the latest AI news,
+                        platform updates, new models, and developments.
+                        Discover what leading AI platforms have to offer.
                     </p>
                 </div>
                 <span class="news-decoration">✦</span>
@@ -809,92 +855,94 @@
 
             <div class="news-grid">
 
-                <!-- NOVEDAD 1 -->
                 <article class="news-card">
+
                     <div class="news-visual news-visual-purple">
                         <span>GPT</span>
                         <small>01 / OPENAI</small>
                     </div>
 
                     <div class="news-content">
-                        <span class="news-tag">NUEVO MODELO</span>
+                        <span class="news-tag">NEW MODEL</span>
+                        <small class="news-date">OCTOBER 26, 2026</small>
 
-                        <small class="news-date">26 DE OCTUBRE DE 2026</small>
-
-                        <h3>OpenAI presenta GPT-6.1 Terra</h3>
+                        <h3>OpenAI Introduces GPT-6.1 Terra</h3>
 
                         <p>
-                            El nuevo modelo incorpora mejoras en comprensión visual,
-                            programación y uso del computador para realizar tareas
-                            de varios pasos.
+                            The new model includes improvements in visual
+                            understanding, coding, and computer use for
+                            completing multi-step tasks.
                         </p>
 
                         <a href="https://openai.com/index/introducing-gpt-6-1-terra/" target="_blank"
                             rel="noopener noreferrer">
-                            Leer anuncio oficial ↗
+                            Read Official Announcement ↗
                         </a>
                     </div>
+
                 </article>
 
-                <!-- NOVEDAD 2 -->
                 <article class="news-card">
+
                     <div class="news-visual news-visual-mint">
                         <span>CLAUDE</span>
                         <small>02 / ANTHROPIC</small>
                     </div>
 
                     <div class="news-content">
-                        <span class="news-tag">ACTUALIZACIÓN</span>
+                        <span class="news-tag">UPDATE</span>
+                        <small class="news-date">NOVEMBER 2, 2026</small>
 
-                        <small class="news-date">2 DE NOVIEMBRE DE 2026</small>
-
-                        <h3>Anthropic mejora las conversaciones con Claude API</h3>
+                        <h3>Anthropic Improves Conversations with Claude API</h3>
 
                         <p>
-                            La función Message Threads, disponible en beta,
-                            permite gestionar conversaciones largas enviando
-                            únicamente los mensajes nuevos en cada interacción.
+                            Message Threads, available in beta, helps
+                            manage longer conversations by sending
+                            only new messages in each interaction.
                         </p>
 
                         <a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank"
                             rel="noopener noreferrer">
-                            Consultar actualización ↗
+                            View Update ↗
                         </a>
                     </div>
+
                 </article>
 
-                <!-- NOVEDAD 3 -->
                 <article class="news-card">
+
                     <div class="news-visual news-visual-blue">
                         <span>GOOGLE</span>
                         <small>03 / DEEPMIND</small>
                     </div>
 
                     <div class="news-content">
-                        <span class="news-tag">INVESTIGACIÓN</span>
+                        <span class="news-tag">RESEARCH</span>
+                        <small class="news-date">NOVEMBER 3, 2026</small>
 
-                        <small class="news-date">3 DE NOVIEMBRE DE 2026</small>
-
-                        <h3>Google Antigravity impulsa la investigación científica</h3>
+                        <h3>Google Antigravity Supports Scientific Research</h3>
 
                         <p>
-                            Google DeepMind presentó nuevas capacidades para apoyar
-                            procesos de investigación química, análisis de datos
-                            y exploración de posibles moléculas.
+                            Google DeepMind presented new capabilities
+                            supporting chemical research, data analysis,
+                            and the exploration of potential molecules.
                         </p>
 
                         <a href="https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/"
                             target="_blank" rel="noopener noreferrer">
-                            Leer investigación ↗
+                            Read Research ↗
                         </a>
                     </div>
+
                 </article>
 
             </div>
+
         </section>
 
-
+        <!-- LEARNING -->
         <section class="learning-section" id="tutoriales">
+
             <div class="learning-decoration" aria-hidden="true">
                 <span>✦</span>
                 <span>✧</span>
@@ -902,19 +950,21 @@
             </div>
 
             <div class="learning-content">
-                <span class="section-kicker">APRENDE ALGO NUEVO</span>
 
-                <h2>Aprende a utilizar la inteligencia artificial desde cero.</h2>
+                <span class="section-kicker">LEARN SOMETHING NEW</span>
+
+                <h2>Learn How to Use Artificial Intelligence from Scratch.</h2>
 
                 <p>
-                    Descubre tutoriales y consejos para aprender a usar herramientas
-                    de inteligencia artificial. Mejora tus prompts, estudia con IA,
-                    crea contenido y aprovecha estas tecnologías en tus proyectos.
+                    Discover tutorials and tips for using AI tools.
+                    Improve your prompts, study with AI, create content,
+                    and make the most of these technologies in your projects.
                 </p>
 
                 <a href="#herramientas" class="btn-primary">
-                    Explorar herramientas <span>→</span>
+                    Explore AI Tools <span>→</span>
                 </a>
+
             </div>
 
             <div class="learning-side">
@@ -922,10 +972,10 @@
                 <div class="learning-mini-card">
                     <span>01</span>
                     <div>
-                        <strong>Aprende a crear prompts</strong>
+                        <strong>Learn to Write Better Prompts</strong>
                         <small>
-                            Descubre cómo escribir instrucciones claras para obtener
-                            mejores respuestas de la IA.
+                            Discover how to write clear instructions
+                            to get better responses from AI.
                         </small>
                     </div>
                     <b>↗</b>
@@ -934,10 +984,10 @@
                 <div class="learning-mini-card">
                     <span>02</span>
                     <div>
-                        <strong>Estudia con inteligencia artificial</strong>
+                        <strong>Study with Artificial Intelligence</strong>
                         <small>
-                            Aprende a resumir documentos, organizar apuntes y
-                            comprender temas difíciles.
+                            Learn how to summarize documents,
+                            organize notes, and understand complex topics.
                         </small>
                     </div>
                     <b>↗</b>
@@ -946,370 +996,438 @@
                 <div class="learning-mini-card">
                     <span>03</span>
                     <div>
-                        <strong>Crea contenido con IA</strong>
+                        <strong>Create Content with AI</strong>
                         <small>
-                            Conoce cómo generar imágenes, preparar presentaciones
-                            y desarrollar nuevas ideas.
+                            Discover how to generate images,
+                            prepare presentations, and develop new ideas.
                         </small>
                     </div>
                     <b>↗</b>
                 </div>
 
             </div>
+
         </section>
 
-
+        <!-- GUIDES -->
         <section class="tutorials-section" id="guias">
+
             <div class="tutorials-container">
 
                 <div class="tutorials-heading">
-                    <span class="section-kicker">CENTRO DE APRENDIZAJE</span>
-                    <h2>Aprende a utilizar la IA</h2>
+                    <span class="section-kicker">LEARNING CENTER</span>
+                    <h2>Learn How to Use AI</h2>
                     <p>
-                        Guías sencillas para descubrir nuevas posibilidades,
-                        mejorar tus ideas y aprovechar las herramientas de IA.
+                        Simple guides to discover new possibilities,
+                        improve your ideas, and get more out of AI tools.
                     </p>
                 </div>
 
                 <div class="tutorials-grid">
 
-                    <!-- TUTORIAL 1 -->
+                    <!-- GUIDE 1 -->
                     <article class="tutorial-card">
-                        <div class="tutorial-number">GUÍA 01</div>
+
+                        <div class="tutorial-number">GUIDE 01</div>
                         <div class="tutorial-icon">01</div>
-                        <span class="tutorial-category">PRIMEROS PASOS</span>
-                        <h3>Cómo escribir buenos prompts</h3>
+                        <span class="tutorial-category">GETTING STARTED</span>
+
+                        <h3>How to Write Better Prompts</h3>
+
                         <p>
-                            Aprende a darle instrucciones claras a una IA
-                            para conseguir respuestas más útiles.
+                            Learn how to give clear instructions to AI
+                            to get more useful responses.
                         </p>
 
                         <details class="tutorial-details">
-                            <summary>Leer tutorial <span>＋</span></summary>
+                            <summary>Read Guide <span>＋</span></summary>
 
                             <div class="tutorial-body">
-                                <h4>¿Qué es un prompt?</h4>
+
+                                <h4>What Is a Prompt?</h4>
                                 <p>
-                                    Es una instrucción o pregunta que escribes
-                                    para indicarle a una inteligencia artificial
-                                    qué necesitas.
+                                    A prompt is an instruction or question
+                                    you give an AI tool to explain what you need.
                                 </p>
 
-                                <h4>¿Cómo escribir uno mejor?</h4>
+                                <h4>How Can You Write a Better Prompt?</h4>
                                 <ol>
-                                    <li>Explica qué necesitas.</li>
-                                    <li>Indica el contexto de tu solicitud.</li>
-                                    <li>Describe cómo quieres recibir la respuesta.</li>
-                                    <li>Añade detalles importantes.</li>
+                                    <li>Explain what you need.</li>
+                                    <li>Provide relevant context.</li>
+                                    <li>Describe your preferred response format.</li>
+                                    <li>Add important details.</li>
                                 </ol>
 
-                                <h4>Ejemplo práctico</h4>
-                                <p>En lugar de escribir:</p>
+                                <h4>Practical Example</h4>
+                                <p>Instead of writing:</p>
+
                                 <blockquote>
-                                    Explícame programación.
+                                    Explain programming.
                                 </blockquote>
 
-                                <p>Prueba con una instrucción más completa:</p>
+                                <p>Try a more detailed instruction:</p>
+
                                 <blockquote>
-                                    Explícame qué es la programación orientada a
-                                    objetos con palabras sencillas. Incluye un
-                                    ejemplo en Java y organiza la explicación
-                                    por conceptos.
+                                    Explain object-oriented programming
+                                    in simple terms. Include a Java example
+                                    and organize the explanation by concept.
                                 </blockquote>
 
                                 <p class="tutorial-tip">
-                                    Consejo: si la respuesta no es lo que esperabas,
-                                    puedes pedirle a la IA que la explique de otra manera.
+                                    Tip: If the answer is not what you expected,
+                                    ask the AI to explain it differently.
                                 </p>
+
                             </div>
                         </details>
+
                     </article>
 
-                    <!-- TUTORIAL 2 -->
+                    <!-- GUIDE 2 -->
                     <article class="tutorial-card">
-                        <div class="tutorial-number">GUÍA 02</div>
+
+                        <div class="tutorial-number">GUIDE 02</div>
                         <div class="tutorial-icon">02</div>
-                        <span class="tutorial-category">ESTUDIO</span>
-                        <h3>Cómo estudiar con inteligencia artificial</h3>
+                        <span class="tutorial-category">STUDYING</span>
+
+                        <h3>How to Study with Artificial Intelligence</h3>
+
                         <p>
-                            Utiliza herramientas de IA para organizar apuntes,
-                            comprender conceptos y preparar evaluaciones.
+                            Use AI tools to organize notes, understand
+                            concepts, and prepare for exams.
                         </p>
 
                         <details class="tutorial-details">
-                            <summary>Leer tutorial <span>＋</span></summary>
+                            <summary>Read Guide <span>＋</span></summary>
 
                             <div class="tutorial-body">
-                                <h4>¿Cómo puede ayudarte?</h4>
+
+                                <h4>How Can AI Help You?</h4>
                                 <p>
-                                    Puedes utilizar la IA como apoyo para comprender
-                                    temas, organizar información y practicar lo
-                                    aprendido.
+                                    AI can support your learning by helping
+                                    you understand topics, organize information,
+                                    and practice what you have learned.
                                 </p>
 
-                                <h4>Algunas formas de utilizarla</h4>
+                                <h4>Ways to Use AI for Studying</h4>
                                 <ol>
-                                    <li>Resume tus apuntes para identificar las ideas principales.</li>
-                                    <li>Pide explicaciones de conceptos que te resulten difíciles.</li>
-                                    <li>Solicita preguntas de práctica sobre un tema.</li>
-                                    <li>Organiza un plan de estudio por temas.</li>
+                                    <li>Summarize your notes to identify key ideas.</li>
+                                    <li>Ask for explanations of difficult concepts.</li>
+                                    <li>Generate practice questions about a topic.</li>
+                                    <li>Create a study plan organized by subject.</li>
                                 </ol>
 
-                                <h4>Ejemplo práctico</h4>
+                                <h4>Practical Example</h4>
+
                                 <blockquote>
-                                    Estoy estudiando bases de datos. Explícame las
-                                    diferencias entre una clave primaria y una
-                                    clave foránea. Incluye ejemplos sencillos
-                                    con tablas SQL y cinco preguntas para practicar.
+                                    I'm studying databases. Explain the
+                                    differences between primary keys and
+                                    foreign keys. Include simple SQL table
+                                    examples and five practice questions.
                                 </blockquote>
 
                                 <p class="tutorial-tip">
-                                    Consejo: intenta resolver los ejercicios por tu
-                                    cuenta antes de consultar las respuestas. Comprueba
-                                    también la información con tus materiales de clase.
+                                    Tip: Try solving exercises yourself
+                                    before checking the answers. Verify
+                                    information using your class materials.
                                 </p>
+
                             </div>
                         </details>
+
                     </article>
 
-                    <!-- TUTORIAL 3 -->
+                    <!-- GUIDE 3 -->
                     <article class="tutorial-card">
-                        <div class="tutorial-number">GUÍA 03</div>
+
+                        <div class="tutorial-number">GUIDE 03</div>
                         <div class="tutorial-icon">03</div>
-                        <span class="tutorial-category">CREATIVIDAD</span>
-                        <h3>Cómo crear contenido con IA</h3>
+                        <span class="tutorial-category">CREATIVITY</span>
+
+                        <h3>How to Create Content with AI</h3>
+
                         <p>
-                            Descubre cómo generar ideas, imágenes y presentaciones
-                            para tus proyectos.
+                            Discover how to generate ideas, images,
+                            and presentations for your projects.
                         </p>
 
                         <details class="tutorial-details">
-                            <summary>Leer tutorial <span>＋</span></summary>
+                            <summary>Read Guide <span>＋</span></summary>
 
                             <div class="tutorial-body">
-                                <h4>¿Qué puedes crear?</h4>
+
+                                <h4>What Can You Create?</h4>
                                 <p>
-                                    Algunas herramientas de inteligencia artificial
-                                    permiten generar imágenes, presentaciones,
-                                    textos y otros recursos creativos.
+                                    Some AI tools can generate images,
+                                    presentations, text, and other
+                                    creative resources.
                                 </p>
 
-                                <h4>Pasos para comenzar</h4>
+                                <h4>Steps to Get Started</h4>
                                 <ol>
-                                    <li>Elige qué tipo de contenido quieres crear.</li>
-                                    <li>Busca una herramienta adecuada en IA HUB.</li>
-                                    <li>Describe con claridad tu idea.</li>
-                                    <li>Revisa el resultado y realiza los ajustes necesarios.</li>
+                                    <li>Choose the type of content you want to create.</li>
+                                    <li>Find a suitable tool on IA Hub.</li>
+                                    <li>Describe your idea clearly.</li>
+                                    <li>Review the result and make adjustments.</li>
                                 </ol>
 
-                                <h4>Ejemplo de instrucción</h4>
+                                <h4>Example Prompt</h4>
+
                                 <blockquote>
-                                    Crea una propuesta de presentación de cinco
-                                    diapositivas sobre el cuidado del medio ambiente.
-                                    Utiliza títulos breves, ideas principales y
-                                    sugerencias de imágenes para cada diapositiva.
+                                    Create an outline for a five-slide
+                                    presentation about environmental
+                                    protection. Use short titles,
+                                    key points, and image suggestions
+                                    for each slide.
                                 </blockquote>
 
                                 <p class="tutorial-tip">
-                                    Consejo: revisa los resultados antes de publicarlos
-                                    y asegúrate de respetar los derechos de uso del
-                                    contenido generado.
+                                    Tip: Review AI-generated content before
+                                    publishing and respect applicable
+                                    usage rights.
                                 </p>
+
                             </div>
                         </details>
+
                     </article>
 
-                    <!-- TUTORIAL 4 -->
+                    <!-- GUIDE 4 -->
                     <article class="tutorial-card">
-                        <div class="tutorial-number">GUÍA 04</div>
+
+                        <div class="tutorial-number">GUIDE 04</div>
                         <div class="tutorial-icon">04</div>
-                        <span class="tutorial-category">PRESENTACIONES</span>
-                        <h3>Cómo crear presentaciones con IA</h3>
+                        <span class="tutorial-category">PRESENTATIONS</span>
+
+                        <h3>How to Create Presentations with AI</h3>
+
                         <p>
-                            Aprende a transformar tus ideas en presentaciones
-                            organizadas y visualmente atractivas.
+                            Learn how to turn your ideas into organized,
+                            visually appealing presentations.
                         </p>
 
                         <details class="tutorial-details">
-                            <summary>Leer tutorial <span>＋</span></summary>
+                            <summary>Read Guide <span>＋</span></summary>
 
                             <div class="tutorial-body">
-                                <h4>¿Qué herramientas puedes utilizar?</h4>
+
+                                <h4>Which Tools Can You Use?</h4>
                                 <p>
-                                    Plataformas como Gamma y Canva ofrecen funciones
-                                    que ayudan a crear presentaciones a partir de
-                                    instrucciones y contenido.
+                                    Platforms such as Gamma and Canva
+                                    offer features that help create
+                                    presentations from prompts and content.
                                 </p>
 
-                                <h4>Pasos para crear una presentación</h4>
+                                <h4>Steps to Create a Presentation</h4>
                                 <ol>
-                                    <li>Define el tema y el objetivo de tu presentación.</li>
-                                    <li>Indica cuántas diapositivas necesitas.</li>
-                                    <li>Especifica el público al que va dirigida.</li>
-                                    <li>Genera una primera propuesta con la herramienta.</li>
-                                    <li>Revisa los textos, imágenes y diseño.</li>
+                                    <li>Define the topic and goal.</li>
+                                    <li>Specify how many slides you need.</li>
+                                    <li>Describe your target audience.</li>
+                                    <li>Generate an initial draft.</li>
+                                    <li>Review the text, images, and design.</li>
                                 </ol>
 
-                                <h4>Ejemplo de instrucción</h4>
+                                <h4>Example Prompt</h4>
+
                                 <blockquote>
-                                    Crea una presentación de seis diapositivas sobre
-                                    la importancia de la ciberseguridad. Está dirigida
-                                    a estudiantes universitarios. Utiliza títulos
-                                    cortos, explicaciones sencillas y ejemplos cotidianos.
+                                    Create a six-slide presentation
+                                    about the importance of cybersecurity
+                                    for university students.
+                                    Use short titles, simple explanations,
+                                    and everyday examples.
                                 </blockquote>
 
                                 <p class="tutorial-tip">
-                                    Consejo: utiliza la IA como punto de partida.
-                                    Revisa los datos y adapta el diseño a las
-                                    necesidades de tu exposición.
+                                    Tip: Use AI as a starting point.
+                                    Check the facts and adapt the design
+                                    to your presentation needs.
                                 </p>
+
                             </div>
                         </details>
+
                     </article>
 
-                    <!-- TUTORIAL 5 -->
+                    <!-- GUIDE 5 -->
                     <article class="tutorial-card">
-                        <div class="tutorial-number">GUÍA 05</div>
+
+                        <div class="tutorial-number">GUIDE 05</div>
                         <div class="tutorial-icon">05</div>
-                        <span class="tutorial-category">INVESTIGACIÓN</span>
-                        <h3>Cómo investigar con inteligencia artificial</h3>
+                        <span class="tutorial-category">RESEARCH</span>
+
+                        <h3>How to Research with Artificial Intelligence</h3>
+
                         <p>
-                            Aprende a buscar información, explorar diferentes
-                            fuentes y comprobar los datos que encuentres.
+                            Learn how to find information, explore sources,
+                            and verify the facts you discover.
                         </p>
 
                         <details class="tutorial-details">
-                            <summary>Leer tutorial <span>＋</span></summary>
+                            <summary>Read Guide <span>＋</span></summary>
 
                             <div class="tutorial-body">
-                                <h4>¿Para qué sirve la IA en una investigación?</h4>
+
+                                <h4>How Can AI Support Research?</h4>
                                 <p>
-                                    Puede ayudarte a encontrar temas relacionados,
-                                    comprender información compleja y organizar
-                                    los resultados de una búsqueda.
+                                    AI can help you explore related topics,
+                                    understand complex information,
+                                    and organize research findings.
                                 </p>
 
-                                <h4>Pasos para investigar mejor</h4>
+                                <h4>Steps for Better Research</h4>
                                 <ol>
-                                    <li>Define claramente el tema que quieres investigar.</li>
-                                    <li>Formula preguntas específicas.</li>
-                                    <li>Utiliza herramientas que muestren fuentes y referencias.</li>
-                                    <li>Consulta las fuentes originales.</li>
-                                    <li>Compara la información antes de utilizarla.</li>
+                                    <li>Clearly define your research topic.</li>
+                                    <li>Ask specific questions.</li>
+                                    <li>Use tools that provide sources and references.</li>
+                                    <li>Read the original sources.</li>
+                                    <li>Compare information before using it.</li>
                                 </ol>
 
-                                <h4>Ejemplo de instrucción</h4>
+                                <h4>Example Prompt</h4>
+
                                 <blockquote>
-                                    Investiga cuáles son los principales beneficios
-                                    de la energía solar. Organiza la información
-                                    por temas e incluye fuentes confiables para
-                                    consultar los datos.
+                                    Research the main benefits of solar energy.
+                                    Organize the information by topic and
+                                    include reliable sources to verify the facts.
                                 </blockquote>
 
                                 <p class="tutorial-tip">
-                                    Consejo: no des por cierta toda respuesta de una IA.
-                                    Comprueba las referencias, las fechas y la
-                                    información en fuentes confiables.
+                                    Tip: Do not assume every AI answer is correct.
+                                    Verify references, dates, and information
+                                    using reliable sources.
                                 </p>
+
                             </div>
                         </details>
+
                     </article>
 
-                    <!-- TUTORIAL 6 -->
+                    <!-- GUIDE 6 -->
                     <article class="tutorial-card">
-                        <div class="tutorial-number">GUÍA 06</div>
+
+                        <div class="tutorial-number">GUIDE 06</div>
                         <div class="tutorial-icon">06</div>
-                        <span class="tutorial-category">PRODUCTIVIDAD</span>
-                        <h3>Cómo organizar tareas y proyectos con IA</h3>
+                        <span class="tutorial-category">PRODUCTIVITY</span>
+
+                        <h3>How to Organize Tasks and Projects with AI</h3>
+
                         <p>
-                            Utiliza la inteligencia artificial para planificar
-                            actividades, establecer prioridades y organizar tu tiempo.
+                            Use AI to plan activities, set priorities,
+                            and manage your time.
                         </p>
 
                         <details class="tutorial-details">
-                            <summary>Leer tutorial <span>＋</span></summary>
+                            <summary>Read Guide <span>＋</span></summary>
 
                             <div class="tutorial-body">
-                                <h4>¿Cómo puede ayudarte?</h4>
+
+                                <h4>How Can AI Help?</h4>
                                 <p>
-                                    La IA puede ayudarte a dividir proyectos grandes
-                                    en tareas pequeñas, crear cronogramas y organizar
-                                    actividades según su importancia.
+                                    AI can help you divide large projects
+                                    into smaller tasks, create schedules,
+                                    and organize activities by priority.
                                 </p>
 
-                                <h4>Pasos para organizar un proyecto</h4>
+                                <h4>Steps to Organize a Project</h4>
                                 <ol>
-                                    <li>Describe el proyecto que necesitas realizar.</li>
-                                    <li>Indica la fecha límite de entrega.</li>
-                                    <li>Solicita una lista de actividades.</li>
-                                    <li>Organiza las tareas por prioridad.</li>
-                                    <li>Revisa el progreso y actualiza tu planificación.</li>
+                                    <li>Describe the project.</li>
+                                    <li>Provide the deadline.</li>
+                                    <li>Ask for a list of tasks.</li>
+                                    <li>Organize tasks by priority.</li>
+                                    <li>Review progress and update your plan.</li>
                                 </ol>
 
-                                <h4>Ejemplo de instrucción</h4>
+                                <h4>Example Prompt</h4>
+
                                 <blockquote>
-                                    Ayúdame a organizar un proyecto universitario
-                                    que debo entregar en tres semanas. Divide el
-                                    trabajo en actividades, establece prioridades
-                                    y crea un cronograma semanal.
+                                    Help me organize a university project
+                                    due in three weeks. Divide the work
+                                    into tasks, set priorities,
+                                    and create a weekly schedule.
                                 </blockquote>
 
                                 <p class="tutorial-tip">
-                                    Consejo: utiliza la planificación como una guía
-                                    y ajústala según tu disponibilidad y el avance
-                                    real de tus actividades.
+                                    Tip: Use your plan as a guide and adjust
+                                    it based on your availability
+                                    and actual progress.
                                 </p>
+
                             </div>
                         </details>
+
                     </article>
 
                 </div>
-            </div>
-        </section>
 
+            </div>
+
+        </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
+
         <div class="footer-main">
+
             <div class="footer-brand">
-                <a href="#inicio" class="logo"><span class="logo-mark">✦</span><span>IA <strong>Hub</strong></span></a>
+
+                <a href="#inicio" class="logo">
+                    <span class="logo-mark">✦</span>
+                    <span>IA <strong>Hub</strong></span>
+                </a>
+
                 <p>
-                    Tu directorio de inteligencia artificial. Descubre, compara
-                    y encuentra herramientas de IA para estudiar, programar,
-                    diseñar, escribir y crear contenido.
+                    Your artificial intelligence directory.
+                    Discover, compare, and find AI tools for
+                    studying, coding, designing, writing,
+                    and creating content.
                 </p>
 
                 <p class="affiliate-disclosure">
-                    Aviso: IA Hub puede recibir una comisión si te registras o
-                    compras mediante algunos de nuestros enlaces, sin costo
-                    adicional para ti. Esto no afecta nuestras recomendaciones.
+                    Disclosure: IA Hub may earn a commission if you
+                    sign up or make a purchase through some of our
+                    links, at no additional cost to you.
+                    This does not affect our recommendations.
                 </p>
+
             </div>
+
             <div class="footer-links">
+
                 <div>
-                    <strong>Explorar</strong>
-                    <a href="#herramientas">Herramientas de IA</a>
-                    <a href="#categorias">Categorías</a>
-                    <a href="#tutoriales">Aprender IA</a>
-                    <a href="comparativas.html">Comparar herramientas</a>
+                    <strong>Explore</strong>
+                    <a href="#herramientas">AI Tools</a>
+                    <a href="#categorias">Categories</a>
+                    <a href="#tutoriales">Learn AI</a>
+                    <a href="comparativas.html">Compare Tools</a>
                 </div>
-                <div><strong>IA Hub</strong><a href="contacto.html">Contacto</a>
-                    <a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a>
+
+                <div>
+                    <strong>IA Hub</strong>
+                    <a href="../contacto.html">Contact</a>
+                    <a href="../privacidad.html">Privacy</a>
+                    <a href="../terminos.html">Terms</a>
                 </div>
+
             </div>
+
         </div>
+
         <div class="footer-bottom">
-            <span>© 2026 IA Hub. Todos los derechos reservados.</span>
-            <span>Hecho para explorar nuevas ideas <b>✦</b></span>
+            <span>© 2026 IA Hub. All rights reserved.</span>
+            <span>Made for exploring new ideas <b>✦</b></span>
         </div>
+
     </footer>
 
-    <script src="catalogo.js"></script>
-    <script src="idiomas.js"></script>
-    <script src="app.js"></script>
-    <script src="recomendador.js"></script>
-    <script src="prompts.js"></script>
+    <!-- SHARED JAVASCRIPT -->
+    <script src="../catalogo.js"></script>
+    <script src="../catalogo-en.js"></script>
+    <script src="../idiomas.js"></script>
+    <script src="../app.js"></script>
+    <script src="../recomendador.js"></script>
+    <script src="../prompts.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -1318,6 +1436,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>
