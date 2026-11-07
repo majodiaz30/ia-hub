@@ -91,14 +91,26 @@ const traduccionesCatalogo = {
         queEsEn: "Elicit is an AI platform designed to support scientific literature searches and academic research."
     },
 
+
     "gamma": {
-        descripcionEn: "AI-powered platform for creating presentations, documents, and visually engaging web pages.",
+        descripcionEn: "Create presentations, documents, and websites with artificial intelligence. Gamma transforms your ideas into organized visual content without designing every slide from scratch.",
+
         etiquetasEn: [
-            "presentations", "slides", "documents",
-            "design", "visual content"
+            "presentations",
+            "slides",
+            "powerpoint",
+            "documents",
+            "design",
+            "students",
+            "artificial intelligence",
+            "ai presentations",
+            "presentation maker",
+            "gamma app"
         ],
-        queEsEn: "Gamma is a visual content creation tool that uses AI to organize ideas into presentations and documents."
+
+        queEsEn: "Gamma is an AI-powered platform for creating presentations, visual documents, and websites. It transforms ideas, text, or outlines into structured content with modern designs. It is useful for students, teachers, entrepreneurs, and professionals who want to present information clearly and effectively."
     },
+
 
     // ============================================
     // IMAGES AND DESIGN
@@ -429,16 +441,55 @@ const detallesCatalogoEn = {
         disponibilidadEn: "Offers free options and paid plans."
     },
 
+
     gamma: {
         usosEn: [
-            { titulo: "Presentations", descripcion: "Create slides from instructions or existing content." },
-            { titulo: "Educational presentations", descripcion: "Organize information to explain topics." },
-            { titulo: "Documents", descripcion: "Create documents with visual layouts." }
+            {
+                titulo: "Academic presentations",
+                descripcion: "Create presentations for school assignments, university projects, and classroom activities using a topic or written instructions."
+            },
+            {
+                titulo: "Business presentations",
+                descripcion: "Organize business proposals, reports, projects, and meeting materials into professional-looking slides."
+            },
+            {
+                titulo: "Visual documents",
+                descripcion: "Turn written information into organized documents with headings, images, and clearly structured sections."
+            },
+            {
+                titulo: "Website creation",
+                descripcion: "Build simple visual websites to showcase ideas, projects, or information without starting from scratch."
+            },
+            {
+                titulo: "Content transformation",
+                descripcion: "Use existing text or outlines as a starting point for creating more organized presentations."
+            }
         ],
-        funcionesEn: ["Presentations", "Documents", "Visual design", "Content generation"],
-        ventajasEn: ["Saves time creating presentations", "Offers visual designs", "Helps organize ideas"],
-        disponibilidadEn: "Offers a limited free plan and paid options."
+
+        funcionesEn: [
+            "AI-powered presentation generation",
+            "Visual document creation",
+            "Website creation",
+            "Customizable designs and templates",
+            "AI content generation and editing",
+            "Images and visual elements",
+            "Automatic content organization",
+            "Presentation sharing and export options"
+        ],
+
+        ventajasEn: [
+            "Creates presentation drafts quickly",
+            "Does not require advanced design skills",
+            "Helps organize complex information",
+            "Offers modern visual designs",
+            "Allows users to customize generated content",
+            "Useful for students and professionals",
+            "Turns ideas into structured presentations"
+        ],
+
+        disponibilidadEn: "Gamma offers a free plan with limited credits and features, along with paid plans that provide additional capabilities. Pricing, limits, and available features may change."
     },
+
 
     canva: {
         usosEn: [
