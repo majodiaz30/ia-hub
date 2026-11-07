@@ -5373,3 +5373,134 @@ section, main, header, footer {
     outline: 2px solid var(--accent);
     outline-offset: 4px;
 }
+
+
+
+/* =========================================
+   IA HUB - AVISO DE COOKIES
+========================================= */
+
+.ia-cookie-banner {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 850px;
+    padding: 24px;
+    background: #171332;
+    border: 1px solid #45377c;
+    border-radius: 18px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.45);
+    z-index: 99999;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.ia-cookie-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.ia-cookie-text {
+    flex: 1;
+}
+
+.ia-cookie-text h3 {
+    color: #f5f3ff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.ia-cookie-text p {
+    color: #aaa5c9;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.ia-cookie-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.ia-cookie-accept,
+.ia-cookie-reject {
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.ia-cookie-accept {
+    background: #9678ff;
+    border: 1px solid #9678ff;
+    color: #ffffff;
+}
+
+.ia-cookie-accept:hover {
+    background: #7654f6;
+}
+
+.ia-cookie-reject {
+    background: transparent;
+    border: 1px solid #45377c;
+    color: #f5f3ff;
+}
+
+.ia-cookie-reject:hover {
+    background: #211b47;
+}
+
+.ia-cookie-settings {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    z-index: 99998;
+    background: #211b47;
+    border: 1px solid #45377c;
+    color: #d2c7ff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.ia-cookie-settings:hover {
+    background: #30285c;
+}
+
+@media (max-width: 650px) {
+
+    .ia-cookie-banner {
+        bottom: 16px;
+        padding: 20px;
+    }
+
+    .ia-cookie-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .ia-cookie-actions {
+        width: 100%;
+    }
+
+    .ia-cookie-accept,
+    .ia-cookie-reject {
+        flex: 1;
+    }
+
+    .ia-cookie-settings {
+        bottom: 8px;
+        left: 8px;
+    }
+}
