@@ -56,4 +56,31 @@
     <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=descript</loc></url>
     <url><loc>https://ia-hub-bice.vercel.app/herramienta.html?id=otter</loc></url>
 
+    
+    <!-- Página principal en inglés -->
+    <url>
+        <loc>https://ia-hub-bice.vercel.app/en/</loc>
+    </url>
+
+    <!-- Tutorial Gamma en español -->
+    <url>
+        <loc>https://ia-hub-bice.vercel.app/tutorial-gamma.html</loc>
+    </url>
+
+    <!-- Tutorial Gamma en inglés -->
+    <url>
+        <loc>https://ia-hub-bice.vercel.app/en/tutorial-gamma.html</loc>
+    </url>
+
+    <!-- Tutorial Lovable en español -->
+    <url>
+        <loc>https://ia-hub-bice.vercel.app/tutorial-lovable.html</loc>
+    </url>
+
+    <!-- Tutorial Lovable en inglés -->
+    <url>
+        <loc>https://ia-hub-bice.vercel.app/en/tutorial-lovable.html</loc>
+    </url>
+
+
 </urlset>
