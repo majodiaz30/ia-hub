@@ -618,20 +618,18 @@ function crearTarjeta(herramienta) {
         cambiarFavorito(herramienta.id);
     });
 
-    // Ver detalles
-    const botonDetalles = document.createElement("button");
+    
+    // Ver detalles - enlace interno para SEO
+    const botonDetalles = document.createElement("a");
 
     botonDetalles.className = "tool-details-button";
-    botonDetalles.type = "button";
+
+    botonDetalles.href = rutaHerramientaIAHub(
+        herramienta.id
+    );
+
     botonDetalles.textContent = tIA.detalles;
 
-    botonDetalles.addEventListener("click", () => {
-
-        window.location.href = rutaHerramientaIAHub(
-            herramienta.id
-        );
-
-    });
 
     acciones.append(
         enlace,

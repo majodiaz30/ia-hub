@@ -5504,3 +5504,15 @@ section, main, header, footer {
         left: 8px;
     }
 }
+
+
+/* =========================================
+   IA HUB - ENLACES DE DETALLES
+========================================= */
+
+.tool-details-button {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
